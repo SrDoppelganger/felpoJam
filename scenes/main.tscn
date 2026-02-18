@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://drlq86n82qobf"]
 
 [ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://dbsp6g3y8xy15" path="res://Scripts/main_script.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://n48nsxsa7eks" path="res://scenes/arquivo.tscn" id="2_0wfyh"]
 
 [node name="Main" type="Node2D" unique_id=1887363783]
+script = ExtResource("1_sugp2")
 
 [node name="background" type="Sprite2D" parent="." unique_id=1865942434]
 position = Vector2(570, 313.5)
@@ -12,3 +14,24 @@ texture = ExtResource("1_o5qli")
 
 [node name="Arquivo" parent="." unique_id=461140739 instance=ExtResource("2_0wfyh")]
 position = Vector2(179, 322)
+
+[node name="Arquivo2" parent="." unique_id=773203964 instance=ExtResource("2_0wfyh")]
+position = Vector2(327, 478)
+
+[node name="Arquivo3" parent="." unique_id=212833661 instance=ExtResource("2_0wfyh")]
+position = Vector2(651, 493)
+
+[node name="Arquivo4" parent="." unique_id=1974708007 instance=ExtResource("2_0wfyh")]
+position = Vector2(897, 338)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=481338847]
+
+[node name="Score" type="Label" parent="HUD" unique_id=1102985674]
+offset_left = 480.0
+offset_top = 4.0
+offset_right = 647.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 32
+text = "PONTOS: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
