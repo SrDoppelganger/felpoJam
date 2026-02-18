@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://bwbn45ld7r5hk"]
 
 [ext_resource type="Script" uid="uid://2qkgkt8x6hxm" path="res://Scripts/global_script.gd" id="1_4pk28"]
+[ext_resource type="AudioStream" uid="uid://dbr24nivwhwlc" path="res://assets/sons/stamp.ogg" id="2_nmxvb"]
 
-[node name="Global" type="Node2D" unique_id=1153912199]
+[node name="GlobalScript" type="Node" unique_id=1088285404]
 script = ExtResource("1_4pk28")
+
+[node name="carimbado" type="AudioStreamPlayer" parent="." unique_id=1725095165]
+stream = ExtResource("2_nmxvb")

@@ -9,6 +9,6 @@ func _on_area_2d_mouse_exited() -> void:
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed:
+			GlobalScript.playEffect("stamp");
 			GlobalScript.addScore();
-			print("bweh bweh");
 			queue_free();
