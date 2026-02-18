@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://n48nsxsa7eks"]
+
+[ext_resource type="Script" uid="uid://bsg3xqo2uos81" path="res://Scripts/arquivo_script/arquivo.gd" id="1_1tye2"]
+[ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="1_anmjr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tye2"]
+size = Vector2(135, 133)
+
+[node name="Arquivo" type="Node2D" unique_id=461140739]
+script = ExtResource("1_1tye2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=911804239]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=388876715]
+texture = ExtResource("1_anmjr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1200353007]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_1tye2")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

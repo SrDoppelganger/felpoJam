@@ -1,25 +1,14 @@
 [gd_scene format=3 uid="uid://drlq86n82qobf"]
 
 [ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://n48nsxsa7eks" path="res://scenes/arquivo.tscn" id="2_0wfyh"]
 
 [node name="Main" type="Node2D" unique_id=1887363783]
 
-[node name="Control" type="Control" parent="." unique_id=292056541]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1144.0
-offset_bottom = 644.0
-
-[node name="ColorRect" type="ColorRect" parent="Control" unique_id=218819720]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.73333335, 0.5803922, 0.34117648, 1)
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=461150721]
-position = Vector2(112, 73)
-scale = Vector2(0.8125, 0.8125)
+[node name="background" type="Sprite2D" parent="." unique_id=1865942434]
+position = Vector2(570, 313.5)
+scale = Vector2(9.140625, 5.210937)
 texture = ExtResource("1_o5qli")
+
+[node name="Arquivo" parent="." unique_id=461140739 instance=ExtResource("2_0wfyh")]
+position = Vector2(179, 322)
