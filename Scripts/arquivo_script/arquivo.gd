@@ -1,5 +1,14 @@
 extends Node2D
 
+const SPEED = 2;
+var velocity = Vector2()
+
+func _ready() -> void:
+	velocity = Vector2(-SPEED, 0)
+
+func _process(delta: float) -> void:
+	translate(velocity)
+
 func _on_area_2d_mouse_entered() -> void:
 	print("MOUSE!");
 
