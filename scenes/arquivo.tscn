@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bsg3xqo2uos81" path="res://Scripts/arquivo_script/arquivo.gd" id="1_1tye2"]
 [ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="1_anmjr"]
+[ext_resource type="AudioStream" uid="uid://dbr24nivwhwlc" path="res://assets/sons/stamp.ogg" id="3_mlcnj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1tye2"]
 size = Vector2(135, 133)
@@ -17,6 +18,9 @@ texture = ExtResource("1_anmjr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1200353007]
 position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_1tye2")
+
+[node name="carimbado" type="AudioStreamPlayer" parent="." unique_id=1354186167]
+stream = ExtResource("3_mlcnj")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

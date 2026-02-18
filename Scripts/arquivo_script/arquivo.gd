@@ -1,13 +1,20 @@
 extends Node2D
+@onready var area_2d: Area2D = $Area2D
 
-const SPEED = 2;
-var velocity = Vector2()
+const SPEED = 0.7;
+var velocity: Vector2;
+var target_position: Vector2;
 
 func _ready() -> void:
-	velocity = Vector2(-SPEED, 0)
-
+	var target_x = randf_range(20, 1122);
+	var target_y = randf_range(150, 625);
+	
+	target_position = Vector2(target_x, target_y);
+	
 func _process(delta: float) -> void:
+	velocity = (target_position - position) * SPEED * delta
 	translate(velocity)
+	
 
 func _on_area_2d_mouse_entered() -> void:
 	print("MOUSE!");

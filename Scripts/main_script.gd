@@ -10,3 +10,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	score.text = "Pontos: " + str(GlobalScript.score);
+	var mouseLocation = get_global_mouse_position();
+	if Input.is_action_just_pressed("click"):
+		print(mouseLocation);
