@@ -1,5 +1,6 @@
 extends Node
 @onready var carimbado: AudioStreamPlayer = $carimbado;
+@onready var yay: AudioStreamPlayer = $yay
 
 var score: int = 0;
 
@@ -11,3 +12,5 @@ func playEffect(sound):
 	match sound:
 		"stamp":
 			carimbado.play();
+		"yay":
+			yay.play();
