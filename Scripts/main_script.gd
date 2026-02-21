@@ -3,9 +3,12 @@ extends Node2D
 @onready var score: Label = $HUD/Score
 @onready var targetNode = get_tree().get_first_node_in_group("alvos");
 @onready var label_carimbado: Label = $HUD/label_carimbado
+@onready var carimbado_sublabel: Label = $HUD/carimbado_sublabel
 
 var stamped: int = 0;
 @onready var spawn_rate: Timer = $SpawnRate
+
+var win_state:bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,9 +19,9 @@ func _process(delta: float) -> void:
 	score.text = "Pontos: " + str(GlobalScript.score);
 	stamped = GlobalScript.score;
 	var mouseLocation = get_global_mouse_position();
-	if Input.is_action_just_pressed("click"):
-		#print(mouseLocation);
-		pass
+	if Input.is_action_just_pressed("click") and win_state:
+		#carregar próxima cena aq
+		get_tree().change_scene_to_file("res://scenes/puzzles/RecFacial.tscn");
 
 func spawn_arquivos():
 	var spawn_pos = %PathFollow2D.global_position;
@@ -39,5 +42,7 @@ func _on_spawn_rate_timeout() -> void:
 
 func victory():
 	label_carimbado.visible = true;
+	carimbado_sublabel.visible = true;
+	win_state = true;
 	GlobalScript.playEffect("yay");
 	#carregar próxima cena aq
