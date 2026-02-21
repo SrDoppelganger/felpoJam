@@ -6,9 +6,13 @@ var velocity: Vector2;
 var target_position: Vector2;
 var spawn_position: Vector2;
 
+#deixando como var global para acessar no timeout
+var target_x;
+var target_y;
+
 func _ready() -> void:
-	var target_x = randi_range(200, 1000);
-	var target_y = randi_range(150, 625);
+	target_x = randi_range(200, 1000);
+	target_y = randi_range(150, 625);
 	spawn_position = position;
 	
 	target_position = Vector2(target_x, target_y);
@@ -33,7 +37,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 
 # Faz o arquivo sair da mesa
 func _on_timer_timeout() -> void:
-	var x = randi_range(28,1143);
-	var y = randi_range(370, 400);
+	var x = target_x
+	var y = randi_range(900, 1000);
 	
-	target_position = Vector2();
+	target_position = Vector2(x,y);
