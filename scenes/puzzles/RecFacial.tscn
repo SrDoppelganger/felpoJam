@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bv587mayvg842"]
+
+[ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="1_5x8cv"]
+[ext_resource type="Script" uid="uid://duviyq537juva" path="res://scenes/puzzles/camera_2d.gd" id="1_g7d6w"]
+[ext_resource type="Script" uid="uid://bu8f76pedbwrj" path="res://scenes/puzzles/player.gd" id="1_xwlxd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8cv"]
+size = Vector2(129, 131)
+
+[node name="RecFacial" type="Node2D" unique_id=664167835]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=466120839]
+position = Vector2(113, 70)
+script = ExtResource("1_g7d6w")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1012888952]
+position = Vector2(113, 70)
+script = ExtResource("1_xwlxd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=575606354]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_5x8cv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1023955504]
+position = Vector2(-1, 0)
+texture = ExtResource("1_5x8cv")
