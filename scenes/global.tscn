@@ -2,9 +2,15 @@
 
 [ext_resource type="Script" uid="uid://2qkgkt8x6hxm" path="res://Scripts/global_script.gd" id="1_4pk28"]
 [ext_resource type="AudioStream" uid="uid://dbr24nivwhwlc" path="res://assets/sons/stamp.ogg" id="2_nmxvb"]
+[ext_resource type="AudioStream" uid="uid://5gjwqegcx7fw" path="res://assets/sons/yay.ogg" id="3_opebo"]
 
 [node name="GlobalScript" type="Node" unique_id=1088285404]
 script = ExtResource("1_4pk28")
 
 [node name="carimbado" type="AudioStreamPlayer" parent="." unique_id=1725095165]
 stream = ExtResource("2_nmxvb")
+
+[node name="yay" type="AudioStreamPlayer" parent="." unique_id=1616871238]
+stream = ExtResource("3_opebo")
+volume_db = -8.0
+pitch_scale = 1.5

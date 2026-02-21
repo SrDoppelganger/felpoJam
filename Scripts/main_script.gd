@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var score: Label = $HUD/Score
 @onready var targetNode = get_tree().get_first_node_in_group("alvos");
+@onready var label_carimbado: Label = $HUD/label_carimbado
 
 var stamped: int = 0;
 @onready var spawn_rate: Timer = $SpawnRate
@@ -34,3 +35,9 @@ func _on_spawn_rate_timeout() -> void:
 		spawn_arquivos();
 	else:
 		spawn_rate.stop();
+		victory();
+
+func victory():
+	label_carimbado.visible = true;
+	GlobalScript.playEffect("yay");
+	#carregar próxima cena aq
