@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://du533ibx0tpy"]
+
+[ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="1_mv1it"]
+[ext_resource type="Script" uid="uid://ddocr0sfuqgu5" path="res://Scripts/carimberto.gd" id="1_xtju1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtju1"]
+atlas = ExtResource("1_mv1it")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7iy5p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtju1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtyv3"]
+size = Vector2(127, 127)
+
+[node name="Carimberto" type="CharacterBody2D" unique_id=1950335021]
+script = ExtResource("1_xtju1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=822739395]
+sprite_frames = SubResource("SpriteFrames_7iy5p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1215802003]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_vtyv3")

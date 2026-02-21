@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://4q5kr72j86i8"]
+
+[ext_resource type="Texture2D" uid="uid://gv4xlud5wu28" path="res://assets/graficos/placeholder_office.jpg" id="1_iuq1m"]
+[ext_resource type="PackedScene" uid="uid://du533ibx0tpy" path="res://scenes/carimberto.tscn" id="2_vhvgg"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vhvgg"]
+a = Vector2(611, -178)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xwucd"]
+a = Vector2(1109, -92)
+b = Vector2(610, -177)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vhvgg"]
+distance = -78.0
+
+[node name="Recepcao" type="Node2D" unique_id=1048078418]
+
+[node name="fundo" type="TextureRect" parent="." unique_id=680776008]
+offset_left = -1.9999999
+offset_top = -107.99999
+offset_right = 5762.9995
+offset_bottom = 3677.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_iuq1m")
+
+[node name="Carimberto" parent="." unique_id=1950335021 instance=ExtResource("2_vhvgg")]
+position = Vector2(957, 547)
+scale = Vector2(0.8, 0.8)
+
+[node name="parede" type="StaticBody2D" parent="." unique_id=915809964]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parede" unique_id=195964245]
+position = Vector2(-1, 565)
+shape = SubResource("SegmentShape2D_vhvgg")
+
+[node name="parede2" type="StaticBody2D" parent="." unique_id=645324290]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parede2" unique_id=879404915]
+position = Vector2(-1, 565)
+shape = SubResource("SegmentShape2D_xwucd")
+
+[node name="parede3" type="StaticBody2D" parent="." unique_id=1039944694]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parede3" unique_id=831706940]
+position = Vector2(-1, 565)
+shape = SubResource("WorldBoundaryShape2D_vhvgg")
