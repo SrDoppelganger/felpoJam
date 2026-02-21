@@ -1,29 +1,33 @@
 [gd_scene format=3 uid="uid://drlq86n82qobf"]
 
-[ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://dbsp6g3y8xy15" path="res://Scripts/main_script.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://n48nsxsa7eks" path="res://scenes/arquivo.tscn" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://cwsf6ho3drdxu" path="res://assets/graficos/mesa.jpg" id="2_sugp2"]
 
-[node name="Main" type="Node2D" unique_id=1887363783]
-position = Vector2(0, -1)
+[sub_resource type="Curve2D" id="Curve2D_sugp2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -49, 161, 0, 0, 0, 0, -49, 674, 0, 0, 0, 0, 1172, 677, 0, 0, 0, 0, 1172, 166)
+}
+point_count = 4
+
+[node name="minigame1" type="Node2D" unique_id=1887363783]
 script = ExtResource("1_sugp2")
 
 [node name="background" type="Sprite2D" parent="." unique_id=1865942434]
 position = Vector2(570, 313.5)
-scale = Vector2(9.140625, 5.210937)
-texture = ExtResource("1_o5qli")
+texture = ExtResource("2_sugp2")
 
 [node name="Arquivo" parent="." unique_id=461140739 instance=ExtResource("2_0wfyh")]
-position = Vector2(-73, 169)
+position = Vector2(-73, 239)
 
 [node name="Arquivo2" parent="." unique_id=773203964 instance=ExtResource("2_0wfyh")]
-position = Vector2(-71, 468)
+position = Vector2(-76, 473)
 
 [node name="Arquivo3" parent="." unique_id=212833661 instance=ExtResource("2_0wfyh")]
-position = Vector2(1226, 495)
+position = Vector2(1229, 466)
 
 [node name="Arquivo4" parent="." unique_id=1974708007 instance=ExtResource("2_0wfyh")]
-position = Vector2(1222, 197)
+position = Vector2(1225, 257)
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=481338847]
 
@@ -36,3 +40,8 @@ theme_override_font_sizes/font_size = 32
 text = "PONTOS: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SpawnRate" type="Timer" parent="." unique_id=186831771]
+
+[node name="Path2D" type="Path2D" parent="." unique_id=222826848]
+curve = SubResource("Curve2D_sugp2")

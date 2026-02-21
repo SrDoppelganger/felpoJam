@@ -13,3 +13,6 @@ func _process(delta: float) -> void:
 	var mouseLocation = get_global_mouse_position();
 	if Input.is_action_just_pressed("click"):
 		print(mouseLocation);
+
+func spawn_arquivos():
+	pass

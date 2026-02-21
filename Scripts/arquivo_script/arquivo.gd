@@ -1,10 +1,14 @@
 extends Node2D
 @onready var area_2d: Area2D = $Area2D
+@onready var sprite: AnimatedSprite2D = $Area2D/Sprite2D
 
 const SPEED = 1;
 var velocity: Vector2;
 var target_position: Vector2;
 var spawn_position: Vector2;
+
+#var para mudar sprites
+var carimbado:bool = false
 
 #deixando como var global para acessar no timeout
 var target_x;
@@ -18,8 +22,11 @@ func _ready() -> void:
 	target_position = Vector2(target_x, target_y);
 	
 func _process(delta: float) -> void:
-	velocity = (target_position - position) * SPEED * delta
-	translate(velocity)
+	if !carimbado:
+		velocity = (target_position - position) * SPEED * delta
+		translate(velocity)
+	else:
+		pass
 	
 
 func _on_area_2d_mouse_entered() -> void:
@@ -33,11 +40,14 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		if event.pressed:
 			GlobalScript.playEffect("stamp");
 			GlobalScript.addScore();
-			queue_free();
+			sprite.play("stamped");
+			carimbado = true;
 
 # Faz o arquivo sair da mesa
 func _on_timer_timeout() -> void:
-	var x = target_x
-	var y = randi_range(900, 1000);
-	
-	target_position = Vector2(x,y);
+	if !carimbado:
+		var x = target_x
+		var y = randi_range(900, 1000);
+		target_position = Vector2(x,y);
+	else:
+		pass
