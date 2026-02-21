@@ -9,6 +9,8 @@ _data = {
 }
 point_count = 4
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sugp2"]
+
 [node name="minigame1" type="Node2D" unique_id=1887363783]
 script = ExtResource("1_sugp2")
 
@@ -20,14 +22,26 @@ texture = ExtResource("2_sugp2")
 [node name="HUD" type="CanvasLayer" parent="." unique_id=481338847]
 
 [node name="Score" type="Label" parent="HUD" unique_id=1102985674]
-offset_left = 480.0
-offset_top = 4.0
-offset_right = 647.0
-offset_bottom = 59.0
+offset_right = 180.0
+offset_bottom = 55.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "PONTOS: 0"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tentativas" type="Label" parent="HUD" unique_id=1236637179]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -212.0
+offset_right = -13.0
+offset_bottom = 55.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "tentativas: 0 "
+horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="label_carimbado" type="Label" parent="HUD" unique_id=569636448]
@@ -76,4 +90,14 @@ unique_name_in_owner = true
 position = Vector2(-47, 236)
 rotation = 1.5753626
 
+[node name="killzone" type="Area2D" parent="." unique_id=1236583345]
+position = Vector2(0, 900)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=1130310303]
+shape = SubResource("WorldBoundaryShape2D_sugp2")
+
+[node name="alvos" type="Node2D" parent="." unique_id=1409602330 groups=["alvos"]]
+
 [connection signal="timeout" from="SpawnRate" to="." method="_on_spawn_rate_timeout"]
+[connection signal="area_entered" from="killzone" to="." method="_on_killzone_area_entered"]

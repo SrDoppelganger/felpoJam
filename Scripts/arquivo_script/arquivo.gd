@@ -16,7 +16,7 @@ var target_y;
 
 func _ready() -> void:
 	target_x = randi_range(200, 1000);
-	target_y = randi_range(150, 500);
+	target_y = randi_range(150, 300);
 	spawn_position = position;
 	
 	target_position = Vector2(target_x, target_y);
