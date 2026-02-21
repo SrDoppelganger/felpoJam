@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://n48nsxsa7eks" path="res://scenes/arquivo.tscn" id="2_0wfyh"]
 
 [node name="Main" type="Node2D" unique_id=1887363783]
+position = Vector2(0, -1)
 script = ExtResource("1_sugp2")
 
 [node name="background" type="Sprite2D" parent="." unique_id=1865942434]
@@ -13,16 +14,16 @@ scale = Vector2(9.140625, 5.210937)
 texture = ExtResource("1_o5qli")
 
 [node name="Arquivo" parent="." unique_id=461140739 instance=ExtResource("2_0wfyh")]
-position = Vector2(179, 322)
+position = Vector2(-73, 169)
 
 [node name="Arquivo2" parent="." unique_id=773203964 instance=ExtResource("2_0wfyh")]
-position = Vector2(327, 478)
+position = Vector2(-71, 468)
 
 [node name="Arquivo3" parent="." unique_id=212833661 instance=ExtResource("2_0wfyh")]
-position = Vector2(651, 493)
+position = Vector2(1226, 495)
 
 [node name="Arquivo4" parent="." unique_id=1974708007 instance=ExtResource("2_0wfyh")]
-position = Vector2(897, 338)
+position = Vector2(1222, 197)
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=481338847]
 

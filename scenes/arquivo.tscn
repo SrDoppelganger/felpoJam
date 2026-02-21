@@ -22,6 +22,11 @@ shape = SubResource("RectangleShape2D_1tye2")
 [node name="carimbado" type="AudioStreamPlayer" parent="." unique_id=1354186167]
 stream = ExtResource("3_mlcnj")
 
+[node name="Timer" type="Timer" parent="." unique_id=2012205883]
+wait_time = 1.5
+autostart = true
+
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
