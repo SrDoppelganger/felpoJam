@@ -3,9 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="1_5x8cv"]
 [ext_resource type="Script" uid="uid://duviyq537juva" path="res://scenes/puzzles/camera_2d.gd" id="1_g7d6w"]
 [ext_resource type="Script" uid="uid://bu8f76pedbwrj" path="res://scenes/puzzles/player.gd" id="1_xwlxd"]
+[ext_resource type="Script" uid="uid://o0eu1xd7srtt" path="res://scenes/puzzles/collision_shape_2d.gd" id="4_kq1wg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8cv"]
 size = Vector2(129, 131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxo82"]
+size = Vector2(144, 136.75)
 
 [node name="RecFacial" type="Node2D" unique_id=664167835]
 
@@ -17,10 +21,30 @@ script = ExtResource("1_g7d6w")
 position = Vector2(113, 70)
 script = ExtResource("1_xwlxd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=575606354]
-position = Vector2(-0.5, 0.5)
-shape = SubResource("RectangleShape2D_5x8cv")
-
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1023955504]
 position = Vector2(-1, 0)
 texture = ExtResource("1_5x8cv")
+
+[node name="Area2D" type="Area2D" parent="Player" unique_id=1714655306]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D" unique_id=575606354]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_5x8cv")
+
+[node name="Reconhecimento" type="Area2D" parent="." unique_id=1141865214 groups=["reconhecimento"]]
+position = Vector2(327, 112)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reconhecimento" unique_id=776589468]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_jxo82")
+debug_color = Color(0.8595056, 0.0006771034, 0.8755232, 0.92156863)
+script = ExtResource("4_kq1wg")
+
+[node name="ColorRect" type="ColorRect" parent="Reconhecimento" unique_id=1867566333]
+offset_left = -74.0
+offset_top = -68.0
+offset_right = 70.0
+offset_bottom = 69.0
+color = Color(1, 0, 1, 1)
+
+[connection signal="area_entered" from="Player/Area2D" to="Reconhecimento/CollisionShape2D" method="_on_area_2d_area_entered"]
