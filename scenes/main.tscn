@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://drlq86n82qobf"]
 
 [ext_resource type="Script" uid="uid://dbsp6g3y8xy15" path="res://Scripts/main_script.gd" id="1_sugp2"]
-[ext_resource type="PackedScene" uid="uid://n48nsxsa7eks" path="res://scenes/arquivo.tscn" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://cwsf6ho3drdxu" path="res://assets/graficos/mesa.jpg" id="2_sugp2"]
 
 [sub_resource type="Curve2D" id="Curve2D_sugp2"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -49, 161, 0, 0, 0, 0, -49, 674, 0, 0, 0, 0, 1172, 677, 0, 0, 0, 0, 1172, 166)
+"points": PackedVector2Array(0, 0, 0, 0, -47, 236, 0, 0, 0, 0, -49, 674, 0, 0, 0, 0, 1172, 677, 0, 0, 0, 0, 1170, 234)
 }
 point_count = 4
 
@@ -14,20 +13,9 @@ point_count = 4
 script = ExtResource("1_sugp2")
 
 [node name="background" type="Sprite2D" parent="." unique_id=1865942434]
-position = Vector2(570, 313.5)
+position = Vector2(573, 319.75)
+scale = Vector2(1.0052084, 1.0192901)
 texture = ExtResource("2_sugp2")
-
-[node name="Arquivo" parent="." unique_id=461140739 instance=ExtResource("2_0wfyh")]
-position = Vector2(-73, 239)
-
-[node name="Arquivo2" parent="." unique_id=773203964 instance=ExtResource("2_0wfyh")]
-position = Vector2(-76, 473)
-
-[node name="Arquivo3" parent="." unique_id=212833661 instance=ExtResource("2_0wfyh")]
-position = Vector2(1229, 466)
-
-[node name="Arquivo4" parent="." unique_id=1974708007 instance=ExtResource("2_0wfyh")]
-position = Vector2(1225, 257)
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=481338847]
 
@@ -36,12 +24,22 @@ offset_left = 480.0
 offset_top = 4.0
 offset_right = 647.0
 offset_bottom = 59.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "PONTOS: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SpawnRate" type="Timer" parent="." unique_id=186831771]
+wait_time = 0.5
+autostart = true
 
-[node name="Path2D" type="Path2D" parent="." unique_id=222826848]
+[node name="Path2D" type="Path2D" parent="." unique_id=222826848 groups=["alvos"]]
 curve = SubResource("Curve2D_sugp2")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1713107892]
+unique_name_in_owner = true
+position = Vector2(-47, 236)
+rotation = 1.5753626
+
+[connection signal="timeout" from="SpawnRate" to="." method="_on_spawn_rate_timeout"]

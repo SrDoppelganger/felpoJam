@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 GlobalScript="*uid://bwbn45ld7r5hk"
 
+[global_group]
+
+target_arquivo="alvos do minigame de railshooter"
+
 [input]
 
 click={
