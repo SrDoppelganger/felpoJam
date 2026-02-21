@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gv4xlud5wu28"
-path="res://.godot/imported/placeholder_office.jpg-5429215241ce73e5ca529dbae787e2bc.ctex"
+uid="uid://dbsg8f16vrjdo"
+path="res://.godot/imported/office_placeholder.jpg-3a90fc0506954e291dcc21fda4e95dfd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graficos/placeholder_office.jpg"
-dest_files=["res://.godot/imported/placeholder_office.jpg-5429215241ce73e5ca529dbae787e2bc.ctex"]
+source_file="res://assets/graficos/office_placeholder.jpg"
+dest_files=["res://.godot/imported/office_placeholder.jpg-3a90fc0506954e291dcc21fda4e95dfd.ctex"]
 
 [params]
 
