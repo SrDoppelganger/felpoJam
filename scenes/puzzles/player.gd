@@ -36,6 +36,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func _process(delta: float) -> void:
-	if (random - scale.x) < 0.2:
-		if (scale.x - random) < 0.2:
-			print("YAY")
+	if (random - scale.x) < 0.2 and (scale.x - random) < 0.2:
+		print("YAY")
+	else:
+		if (random - scale.x) < 0.2:
+			print("Se afaste da camera")
+		else:
+			print("Se aproxime da camera")
