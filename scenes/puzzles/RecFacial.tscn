@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bv587mayvg842"]
 
 [ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="1_5x8cv"]
-[ext_resource type="Script" uid="uid://duviyq537juva" path="res://scenes/puzzles/camera_2d.gd" id="1_g7d6w"]
 [ext_resource type="Script" uid="uid://bu8f76pedbwrj" path="res://scenes/puzzles/player.gd" id="1_xwlxd"]
 [ext_resource type="Script" uid="uid://o0eu1xd7srtt" path="res://scenes/puzzles/collision_shape_2d.gd" id="4_kq1wg"]
 
@@ -12,10 +11,6 @@ size = Vector2(129, 131)
 size = Vector2(144, 136.75)
 
 [node name="RecFacial" type="Node2D" unique_id=664167835]
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=466120839]
-position = Vector2(113, 70)
-script = ExtResource("1_g7d6w")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1012888952]
 position = Vector2(113, 70)
@@ -40,11 +35,11 @@ shape = SubResource("RectangleShape2D_jxo82")
 debug_color = Color(0.8595056, 0.0006771034, 0.8755232, 0.92156863)
 script = ExtResource("4_kq1wg")
 
-[node name="ColorRect" type="ColorRect" parent="Reconhecimento" unique_id=1867566333]
-offset_left = -74.0
-offset_top = -68.0
-offset_right = 70.0
-offset_bottom = 69.0
+[node name="ColorRect" type="ColorRect" parent="Reconhecimento/CollisionShape2D" unique_id=1867566333]
+offset_left = -73.0
+offset_top = -69.0
+offset_right = 71.0
+offset_bottom = 68.0
 color = Color(1, 0, 1, 1)
 
 [connection signal="area_entered" from="Player/Area2D" to="Reconhecimento/CollisionShape2D" method="_on_area_2d_area_entered"]
