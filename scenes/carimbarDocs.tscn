@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://drlq86n82qobf"]
 
-[ext_resource type="Script" uid="uid://dbsp6g3y8xy15" path="res://Scripts/main_script.gd" id="1_sugp2"]
-[ext_resource type="Texture2D" uid="uid://cwsf6ho3drdxu" path="res://assets/graficos/mesa.jpg" id="2_sugp2"]
+[ext_resource type="Script" uid="uid://dbsp6g3y8xy15" path="res://Scripts/main_script.gd" id="1_5vrnw"]
+[ext_resource type="Texture2D" uid="uid://cwsf6ho3drdxu" path="res://assets/graficos/mesa.jpg" id="2_o5xnr"]
 
 [sub_resource type="Curve2D" id="Curve2D_sugp2"]
 _data = {
@@ -12,12 +12,12 @@ point_count = 4
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sugp2"]
 
 [node name="minigame1" type="Node2D" unique_id=1887363783]
-script = ExtResource("1_sugp2")
+script = ExtResource("1_5vrnw")
 
 [node name="background" type="Sprite2D" parent="." unique_id=1865942434]
 position = Vector2(573, 319.75)
 scale = Vector2(1.0052084, 1.0192901)
-texture = ExtResource("2_sugp2")
+texture = ExtResource("2_o5xnr")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=481338847]
 
