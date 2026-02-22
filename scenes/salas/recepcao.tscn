@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dbsg8f16vrjdo" path="res://assets/graficos/office_placeholder.jpg" id="1_vhvgg"]
 [ext_resource type="PackedScene" uid="uid://du533ibx0tpy" path="res://scenes/carimberto.tscn" id="2_vhvgg"]
+[ext_resource type="PackedScene" uid="uid://deofm5od5e231" path="res://scenes/npc.tscn" id="3_xwucd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhvgg"]
 size = Vector2(503, 647)
@@ -12,12 +13,9 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(
 outlines = Array[PackedVector2Array]([PackedVector2Array(80, 640, 552, 576, 528, 320, 864, 320, 1152, 448, 1152, 648)])
 agent_radius = 5.0
 
-[node name="Recepcao" type="Control" unique_id=536199503]
-layout_mode = 3
-anchors_preset = 0
+[node name="Recepcao" type="Node2D" unique_id=2110439475]
 
 [node name="fundo" type="TextureRect" parent="." unique_id=680776008]
-layout_mode = 0
 offset_left = -1.9999999
 offset_top = -107.99999
 offset_right = 5762.9995
@@ -25,7 +23,10 @@ offset_bottom = 3677.0
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_vhvgg")
 
-[node name="Carimberto" parent="." unique_id=1950335021 instance=ExtResource("2_vhvgg")]
+[node name="NPC" parent="." unique_id=714093445 instance=ExtResource("3_xwucd")]
+position = Vector2(688, 456)
+
+[node name="Carimberto" parent="." unique_id=1950335021 groups=["player"] instance=ExtResource("2_vhvgg")]
 position = Vector2(957, 547)
 scale = Vector2(0.8, 0.8)
 

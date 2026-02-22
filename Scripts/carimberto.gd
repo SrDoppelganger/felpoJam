@@ -8,7 +8,7 @@ func _ready() -> void:
 	$NavigationAgent2D.target_position = position
 
 func _input(event):
-	if event.is_action_pressed("click"):
+	if event.is_action_pressed("click") and !GlobalScript.speaking:
 		$NavigationAgent2D.target_position = get_global_mouse_position();
 
 func _physics_process(delta: float) -> void:	
@@ -17,3 +17,5 @@ func _physics_process(delta: float) -> void:
 		var nav_direction = to_local($NavigationAgent2D.get_next_path_position()).normalized();
 		velocity = nav_direction * SPEED * delta
 		move_and_slide()
+	if GlobalScript.speaking:
+		$NavigationAgent2D.target_position = position;
