@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://2qkgkt8x6hxm" path="res://Scripts/global_script.gd" id="1_4pk28"]
 [ext_resource type="AudioStream" uid="uid://dbr24nivwhwlc" path="res://assets/sons/stamp.ogg" id="2_nmxvb"]
 [ext_resource type="AudioStream" uid="uid://5gjwqegcx7fw" path="res://assets/sons/yay.ogg" id="3_opebo"]
+[ext_resource type="AudioStream" uid="uid://bdu2sbycqftxr" path="res://assets/sons/musica_placeholder.ogg" id="4_m3l3d"]
 
 [node name="GlobalScript" type="Node" unique_id=1088285404]
 script = ExtResource("1_4pk28")
@@ -14,3 +15,9 @@ stream = ExtResource("2_nmxvb")
 stream = ExtResource("3_opebo")
 volume_db = -8.0
 pitch_scale = 1.5
+
+[node name="Musgas" type="Node" parent="." unique_id=1005388058]
+
+[node name="placeholder" type="AudioStreamPlayer" parent="Musgas" unique_id=2040686557]
+stream = ExtResource("4_m3l3d")
+bus = &"Musica"

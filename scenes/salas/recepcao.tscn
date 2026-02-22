@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dbsg8f16vrjdo" path="res://assets/graficos/office_placeholder.jpg" id="1_vhvgg"]
 [ext_resource type="PackedScene" uid="uid://du533ibx0tpy" path="res://scenes/carimberto.tscn" id="2_vhvgg"]
 [ext_resource type="PackedScene" uid="uid://deofm5od5e231" path="res://scenes/npc.tscn" id="3_xwucd"]
+[ext_resource type="PackedScene" uid="uid://ocjvpc0gyhiu" path="res://scenes/menus/PauseMenu.tscn" id="4_tifur"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhvgg"]
 size = Vector2(503, 647)
@@ -39,3 +40,8 @@ shape = SubResource("RectangleShape2D_vhvgg")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=859639164]
 navigation_polygon = SubResource("NavigationPolygon_vhvgg")
+
+[node name="menus" type="CanvasLayer" parent="." unique_id=177444791]
+
+[node name="PauseMenu" parent="menus" unique_id=1992423139 instance=ExtResource("4_tifur")]
+visible = false

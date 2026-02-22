@@ -9,7 +9,14 @@ var score: int = 0;
 # Caso necessário, add param. de valor para pontuações diferentes
 func addScore():
 	score += 1;
-	
+
+func playMusic(track):
+	match track:
+		"placeholder":
+			$Musgas/placeholder.play();
+		"yay":
+			yay.play();
+
 func playEffect(sound):
 	match sound:
 		"stamp":

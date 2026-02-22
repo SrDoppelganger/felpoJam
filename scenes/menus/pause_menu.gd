@@ -9,9 +9,7 @@ func _process(delta: float) -> void:
 
 func resume():
 	get_tree().paused = false
-	print(get_tree().paused)
 	hide()
-
 
 
 func pause():
@@ -29,4 +27,5 @@ func _on_resumir_button_down() -> void:
 	resume()
 
 func _on_menu_principal_button_down() -> void:
-	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/menus/MainMenu.tscn");

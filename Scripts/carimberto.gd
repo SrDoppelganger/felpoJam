@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
-
-const SPEED = 8000.0
+const SPEED = 9000.0
 var target = position;
 
 func _ready() -> void:
