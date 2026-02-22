@@ -1,8 +1,18 @@
 extends CollisionShape2D
 
-func _ready() -> void:
-	position.x = randf_range(-250, 750)
-	position.y = randf_range(-43, 648)
+@export var isColliding = false
 
-func _on_area_2d_area_entered(_area: Area2D) -> void:
-	print("colidiu")
+func _ready() -> void:
+	randomArea()
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	isColliding = true
+	
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	isColliding = false
+
+func randomArea() -> void:
+	position.x = randf_range(-250, 750)
+
+func _on_rec_facial_retried() -> void:
+	randomArea()
