@@ -12,6 +12,19 @@ size = Vector2(144, 136.75)
 
 [node name="RecFacial" type="Node2D" unique_id=664167835]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1924819972]
+
+[node name="instrucao" type="Label" parent="CanvasLayer" unique_id=215616260]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "comando"
+
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1012888952]
 position = Vector2(113, 70)
 script = ExtResource("1_xwlxd")

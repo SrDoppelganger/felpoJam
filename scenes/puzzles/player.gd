@@ -3,6 +3,9 @@ extends CharacterBody2D
 const SPEED = 600
 const STOP_DISTANCE = 10   # pixels
 
+#label com instrução pro jogador
+@onready var instrucao: Label = $"../CanvasLayer/instrucao"
+
 # ZOOM
 @export var min_zoom: Vector2 = Vector2(0.4, 0.4)
 @export var max_zoom: Vector2 = Vector2(2, 2)
@@ -23,7 +26,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			if scale < max_zoom:
 				scale += zoom_speed
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var mouse_position = get_global_mouse_position()
 	var distance = position.distance_to(mouse_position)
 
@@ -38,8 +41,11 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	if (random - scale.x) < 0.2 and (scale.x - random) < 0.2:
 		print("YAY")
+		instrucao.text = "Scaneando, não se mexa";
 	else:
 		if (random - scale.x) < 0.2:
 			print("Se afaste da camera")
+			instrucao.text = "Se afaste de camera";
 		else:
 			print("Se aproxime da camera")
+			instrucao.text = "Se aproxime da camera";

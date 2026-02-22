@@ -3,3 +3,4 @@ set GlobalScript.speaking = true
 carimberto: [wave]meooooow[/wave]
 void do abismo infinito no escritório: ...
 set GlobalScript.speaking = false
+do get_tree().change_scene_to_file("res://scenes/carimbarDocs.tscn")
