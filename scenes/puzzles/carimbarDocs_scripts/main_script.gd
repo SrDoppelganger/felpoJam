@@ -35,7 +35,7 @@ func _process(_delta: float) -> void:
 
 func spawn_arquivos():
 	var spawn_pos = %PathFollow2D.global_position;
-	var novo_arq = preload("res://scenes/arquivo.tscn").instantiate();
+	var novo_arq = preload("res://scenes/puzzles/carimbarDocs_scripts/arquivo.tscn").instantiate();
 	#randomiza ponto de spawn
 	%PathFollow2D.progress_ratio = randf();
 	novo_arq.global_position = spawn_pos;

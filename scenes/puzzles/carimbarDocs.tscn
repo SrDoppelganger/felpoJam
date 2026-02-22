@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drlq86n82qobf"]
 
-[ext_resource type="Script" uid="uid://dbsp6g3y8xy15" path="res://Scripts/main_script.gd" id="1_5vrnw"]
+[ext_resource type="Script" uid="uid://dbsp6g3y8xy15" path="res://scenes/puzzles/carimbarDocs_scripts/main_script.gd" id="1_5vrnw"]
 [ext_resource type="Texture2D" uid="uid://cwsf6ho3drdxu" path="res://assets/graficos/mesa.jpg" id="2_o5xnr"]
 
 [sub_resource type="Curve2D" id="Curve2D_sugp2"]

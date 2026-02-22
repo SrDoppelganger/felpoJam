@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bv587mayvg842"]
 
 [ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="1_5x8cv"]
-[ext_resource type="Script" uid="uid://bu8f76pedbwrj" path="res://scenes/puzzles/player.gd" id="1_xwlxd"]
-[ext_resource type="Script" uid="uid://o0eu1xd7srtt" path="res://scenes/puzzles/collision_shape_2d.gd" id="4_kq1wg"]
+[ext_resource type="Script" uid="uid://bu8f76pedbwrj" path="res://scenes/puzzles/RecFacial_scripts/player.gd" id="1_xwlxd"]
+[ext_resource type="Script" uid="uid://o0eu1xd7srtt" path="res://scenes/puzzles/RecFacial_scripts/collision_shape_2d.gd" id="4_kq1wg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8cv"]
 size = Vector2(129, 131)
@@ -49,6 +49,7 @@ debug_color = Color(0.8595056, 0.0006771034, 0.8755232, 0.92156863)
 script = ExtResource("4_kq1wg")
 
 [node name="ColorRect" type="ColorRect" parent="Reconhecimento/CollisionShape2D" unique_id=1867566333]
+visible = false
 offset_left = -73.0
 offset_top = -69.0
 offset_right = 71.0

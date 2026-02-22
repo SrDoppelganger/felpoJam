@@ -38,14 +38,11 @@ func _physics_process(_delta: float) -> void:
 
 	move_and_slide()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (random - scale.x) < 0.2 and (scale.x - random) < 0.2:
-		print("YAY")
 		instrucao.text = "Scaneando, não se mexa";
 	else:
 		if (random - scale.x) < 0.2:
-			print("Se afaste da camera")
 			instrucao.text = "Se afaste de camera";
 		else:
-			print("Se aproxime da camera")
 			instrucao.text = "Se aproxime da camera";

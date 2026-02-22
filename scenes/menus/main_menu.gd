@@ -14,7 +14,7 @@ extends Control
 
 
 func _on_jogar_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	get_tree().change_scene_to_file("res://scenes/salas/recepcao.tscn")
 
 
 func _on_fechar_pressed() -> void:

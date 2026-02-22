@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://n48nsxsa7eks"]
 
-[ext_resource type="Script" uid="uid://bsg3xqo2uos81" path="res://Scripts/arquivo_script/arquivo.gd" id="1_1tye2"]
+[ext_resource type="Script" uid="uid://bsg3xqo2uos81" path="res://scenes/puzzles/carimbarDocs_scripts/arquivo.gd" id="1_1tye2"]
 [ext_resource type="Texture2D" uid="uid://cnt0b0xpcyabw" path="res://assets/graficos/arq_placeholder.png" id="2_mlcnj"]
 [ext_resource type="Texture2D" uid="uid://3v1pjefx57de" path="res://assets/graficos/arq_stamped_placeholder.png" id="3_j8r0s"]
 [ext_resource type="AudioStream" uid="uid://dbr24nivwhwlc" path="res://assets/sons/stamp.ogg" id="3_mlcnj"]
