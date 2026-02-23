@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 GlobalScript="*uid://bwbn45ld7r5hk"
 DialogueManager="*uid://c3rodes2l3gxb"
 
+[dialogue_manager]
+
+runtime/balloon_path="res://scenes/balloon.tscn"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
@@ -44,7 +48,7 @@ esc={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Scripts/dialogues/test.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Scripts/dialogues/test.dialogue", "res://Scripts/dialogues/Mirtilanna.dialogue")
 
 [layer_names]
 

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://5bw2guen7net"]
 
+[ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="1_ldf1p"]
 [ext_resource type="Script" uid="uid://bn5sx1yc2j8m1" path="res://scenes/menus/main_menu.gd" id="1_yqorp"]
 [ext_resource type="Texture2D" uid="uid://cp6asqfacgvxi" path="res://assets/graficos/placeholder_title.jpeg" id="2_bqojv"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ldf1p")
 script = ExtResource("1_yqorp")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=48166627]

@@ -3,6 +3,8 @@ extends Node2D
 @export_enum("godot") var animation:String;
 @onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+
+#LEMBRETE: ADD AREA2D PARA TODA INSTANCIA DE NPC
 #recebe o caminho para o arquivo de dialogo do plugin
 @export_dir var dialogue_path;
 var dialog;
