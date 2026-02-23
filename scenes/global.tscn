@@ -10,11 +10,13 @@ script = ExtResource("1_4pk28")
 
 [node name="carimbado" type="AudioStreamPlayer" parent="." unique_id=1725095165]
 stream = ExtResource("2_nmxvb")
+bus = &"Efeitos"
 
 [node name="yay" type="AudioStreamPlayer" parent="." unique_id=1616871238]
 stream = ExtResource("3_opebo")
 volume_db = -8.0
 pitch_scale = 1.5
+bus = &"Efeitos"
 
 [node name="Musgas" type="Node" parent="." unique_id=1005388058]
 
