@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://5bw2guen7net"]
 
 [ext_resource type="Script" uid="uid://bn5sx1yc2j8m1" path="res://scenes/menus/main_menu.gd" id="1_yqorp"]
+[ext_resource type="Texture2D" uid="uid://cp6asqfacgvxi" path="res://assets/graficos/placeholder_title.jpeg" id="2_bqojv"]
 
 [node name="MainMenu" type="Control" unique_id=1217285510]
 layout_mode = 3
@@ -11,13 +12,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yqorp")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=48166627]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_bqojv")
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1786541762]
 process_mode = 3
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -172.0
+offset_right = 504.0
+offset_bottom = 116.0
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1817629713]
@@ -35,12 +44,12 @@ theme_override_constants/separation = 5
 alignment = 1
 
 [node name="Jogar" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=471867755]
-custom_minimum_size = Vector2(250, 60)
+custom_minimum_size = Vector2(350, 70)
 layout_mode = 2
 text = "Jogar"
 
 [node name="Fechar" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1385660992]
-custom_minimum_size = Vector2(150, 60)
+custom_minimum_size = Vector2(150, 70)
 layout_mode = 2
 text = "Fechar"
 

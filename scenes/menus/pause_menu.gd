@@ -1,5 +1,7 @@
 extends Control
 
+signal openConfig;
+
 func _ready():
 	hide()
 	print(get_tree().paused)
@@ -29,3 +31,11 @@ func _on_resumir_button_down() -> void:
 func _on_menu_principal_button_down() -> void:
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/menus/MainMenu.tscn");
+
+
+func _on_config_pressed() -> void:
+	openConfig.emit();
+	hide();
+
+func _on_config_open_pause() -> void:
+	show();

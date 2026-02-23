@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://du533ibx0tpy" path="res://scenes/carimberto.tscn" id="2_vhvgg"]
 [ext_resource type="PackedScene" uid="uid://deofm5od5e231" path="res://scenes/npc.tscn" id="3_xwucd"]
 [ext_resource type="PackedScene" uid="uid://ocjvpc0gyhiu" path="res://scenes/menus/PauseMenu.tscn" id="4_tifur"]
+[ext_resource type="PackedScene" uid="uid://bhkpy4mpr0pug" path="res://scenes/menus/config.tscn" id="5_pbcjn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhvgg"]
 size = Vector2(503, 647)
@@ -45,3 +46,10 @@ navigation_polygon = SubResource("NavigationPolygon_vhvgg")
 
 [node name="PauseMenu" parent="menus" unique_id=1992423139 instance=ExtResource("4_tifur")]
 visible = false
+
+[node name="Config" parent="menus" unique_id=1177158484 instance=ExtResource("5_pbcjn")]
+process_mode = 3
+visible = false
+
+[connection signal="openConfig" from="menus/PauseMenu" to="menus/Config" method="_on_pause_menu_open_config"]
+[connection signal="openPause" from="menus/Config" to="menus/PauseMenu" method="_on_config_open_pause"]

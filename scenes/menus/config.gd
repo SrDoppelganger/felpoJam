@@ -1,5 +1,6 @@
 extends Control
 
+signal openPause;
 func _ready() -> void:
 	GlobalScript.playMusic("placeholder");
 
@@ -23,4 +24,8 @@ func _on_mute_efeito_toggled(toggled_on: bool) -> void:
 
 
 func _on_button_pressed() -> void:
+	openPause.emit();
 	hide();
+
+func _on_pause_menu_open_config() -> void:
+	show();

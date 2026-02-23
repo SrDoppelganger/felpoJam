@@ -39,10 +39,16 @@ custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 text = "Resumir"
 
+[node name="Config" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=430726574]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+text = "Configurações"
+
 [node name="Menu Principal" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1830049335]
 custom_minimum_size = Vector2(150, 60)
 layout_mode = 2
 text = "Menu Principal"
 
 [connection signal="button_down" from="MarginContainer/HBoxContainer/VBoxContainer/Resumir" to="." method="_on_resumir_button_down"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Config" to="." method="_on_config_pressed"]
 [connection signal="button_down" from="MarginContainer/HBoxContainer/VBoxContainer/Menu Principal" to="." method="_on_menu_principal_button_down"]
