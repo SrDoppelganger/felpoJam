@@ -1,2 +1,5 @@
 ~ start
-Mirtilanna
+set GlobalScript.speaking = true
+if SceneHandler.scene == 'intro':
+	[color=#4f86f7]Mirtilanna[/color]: bleeeeeeh
+set GlobalScript.speaking = false

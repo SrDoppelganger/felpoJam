@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GlobalScript="*uid://bwbn45ld7r5hk"
 DialogueManager="*uid://c3rodes2l3gxb"
+SceneHandler="*uid://dnbacd30s3mhh"
 
 [dialogue_manager]
 
@@ -48,7 +49,7 @@ esc={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Scripts/dialogues/test.dialogue", "res://Scripts/dialogues/Mirtilanna.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Scripts/dialogues/test.dialogue", "res://Scripts/dialogues/Mirtilanna.dialogue", "res://Scripts/dialogues/intro.dialogue")
 
 [layer_names]
 

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 9000.0
 var target = position;
+var cutscene_state = GlobalScript.getCutscene();
 
 func _ready() -> void:
 	$NavigationAgent2D.target_position = position
@@ -17,4 +18,8 @@ func _physics_process(delta: float) -> void:
 		velocity = nav_direction * SPEED * delta
 		move_and_slide()
 	if GlobalScript.speaking:
+		$NavigationAgent2D.target_position = position;
+		
+	#para de mover o jogador em cutscenes
+	if cutscene_state:
 		$NavigationAgent2D.target_position = position;

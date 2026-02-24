@@ -1,21 +1,64 @@
 [gd_scene format=3 uid="uid://4q5kr72j86i8"]
 
+[ext_resource type="Script" uid="uid://b7fpcsomipuxj" path="res://Scripts/recepcao.gd" id="1_d3klu"]
 [ext_resource type="Texture2D" uid="uid://dql0olcj15rof" path="res://assets/graficos/recepcao_PLACEHOLDER.jpeg" id="1_w76ij"]
 [ext_resource type="PackedScene" uid="uid://du533ibx0tpy" path="res://scenes/carimberto.tscn" id="2_vhvgg"]
 [ext_resource type="PackedScene" uid="uid://deofm5od5e231" path="res://scenes/npc.tscn" id="3_xwucd"]
 [ext_resource type="PackedScene" uid="uid://ocjvpc0gyhiu" path="res://scenes/menus/PauseMenu.tscn" id="4_tifur"]
 [ext_resource type="PackedScene" uid="uid://bhkpy4mpr0pug" path="res://scenes/menus/config.tscn" id="5_pbcjn"]
 [ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="5_w76ij"]
+[ext_resource type="AudioStream" uid="uid://dt312hi2dw1rn" path="res://assets/sons/beep_placeholder.mp3" id="8_5boec"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w76ij"]
-size = Vector2(456, 112)
+size = Vector2(344, 96)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_w76ij"]
 vertices = PackedVector2Array(898.3594, 274, 1118.2734, 638, 9.78125, 638, 461.21875, 346.20313, 2.2265625, 298, 188.38281, 298, 236.21875, 337.8672, 509.35156, 274)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(2, 4, 5, 6), PackedInt32Array(3, 7, 0), PackedInt32Array(3, 2, 6)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-8, 288, 0, 648, 1136, 648, 904, 264, 504, 264, 456, 336, 240, 328, 192, 288)])
 
+[sub_resource type="Animation" id="Animation_w76ij"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Carimberto:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(488.00003, 712)]
+}
+
+[sub_resource type="Animation" id="Animation_d3klu"]
+resource_name = "intro"
+length = 1.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Carimberto:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(488.00003, 712), Vector2(336, 512)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5boec"]
+_data = {
+&"RESET": SubResource("Animation_w76ij"),
+&"intro": SubResource("Animation_d3klu")
+}
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_5boec"]
+points = PackedVector2Array(381, 164, 389, -180, 253, -324, -27, -140, 5, 156)
+
 [node name="Recepcao" type="Node2D" unique_id=2110439475]
+script = ExtResource("1_d3klu")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=491697739]
 anchors_preset = 15
@@ -29,20 +72,21 @@ texture = ExtResource("1_w76ij")
 
 [node name="NPC" parent="." unique_id=714093445 instance=ExtResource("3_xwucd")]
 position = Vector2(336, 320)
+dialogue_path = "res://Scripts/dialogues/Mirtilanna.dialogue"
 
 [node name="Area2D" type="Area2D" parent="NPC" unique_id=848317710]
 
 [node name="mirtilanna_talkrange" type="CollisionShape2D" parent="NPC/Area2D" unique_id=1720117717]
-visible = false
-position = Vector2(12, 48)
+position = Vector2(12, 40)
 shape = SubResource("RectangleShape2D_w76ij")
 debug_color = Color(0.94049126, 0.1889734, 0.40293947, 0.41960785)
 
 [node name="Carimberto" parent="." unique_id=1950335021 groups=["player"] instance=ExtResource("2_vhvgg")]
-position = Vector2(957, 547)
+position = Vector2(488.00003, 712)
 scale = Vector2(0.8, 0.8)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=859639164]
+visible = false
 navigation_polygon = SubResource("NavigationPolygon_w76ij")
 
 [node name="menus" type="CanvasLayer" parent="." unique_id=177444791]
@@ -56,8 +100,24 @@ process_mode = 3
 visible = false
 theme = ExtResource("5_w76ij")
 
+[node name="Intro_cutscene" type="AnimationPlayer" parent="." unique_id=1004921321]
+libraries/ = SubResource("AnimationLibrary_5boec")
+
+[node name="catraca" type="Area2D" parent="." unique_id=381151900]
+position = Vector2(760, 368)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="catraca" unique_id=1087337932]
+position = Vector2(11, 124)
+shape = SubResource("ConvexPolygonShape2D_5boec")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="catraca" unique_id=557503833]
+stream = ExtResource("8_5boec")
+bus = &"Efeitos"
+
 [connection signal="body_entered" from="NPC/Area2D" to="NPC" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="NPC/Area2D" to="NPC" method="_on_area_2d_body_exited"]
 [connection signal="input_event" from="NPC/Area2D" to="NPC" method="_on_area_2d_input_event"]
 [connection signal="openConfig" from="menus/PauseMenu" to="menus/Config" method="_on_pause_menu_open_config"]
 [connection signal="openPause" from="menus/Config" to="menus/PauseMenu" method="_on_config_open_pause"]
+[connection signal="animation_finished" from="Intro_cutscene" to="." method="_on_intro_cutscene_animation_finished"]
+[connection signal="body_entered" from="catraca" to="." method="_on_catraca_body_entered"]

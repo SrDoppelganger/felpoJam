@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dnbacd30s3mhh"]
+
+[ext_resource type="Script" uid="uid://bfuxlhp3om5np" path="res://SceneHandler.gd" id="1_djbia"]
+
+[node name="Node" type="Node" unique_id=1034799554]
+script = ExtResource("1_djbia")

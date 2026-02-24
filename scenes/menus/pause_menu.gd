@@ -4,9 +4,8 @@ signal openConfig;
 
 func _ready():
 	hide()
-	print(get_tree().paused)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	escPress()
 
 func resume():
@@ -16,7 +15,6 @@ func resume():
 
 func pause():
 	get_tree().paused = true
-	print(get_tree().paused)
 	show()
 
 func escPress():

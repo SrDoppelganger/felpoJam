@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cyjvjsjv0tp12"]
+
+[node name="Elevador" type="Node2D" unique_id=796784086]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=429703882]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1503896398]
