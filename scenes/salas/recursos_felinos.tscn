@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bfsxpx337myep"]
+
+[ext_resource type="Texture2D" uid="uid://gw1b4xi2h3ir" path="res://assets/graficos/rf_PLACEHOLDER.jpg" id="1_qa832"]
+
+[node name="RecursosFelinos" type="Node2D" unique_id=1282392397]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1650132799]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_right = 1160.0
+offset_bottom = 646.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qa832")
+expand_mode = 1

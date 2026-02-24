@@ -8,28 +8,21 @@ var minigame1:bool = false;
 var minigame2:bool = false;
 var minigame3:bool = false;
 
+var lastMinigame: String = "intro";
+
 func clearMinigame(scenario:String):
 	match scenario:
 		"minigame1":
-			intro = false;
 			minigame1 = true;
+			setLastMinigame("minigame1");
 		"minigame2":
-			intro = false;
-			minigame1 = false
 			minigame2 = true;
+			setLastMinigame("minigame2");
 		"minigame3":
-			intro = false;
-			minigame1 = false;
-			minigame2 = false;
 			minigame3 = true;
-	
-func getLastMinigame(minigame:String):
-	match minigame:
-		"intro":
-			return intro;
-		"minigame1":
-			return minigame1;
-		"minigame2":
-			return minigame2;
-		"minigame3":
-			return minigame3;
+			setLastMinigame("minigame3");
+
+func setLastMinigame(minigame):
+	lastMinigame = minigame;
+func getLastMinigame():
+	return lastMinigame;
