@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d1n0cgwvu2pr1"]
+
+[ext_resource type="Texture2D" uid="uid://dwk8ncu8dao07" path="res://assets/graficos/salaDoGato_PLACEHOLDER.jpg" id="1_cm18g"]
+
+[node name="SalaDoGato" type="Node2D" unique_id=972720894]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1695364616]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_cm18g")
+expand_mode = 1

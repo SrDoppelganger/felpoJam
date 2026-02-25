@@ -6,3 +6,4 @@ set GlobalScript.speaking = true
 [color=#4f86f7]Mirtilanna[/color]: Se precisar de qualquer coisa, pode me chamar no [color=25D366]GatoZap[/color]
 #revelar icone do gatophone na hud
 set GlobalScript.speaking = false
+set SceneHandler.lastMinigame = "intro"

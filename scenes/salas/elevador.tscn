@@ -43,6 +43,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "Para onde você quer ir?"
 
+[node name="Recepcao" type="Button" parent="Menu/VBoxContainer" unique_id=1052527023]
+layout_mode = 2
+theme = ExtResource("2_yhqp4")
+text = "Recepção"
+
 [node name="SalaDoGato" type="Button" parent="Menu/VBoxContainer" unique_id=1362070401]
 visible = false
 layout_mode = 2
@@ -69,6 +74,7 @@ text = "Sala  do  chefe"
 [node name="ding" type="AudioStreamPlayer" parent="Sons" unique_id=800395497]
 stream = ExtResource("4_f1svh")
 
+[connection signal="pressed" from="Menu/VBoxContainer/Recepcao" to="." method="_on_recepcao_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/SalaDoGato" to="." method="_on_sala_do_gato_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/RF" to="." method="_on_rf_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Gabinete" to="." method="_on_gabinete_pressed"]

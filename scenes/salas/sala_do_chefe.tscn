@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bthcfje4xhyqb"]
+
+[ext_resource type="Texture2D" uid="uid://dhrklkpw8wjjf" path="res://assets/graficos/salaDoChefe_PLACEHOLDER.jpg" id="1_3ce04"]
+
+[node name="salaDoChefe" type="Node2D" unique_id=397794215]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=920312004]
+offset_right = 1152.0
+offset_bottom = 640.0
+texture = ExtResource("1_3ce04")
+expand_mode = 1
