@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dbsp6g3y8xy15" path="res://scenes/puzzles/carimbarDocs_scripts/main_script.gd" id="1_5vrnw"]
 [ext_resource type="Texture2D" uid="uid://cwsf6ho3drdxu" path="res://assets/graficos/mesa.jpg" id="2_o5xnr"]
+[ext_resource type="Texture2D" uid="uid://pp5opj30xs1g" path="res://assets/graficos/bleh_PLACEHOLDER.png" id="3_6jben"]
+[ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="3_wlj5l"]
+[ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="4_2u2ia"]
+[ext_resource type="Texture2D" uid="uid://bs23ynxqclt82" path="res://assets/graficos/tinta_PLACEHOLDER.png" id="5_sxtb0"]
 
 [sub_resource type="Curve2D" id="Curve2D_sugp2"]
 _data = {
@@ -21,65 +25,74 @@ texture = ExtResource("2_o5xnr")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=481338847]
 
-[node name="Score" type="Label" parent="HUD" unique_id=1102985674]
-offset_right = 180.0
-offset_bottom = 55.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
-text = "PONTOS: 0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Tentativas" type="Label" parent="HUD" unique_id=1236637179]
+[node name="tentativasContainer" type="HBoxContainer" parent="HUD" unique_id=2052209992]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -212.0
-offset_right = -13.0
-offset_bottom = 55.0
+offset_left = -136.0
+offset_bottom = 80.0
 grow_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/tentativasContainer" unique_id=779143807]
+layout_mode = 2
+texture = ExtResource("3_6jben")
+expand_mode = 3
+
+[node name="Tentativas" type="Label" parent="HUD/tentativasContainer" unique_id=1236637179]
+layout_mode = 2
+theme = ExtResource("3_wlj5l")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
-text = "tentativas: 0 "
+theme_override_font_sizes/font_size = 48
+text = "0 "
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="label_carimbado" type="Label" parent="HUD" unique_id=569636448]
-visible = false
-anchors_preset = 8
+[node name="Score" type="Label" parent="HUD" unique_id=1102985674]
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.5
-offset_top = -11.5
-offset_right = 50.5
-offset_bottom = 11.5
+offset_left = -90.0
+offset_right = 90.0
+offset_bottom = 55.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 0.16078432, 0.30980393, 1)
-theme_override_font_sizes/font_size = 64
-text = "CARIMBADO!"
-
-[node name="carimbado_sublabel" type="Label" parent="HUD" unique_id=1370593201]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -314.0
-offset_top = 83.0
-offset_right = 310.0
-offset_bottom = 128.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 0.11764706, 0.22745098, 1)
+theme = ExtResource("3_wlj5l")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
-text = "clique em qualquer lugar para continuar"
+text = "PONTOS: 0000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tintaContainer" type="HBoxContainer" parent="HUD" unique_id=1041503598]
+offset_right = 160.0
+offset_bottom = 88.0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/tintaContainer" unique_id=1779891530]
+layout_mode = 2
+texture = ExtResource("5_sxtb0")
+expand_mode = 3
+
+[node name="Tinta" type="Label" parent="HUD/tintaContainer" unique_id=252620436]
+layout_mode = 2
+theme = ExtResource("3_wlj5l")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "5"
+
+[node name="tinta" type="TextureButton" parent="HUD" unique_id=436226890]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -176.0
+offset_top = -144.0
+offset_right = -48.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("4_2u2ia")
 
 [node name="SpawnRate" type="Timer" parent="." unique_id=186831771]
-wait_time = 0.5
 autostart = true
 
 [node name="Path2D" type="Path2D" parent="." unique_id=222826848 groups=["alvos"]]
@@ -99,5 +112,6 @@ shape = SubResource("WorldBoundaryShape2D_sugp2")
 
 [node name="alvos" type="Node2D" parent="." unique_id=1409602330 groups=["alvos"]]
 
+[connection signal="pressed" from="HUD/tinta" to="." method="_on_tinta_pressed"]
 [connection signal="timeout" from="SpawnRate" to="." method="_on_spawn_rate_timeout"]
 [connection signal="area_entered" from="killzone" to="." method="_on_killzone_area_entered"]

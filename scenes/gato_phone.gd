@@ -13,6 +13,5 @@ func _process(_delta:float) -> void:
 	texture_button.disabled = !GlobalScript.phone_enabled
 
 func _on_texture_button_pressed() -> void:
-	print("meow")
 	onFocus.emit();
 	DialogueManager.show_dialogue_balloon(dialog)

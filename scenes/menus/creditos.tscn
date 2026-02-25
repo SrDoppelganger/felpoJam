@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://d3nsfqnxfwa58"]
+
+[ext_resource type="Shader" uid="uid://ecgbcga2vg81" path="res://scenes/menus/creditos.gdshader" id="1_jk2nc"]
+[ext_resource type="Texture2D" uid="uid://cp2l4jw71ooqu" path="res://assets/graficos/Sem título.jpg" id="1_p0w84"]
+[ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="3_f6pr2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f6pr2"]
+shader = ExtResource("1_jk2nc")
+
+[node name="Creditos" type="Control" unique_id=1741456562]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=452935328]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_f6pr2")
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 656.0
+texture = ExtResource("1_p0w84")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=142010437]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.0
+offset_top = 8.0
+offset_right = 272.0
+offset_bottom = 124.0
+grow_horizontal = 2
+theme = ExtResource("3_f6pr2")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 16
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 72
+text = "CRÉDITOS :3"
+horizontal_alignment = 1
