@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cwsf6ho3drdxu" path="res://assets/graficos/mesa.jpg" id="2_o5xnr"]
 [ext_resource type="Texture2D" uid="uid://pp5opj30xs1g" path="res://assets/graficos/bleh_PLACEHOLDER.png" id="3_6jben"]
 [ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="3_wlj5l"]
-[ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="4_2u2ia"]
+[ext_resource type="FontFile" uid="uid://lmblh8lufbue" path="res://assets/temas/BaksoSapi.otf" id="4_sxtb0"]
 [ext_resource type="Texture2D" uid="uid://bs23ynxqclt82" path="res://assets/graficos/tinta_PLACEHOLDER.png" id="5_sxtb0"]
+[ext_resource type="Texture2D" uid="uid://cnt0b0xpcyabw" path="res://assets/graficos/arq_placeholder.png" id="7_tuvko"]
 
 [sub_resource type="Curve2D" id="Curve2D_sugp2"]
 _data = {
@@ -14,6 +15,42 @@ _data = {
 point_count = 4
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sugp2"]
+
+[sub_resource type="Animation" id="Animation_tuvko"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/bigDoc:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(176, 640)]
+}
+
+[sub_resource type="Animation" id="Animation_4cosh"]
+resource_name = "documento"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/bigDoc:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(176, 640), Vector2(192, 88.00006)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_empqv"]
+_data = {
+&"RESET": SubResource("Animation_tuvko"),
+&"documento": SubResource("Animation_4cosh")
+}
 
 [node name="minigame1" type="Node2D" unique_id=1887363783]
 script = ExtResource("1_5vrnw")
@@ -24,6 +61,48 @@ scale = Vector2(1.0052084, 1.0192901)
 texture = ExtResource("2_o5xnr")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=481338847]
+
+[node name="wave_label" type="RichTextLabel" parent="HUD" unique_id=1239993069]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = -116.0
+offset_right = 389.0
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_wlj5l")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/normal_font = ExtResource("4_sxtb0")
+theme_override_font_sizes/normal_font_size = 52
+text = "Onda completa!! O(∩_∩)O
+"
+scroll_active = false
+autowrap_trim_flags = 0
+horizontal_alignment = 1
+justification_flags = 160
+
+[node name="tinta" type="TextureButton" parent="HUD" unique_id=436226890]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -176.0
+offset_top = -152.0
+offset_right = 105.0
+offset_bottom = 129.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_sxtb0")
+stretch_mode = 0
 
 [node name="tentativasContainer" type="HBoxContainer" parent="HUD" unique_id=2052209992]
 anchors_preset = 1
@@ -58,7 +137,8 @@ grow_horizontal = 2
 theme = ExtResource("3_wlj5l")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
-text = "PONTOS: 0000"
+text = "ONDA: 1
+PONTOS: 0000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -78,22 +158,12 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 48
 text = "5"
 
-[node name="tinta" type="TextureButton" parent="HUD" unique_id=436226890]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -176.0
-offset_top = -144.0
-offset_right = -48.0
-offset_bottom = -16.0
-grow_horizontal = 0
-grow_vertical = 0
-texture_normal = ExtResource("4_2u2ia")
-
 [node name="SpawnRate" type="Timer" parent="." unique_id=186831771]
 autostart = true
+
+[node name="WaveTimer" type="Timer" parent="." unique_id=1878151974]
+wait_time = 1.5
+one_shot = true
 
 [node name="Path2D" type="Path2D" parent="." unique_id=222826848 groups=["alvos"]]
 curve = SubResource("Curve2D_sugp2")
@@ -112,6 +182,28 @@ shape = SubResource("WorldBoundaryShape2D_sugp2")
 
 [node name="alvos" type="Node2D" parent="." unique_id=1409602330 groups=["alvos"]]
 
+[node name="Cutscene" type="CanvasLayer" parent="." unique_id=672471947]
+
+[node name="bigDoc" type="TextureRect" parent="Cutscene" unique_id=729712685]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = 316.0
+offset_right = -360.0
+offset_bottom = 356.00012
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(20, 20)
+texture = ExtResource("7_tuvko")
+expand_mode = 1
+
+[node name="cutscene" type="AnimationPlayer" parent="." unique_id=489390391]
+libraries/ = SubResource("AnimationLibrary_empqv")
+
 [connection signal="pressed" from="HUD/tinta" to="." method="_on_tinta_pressed"]
 [connection signal="timeout" from="SpawnRate" to="." method="_on_spawn_rate_timeout"]
+[connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]
 [connection signal="area_entered" from="killzone" to="." method="_on_killzone_area_entered"]

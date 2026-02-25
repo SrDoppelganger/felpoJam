@@ -17,7 +17,10 @@ var phone_enabled = false;
 func addScore(value):
 	score += value;
 func useAmmo():
-	ammo -= 1;
+	if ammo < 0:
+		ammo = 0
+	else:
+		ammo -= 1;
 func fillAmmo():
 	ammo = 5;
 
