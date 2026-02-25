@@ -6,7 +6,7 @@ extends Node
 var intro:bool = true;
 var minigame1:bool = false;
 var minigame2:bool = false;
-var minigame3:bool = true;
+var minigame3:bool = false;
 
 var lastMinigame: String = "start";
 

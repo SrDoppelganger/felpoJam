@@ -8,6 +8,9 @@ var speaking: bool;
 var is_in_cutscene: bool;
 var score: int = 0;
 
+#ativar elementos da HUD
+var phone_enabled = false;
+
 # Caso necessário, add param. de valor para pontuações diferentes
 func addScore():
 	score += 1;

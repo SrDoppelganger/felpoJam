@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ocjvpc0gyhiu" path="res://scenes/menus/PauseMenu.tscn" id="4_tifur"]
 [ext_resource type="PackedScene" uid="uid://bhkpy4mpr0pug" path="res://scenes/menus/config.tscn" id="5_pbcjn"]
 [ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="5_w76ij"]
+[ext_resource type="PackedScene" uid="uid://bbj7knvjviqdd" path="res://scenes/gato_phone.tscn" id="8_1y1f5"]
 [ext_resource type="AudioStream" uid="uid://dt312hi2dw1rn" path="res://assets/sons/beep_placeholder.mp3" id="8_5boec"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w76ij"]
@@ -116,6 +117,16 @@ process_mode = 3
 visible = false
 theme = ExtResource("5_w76ij")
 
+[node name="GatoPhone" parent="menus" unique_id=1980130972 instance=ExtResource("8_1y1f5")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -160.0
+offset_right = 16.0
+offset_bottom = -160.0
+grow_vertical = 0
+
 [node name="Intro_cutscene" type="AnimationPlayer" parent="." unique_id=1004921321]
 libraries/ = SubResource("AnimationLibrary_5boec")
 
@@ -135,5 +146,6 @@ bus = &"Efeitos"
 [connection signal="input_event" from="NPC/Area2D" to="NPC" method="_on_area_2d_input_event"]
 [connection signal="openConfig" from="menus/PauseMenu" to="menus/Config" method="_on_pause_menu_open_config"]
 [connection signal="openPause" from="menus/Config" to="menus/PauseMenu" method="_on_config_open_pause"]
+[connection signal="onFocus" from="menus/GatoPhone" to="Carimberto" method="_on_gato_phone_on_focus"]
 [connection signal="animation_finished" from="Intro_cutscene" to="." method="_on_intro_cutscene_animation_finished"]
 [connection signal="body_entered" from="catraca" to="." method="_on_catraca_body_entered"]

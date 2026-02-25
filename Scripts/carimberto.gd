@@ -1,14 +1,18 @@
 extends CharacterBody2D
 
-const SPEED = 9000.0
+const SPEED = 14000.0
 var target = position;
 var cutscene_state = GlobalScript.getCutscene();
+
+var onMenu:bool;
 
 func _ready() -> void:
 	$NavigationAgent2D.target_position = position
 
 func _input(event):
 	if event.is_action_pressed("click") and !GlobalScript.speaking:
+		$NavigationAgent2D.target_position = get_global_mouse_position();
+	if onMenu:
 		$NavigationAgent2D.target_position = get_global_mouse_position();
 
 func _physics_process(delta: float) -> void:	
@@ -23,3 +27,6 @@ func _physics_process(delta: float) -> void:
 	#para de mover o jogador em cutscenes
 	if cutscene_state:
 		$NavigationAgent2D.target_position = position;
+
+func _on_gato_phone_on_focus() -> void:
+	$NavigationAgent2D.target_position = position;
