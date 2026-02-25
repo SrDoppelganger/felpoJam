@@ -2,6 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://dhrklkpw8wjjf" path="res://assets/graficos/salaDoChefe_PLACEHOLDER.jpg" id="1_3ce04"]
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_3ce04"]
+vertices = PackedVector2Array(1138.0234, 335.67188, 1138.9688, 628, 12.0390625, 628, 12.96875, 403, 443.64844, 366.5, 319.89063, 291.03906, 782.5, 187.04688)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(3, 5, 4), PackedInt32Array(6, 0, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(782, 176, 444, 355, 321, 280, 3, 396, 2, 638, 1149, 638, 1148, 329)])
+
 [node name="salaDoChefe" type="Node2D" unique_id=397794215]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=920312004]
@@ -9,3 +14,6 @@ offset_right = 1152.0
 offset_bottom = 640.0
 texture = ExtResource("1_3ce04")
 expand_mode = 1
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1525174210]
+navigation_polygon = SubResource("NavigationPolygon_3ce04")

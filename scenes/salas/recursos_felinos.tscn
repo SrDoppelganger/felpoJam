@@ -2,6 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://gw1b4xi2h3ir" path="res://assets/graficos/rf_PLACEHOLDER.jpg" id="1_qa832"]
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_qa832"]
+vertices = PackedVector2Array(744.1406, 137.78125, 752.8125, 44.070313, 833.1406, 135.63281, 924.39844, 143.29688, 896.6094, 174.96094, 81.85156, 458.89844, 29.796875, 456.70313, 203.89063, 150.85938, 166.70313, 416.97656, 1043.8516, 413.85938, 996.52344, 422.78125, 963.7031, 358.1797, 719.7031, 540.8672, 589.8672, 555.6875, 594.1172, 498.82813, 738.2969, 452.8125, 292.60938, 417.96875, 369.53906, 358.25, 562.78906, 399.4297)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(2, 3, 4, 0), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(4, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 8, 7, 17), PackedInt32Array(17, 7, 0, 18), PackedInt32Array(11, 15, 14, 18, 0, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(735, 128, 198, 141, 13, 466, 84, 469, 169, 427, 296, 428, 372, 369, 555, 408, 584, 500, 579, 567, 728, 550, 747, 460, 959, 371, 991, 434, 1060, 421, 909, 176, 945, 135, 838, 126, 745, 20)])
+
 [node name="RecursosFelinos" type="Node2D" unique_id=1282392397]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1650132799]
@@ -15,3 +20,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_qa832")
 expand_mode = 1
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=531006808]
+navigation_polygon = SubResource("NavigationPolygon_qa832")
