@@ -1,0 +1,9 @@
+~ start
+set GlobalScript.speaking = true
+if SceneHandler.lastMinigame == "intro":
+	% [color=#4f86f7]Mirtilanna[/color]: Ouvi  dizer  que  eles  vão  dar  outro  arranhador  para  o  Departamento  de  Recursos  Felinos,  o  pessoal  da  gerencia  de  cochilos  e  sonequinhas  não  curtiu  muito  isso... 
+	% [color=#4f86f7]Mirtilanna[/color]: Inclusive,  parece  que  o  [color=ff6347]Tomatheus[/color]  vomitou  uma  bola  de  pelo  em  cima  do  servidor,  desde  então  o  sistema  está  fora  do  ar 
+	% [color=#4f86f7]Mirtilanna[/color]: Inclusive,  caixa  de  areia  do  seu  andar  ainda  está  interditada.
+	% [color=#4f86f7]Mirtilanna[/color]: Estão  votando  na  reunião  sobre  o  auxílio-peixe,  parece  que  eles  querem  cortar  o  benefício  para  os  estagiários.  Absurdo,  né?
+	% [color=#4f86f7]Mirtilanna[/color]: Você  vai  participar  da  oficina  de  [wave]meowing[/wave]?
+set GlobalScript.speaking = false

@@ -1,0 +1,5 @@
+~ start
+set GlobalScript.speaking = true
+Mirtilanna: Figurinha do gato calvo*
+set GlobalScript.speaking = false
+=> END

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bbj7knvjviqdd"]
+
+[ext_resource type="Script" uid="uid://by3sk5vkx1yvt" path="res://scenes/gato_phone.gd" id="1_4cuvs"]
+[ext_resource type="Texture2D" uid="uid://jt4uc10nl45m" path="res://assets/graficos/gatophone_PLACEHOLDER.jpeg" id="1_yatlb"]
+
+[node name="GatoPhone" type="Control" unique_id=1980130972]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4cuvs")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1034154149]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 256.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_yatlb")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

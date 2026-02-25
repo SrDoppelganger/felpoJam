@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cebr6h4ddct1o"]
+
+[ext_resource type="Texture2D" uid="uid://c5l4imfj72d2g" path="res://assets/graficos/cubiculo_PLACEHOLDER.jpg" id="1_aa2ty"]
+
+[node name="cubiculo" type="Node2D" unique_id=299444551]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1983981128]
+offset_right = 1152.0
+offset_bottom = 656.0
+texture = ExtResource("1_aa2ty")
+expand_mode = 1

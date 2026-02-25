@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://deofm5od5e231"]
+
+[ext_resource type="Script" uid="uid://bm1emkk8ngqyo" path="res://Scripts/npc.gd" id="1_nh2m4"]
+[ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="2_abqhh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv78h"]
+atlas = ExtResource("2_abqhh")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7n8xq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv78h")
+}],
+"loop": true,
+"name": &"godot_idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abqhh"]
+size = Vector2(146, 149)
+
+[node name="NPC" type="CharacterBody2D" unique_id=714093445]
+collision_layer = 2
+script = ExtResource("1_nh2m4")
+animation = "godot"
+dialogue_path = "res://Scripts/dialogues/test.dialogue"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=247874319]
+sprite_frames = SubResource("SpriteFrames_7n8xq")
+animation = &"godot_idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=696196867]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_abqhh")

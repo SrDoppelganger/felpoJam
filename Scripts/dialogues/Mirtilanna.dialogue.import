@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dkf4q25q6018v"
+path="res://.godot/imported/Mirtilanna.dialogue-b5567f0c21064eb21db0fb119a6be6a2.tres"
+
+[deps]
+
+source_file="res://Scripts/dialogues/Mirtilanna.dialogue"
+dest_files=["res://.godot/imported/Mirtilanna.dialogue-b5567f0c21064eb21db0fb119a6be6a2.tres"]
+
+[params]
+
+defaults=true

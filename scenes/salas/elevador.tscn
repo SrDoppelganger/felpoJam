@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cyjvjsjv0tp12"]
+
+[ext_resource type="Script" uid="uid://cwwotfmkfvirc" path="res://scenes/salas/elevador.gd" id="1_fwl37"]
+[ext_resource type="Texture2D" uid="uid://c4l2p1efra4mo" path="res://assets/graficos/elevador_PLACEHOLDER.jpg" id="1_oycxj"]
+[ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="2_yhqp4"]
+[ext_resource type="AudioStream" uid="uid://dt312hi2dw1rn" path="res://assets/sons/beep_placeholder.mp3" id="4_f1svh"]
+
+[node name="Elevador" type="Node2D" unique_id=796784086]
+script = ExtResource("1_fwl37")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=429703882]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 697.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_oycxj")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1503896398]
+
+[node name="Menu" type="CanvasLayer" parent="." unique_id=1225643678]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu" unique_id=1051519167]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = -71.0
+offset_right = 179.0
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="onde vc quer ir" type="Label" parent="Menu/VBoxContainer" unique_id=1918785354]
+layout_mode = 2
+theme = ExtResource("2_yhqp4")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Para onde você quer ir?"
+
+[node name="Recepcao" type="Button" parent="Menu/VBoxContainer" unique_id=1052527023]
+layout_mode = 2
+theme = ExtResource("2_yhqp4")
+text = "Recepção"
+
+[node name="SalaDoGato" type="Button" parent="Menu/VBoxContainer" unique_id=1362070401]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_yhqp4")
+disabled = true
+text = "Escritório"
+
+[node name="RF" type="Button" parent="Menu/VBoxContainer" unique_id=441513836]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_yhqp4")
+disabled = true
+text = "Recursos  Felinos"
+
+[node name="Gabinete" type="Button" parent="Menu/VBoxContainer" unique_id=916037168]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_yhqp4")
+disabled = true
+text = "Sala  do  chefe"
+
+[node name="Sons" type="Node" parent="." unique_id=109183962]
+
+[node name="ding" type="AudioStreamPlayer" parent="Sons" unique_id=800395497]
+stream = ExtResource("4_f1svh")
+
+[connection signal="pressed" from="Menu/VBoxContainer/Recepcao" to="." method="_on_recepcao_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/SalaDoGato" to="." method="_on_sala_do_gato_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/RF" to="." method="_on_rf_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Gabinete" to="." method="_on_gabinete_pressed"]
