@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 400.0
+const SPEED = 300.0
 var target = position;
 var cutscene_state = GlobalScript.getCutscene();
 

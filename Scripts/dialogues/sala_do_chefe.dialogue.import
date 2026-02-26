@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bop1fd66xhadr"
+path="res://.godot/imported/sala_do_chefe.dialogue-54e99ab8e3f2bdff3453b81960c91e1b.tres"
+
+[deps]
+
+source_file="res://Scripts/dialogues/sala_do_chefe.dialogue"
+dest_files=["res://.godot/imported/sala_do_chefe.dialogue-54e99ab8e3f2bdff3453b81960c91e1b.tres"]
+
+[params]
+
+defaults=true
