@@ -1,6 +1,6 @@
 ~ start
 set GlobalScript.speaking = true
-[color=#4f86f7]Mirtilanna[/color]: Bom  dia,  Dengoso.  Atrasado  como  sempre,  né?
+[color=#4f86f7]Mirtilanna[/color]: Bom  dia,  {{GlobalScript.gatoName}}.  Atrasado  como  sempre,  né?
 [color=#4f86f7]Mirtilanna[/color]: Olha,  já  consertaram  o  elevador,  agora  você  pode  ir  direto  para  os  departamentos  sem  ter  que  pegar  a  escada
 [color=#4f86f7]Mirtilanna[/color]: O  [color=#ffa62b]Mangabriel[/color]  mandou  uns  documentos  para  você  [wave]carimbar[/wave]  urgentemente
 [color=#4f86f7]Mirtilanna[/color]: Se  precisar  de  qualquer  coisa,  pode  me  chamar  no  [color=25D366]GatoZap[/color]

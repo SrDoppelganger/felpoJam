@@ -14,10 +14,11 @@ func _input(event):
 		$NavigationAgent2D.target_position = get_global_mouse_position();
 	if onMenu:
 		$NavigationAgent2D.target_position = get_global_mouse_position();
+	
 
 func _physics_process(delta: float) -> void:	
 	#testando movimento usando navAgent2D
-	if !$NavigationAgent2D.is_target_reached():
+	if !$NavigationAgent2D.is_target_reached() and !GlobalScript.speaking:
 		var nav_direction = to_local($NavigationAgent2D.get_next_path_position()).normalized();
 		velocity = nav_direction * SPEED * delta
 		move_and_slide()

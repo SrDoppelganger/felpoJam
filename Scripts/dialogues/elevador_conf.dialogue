@@ -1,0 +1,9 @@
+~ start
+set GlobalScript.speaking = true
+: Entrar no elevador?
+- Sim
+	set GlobalScript.speaking = false
+	do get_tree().change_scene_to_file("res://scenes/salas/elevador.tscn")
+- Não
+	set GlobalScript.speaking = false
+=> END

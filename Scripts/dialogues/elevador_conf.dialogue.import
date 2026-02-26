@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://m28ledt25ifd"
+path="res://.godot/imported/elevador_conf.dialogue-8874bc9fcca8f274ba21b33c8bcc4a22.tres"
+
+[deps]
+
+source_file="res://Scripts/dialogues/elevador_conf.dialogue"
+dest_files=["res://.godot/imported/elevador_conf.dialogue-8874bc9fcca8f274ba21b33c8bcc4a22.tres"]
+
+[params]
+
+defaults=true

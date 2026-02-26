@@ -2,6 +2,8 @@ extends Node
 @onready var carimbado: AudioStreamPlayer = $carimbado;
 @onready var yay: AudioStreamPlayer = $yay
 
+var gatoName = "Dengoso"
+
 #variavel para para o input de andar enquanto a caixa de dialogo está ativa
 var speaking: bool;
 #variavel para saber se o jogo está numa cutscene

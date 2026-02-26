@@ -10,6 +10,10 @@ var minigame3:bool = false;
 
 var lastMinigame: String = "start";
 
+#variaveis para salvar a pos. global do gato
+var gatoPosition:Vector2;
+var justFinished:bool = false;
+
 func clearMinigame(scenario:String):
 	match scenario:
 		"minigame1":

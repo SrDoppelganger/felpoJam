@@ -125,6 +125,8 @@ func _on_spawn_rate_timeout() -> void:
 			lose();
 
 func victory():
+	SceneHandler.clearMinigame("minigame1")
+	SceneHandler.justFinished = true;
 	DialogueManager.show_dialogue_balloon(win_dialog);
 	game_state = "victory"
 	GlobalScript.playEffect("yay");

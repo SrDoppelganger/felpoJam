@@ -36,4 +36,5 @@ func _on_config_pressed() -> void:
 	hide();
 
 func _on_config_open_pause() -> void:
+	print("slay queen")
 	show();
