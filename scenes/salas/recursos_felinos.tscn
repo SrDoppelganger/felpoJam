@@ -1,13 +1,20 @@
 [gd_scene format=3 uid="uid://bfsxpx337myep"]
 
+[ext_resource type="Script" uid="uid://duwtvn4n8gjwt" path="res://scenes/salas/recursos_felinos.gd" id="1_g2qgc"]
 [ext_resource type="Texture2D" uid="uid://gw1b4xi2h3ir" path="res://assets/graficos/rf_PLACEHOLDER.jpg" id="1_qa832"]
+[ext_resource type="PackedScene" uid="uid://du533ibx0tpy" path="res://scenes/carimberto.tscn" id="2_5nnx3"]
+[ext_resource type="PackedScene" uid="uid://deofm5od5e231" path="res://scenes/npc.tscn" id="4_gvbcq"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qa832"]
-vertices = PackedVector2Array(744.1406, 137.78125, 752.8125, 44.070313, 833.1406, 135.63281, 924.39844, 143.29688, 896.6094, 174.96094, 81.85156, 458.89844, 29.796875, 456.70313, 203.89063, 150.85938, 166.70313, 416.97656, 1043.8516, 413.85938, 996.52344, 422.78125, 963.7031, 358.1797, 719.7031, 540.8672, 589.8672, 555.6875, 594.1172, 498.82813, 738.2969, 452.8125, 292.60938, 417.96875, 369.53906, 358.25, 562.78906, 399.4297)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(2, 3, 4, 0), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(4, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 8, 7, 17), PackedInt32Array(17, 7, 0, 18), PackedInt32Array(11, 15, 14, 18, 0, 4)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(735, 128, 198, 141, 13, 466, 84, 469, 169, 427, 296, 428, 372, 369, 555, 408, 584, 500, 579, 567, 728, 550, 747, 460, 959, 371, 991, 434, 1060, 421, 909, 176, 945, 135, 838, 126, 745, 20)])
+vertices = PackedVector2Array(833.1406, 135.63281, 924.39844, 143.28906, 896.6094, 174.95313, 719.1094, 121.78906, 748.6719, 39.359375, 761.5, 479.6172, 1080.6563, 474.14844, 1020.03906, 492.34375, 963.90625, 412.14844, 722.2031, 540.53125, 563.2969, 556.78125, 570.5703, 491.4297, 198.10938, 137.82031, 532.0781, 462.5625, 346.10156, 430.21094, 297.27344, 418.0078, 165.95313, 416.97656, 25.523438, 463.71875, 56.789063, 491.35938)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 0, 5), PackedInt32Array(2, 6, 7, 8), PackedInt32Array(9, 10, 11), PackedInt32Array(2, 8, 5, 0), PackedInt32Array(12, 3, 5, 9, 11, 13), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(12, 15, 16), PackedInt32Array(17, 12, 16, 18)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(735, 128, 198, 141, 13, 466, 84, 469, 169, 427, 296, 428, 372, 369, 555, 408, 584, 500, 579, 567, 728, 550, 768, 488, 960, 424, 991, 434, 1060, 421, 909, 176, 945, 135, 838, 126, 745, 20)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5nnx3"]
+size = Vector2(280, 184)
 
 [node name="RecursosFelinos" type="Node2D" unique_id=1282392397]
+script = ExtResource("1_g2qgc")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1650132799]
 anchors_preset = 15
@@ -23,3 +30,29 @@ expand_mode = 1
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=531006808]
 navigation_polygon = SubResource("NavigationPolygon_qa832")
+
+[node name="Carimberto" parent="." unique_id=1950335021 groups=["player"] instance=ExtResource("2_5nnx3")]
+position = Vector2(800, 224)
+
+[node name="Corredor" type="Area2D" parent="." unique_id=307217799]
+position = Vector2(704, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corredor" unique_id=1776384389]
+position = Vector2(132, 92)
+shape = SubResource("RectangleShape2D_5nnx3")
+debug_color = Color(0.76385766, 0.4500926, 3.85046e-07, 0.41960785)
+
+[node name="NPCs" type="Node" parent="." unique_id=1591131394]
+
+[node name="Emilho" parent="NPCs" unique_id=714093445 instance=ExtResource("4_gvbcq")]
+position = Vector2(880, 464)
+
+[node name="Acerolina" parent="NPCs" unique_id=218430560 instance=ExtResource("4_gvbcq")]
+position = Vector2(400, 488)
+
+[node name="Cerejete" parent="NPCs" unique_id=1633984902 instance=ExtResource("4_gvbcq")]
+position = Vector2(200, 168)
+
+[connection signal="body_entered" from="Corredor" to="." method="_on_corredor_body_entered"]
+[connection signal="body_exited" from="Corredor" to="." method="_on_corredor_body_exited"]
+[connection signal="input_event" from="Corredor" to="." method="_on_corredor_input_event"]

@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://bhkpy4mpr0pug"]
 
 [ext_resource type="Script" uid="uid://w04dcrg5nrl0" path="res://scenes/menus/config.gd" id="1_cvt51"]
+[ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="2_sy5uv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ad3v"]
+bg_color = Color(0.6, 0.6, 0.6, 0.39215687)
+border_color = Color(1.1551381e-06, 0.90463036, 0.9699128, 1)
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 40.0
 
 [node name="Config" type="Control" unique_id=1177158484]
 layout_mode = 3
@@ -32,97 +41,120 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -408.0
 offset_right = 392.0
-offset_bottom = 320.0
+offset_bottom = 256.0
 grow_horizontal = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1814566948]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -382.0
-offset_top = 30.0
-offset_right = 398.0
-offset_bottom = 223.0
-grow_horizontal = 2
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel" unique_id=806361009]
+layout_mode = 0
+offset_right = 780.0
+offset_bottom = 464.0
 
-[node name="AUDIO" type="Label" parent="Panel/VBoxContainer" unique_id=1002029032]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer2" unique_id=1814566948]
+layout_mode = 2
+
+[node name="AUDIO" type="Label" parent="Panel/VBoxContainer2/VBoxContainer" unique_id=1002029032]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "ÁUDIO"
 horizontal_alignment = 1
 
-[node name="masterVol" type="Label" parent="Panel/VBoxContainer" unique_id=1976478152]
+[node name="masterVol" type="Label" parent="Panel/VBoxContainer2/VBoxContainer" unique_id=1976478152]
 layout_mode = 2
 text = "Geral"
 
-[node name="master_container" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=367467834]
+[node name="master_container" type="HBoxContainer" parent="Panel/VBoxContainer2/VBoxContainer" unique_id=367467834]
 layout_mode = 2
 
-[node name="Volume_master" type="HSlider" parent="Panel/VBoxContainer/master_container" unique_id=226835784]
+[node name="Volume_master" type="HSlider" parent="Panel/VBoxContainer2/VBoxContainer/master_container" unique_id=226835784]
 custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
 min_value = -10.0
 max_value = 10.0
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/master_container" unique_id=1101887485]
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/VBoxContainer/master_container" unique_id=1101887485]
 layout_mode = 2
 text = "mutar"
 vertical_alignment = 1
 
-[node name="mute_master" type="CheckBox" parent="Panel/VBoxContainer/master_container" unique_id=575829495]
+[node name="mute_master" type="CheckBox" parent="Panel/VBoxContainer2/VBoxContainer/master_container" unique_id=575829495]
 layout_mode = 2
 
-[node name="musicaVol" type="Label" parent="Panel/VBoxContainer" unique_id=2036135778]
+[node name="musicaVol" type="Label" parent="Panel/VBoxContainer2/VBoxContainer" unique_id=2036135778]
 layout_mode = 2
 text = "Música"
 
-[node name="musica_container" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1090521887]
+[node name="musica_container" type="HBoxContainer" parent="Panel/VBoxContainer2/VBoxContainer" unique_id=1090521887]
 layout_mode = 2
 
-[node name="Volume_musica" type="HSlider" parent="Panel/VBoxContainer/musica_container" unique_id=1462148295]
+[node name="Volume_musica" type="HSlider" parent="Panel/VBoxContainer2/VBoxContainer/musica_container" unique_id=1462148295]
 custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
 min_value = -10.0
 max_value = 10.0
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/musica_container" unique_id=1832452402]
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/VBoxContainer/musica_container" unique_id=1832452402]
 layout_mode = 2
 text = "mutar"
 
-[node name="mute_musica" type="CheckBox" parent="Panel/VBoxContainer/musica_container" unique_id=1178106966]
+[node name="mute_musica" type="CheckBox" parent="Panel/VBoxContainer2/VBoxContainer/musica_container" unique_id=1178106966]
 layout_mode = 2
 
-[node name="efeitoVol" type="Label" parent="Panel/VBoxContainer" unique_id=560231522]
+[node name="efeitoVol" type="Label" parent="Panel/VBoxContainer2/VBoxContainer" unique_id=560231522]
 layout_mode = 2
 text = "Efeitos Sonoros"
 
-[node name="efeito_container" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1346130911]
+[node name="efeito_container" type="HBoxContainer" parent="Panel/VBoxContainer2/VBoxContainer" unique_id=1346130911]
 layout_mode = 2
 
-[node name="Volume_efeito" type="HSlider" parent="Panel/VBoxContainer/efeito_container" unique_id=1999320017]
+[node name="Volume_efeito" type="HSlider" parent="Panel/VBoxContainer2/VBoxContainer/efeito_container" unique_id=1999320017]
 custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
 min_value = -10.0
 max_value = 10.0
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/efeito_container" unique_id=1155641812]
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/VBoxContainer/efeito_container" unique_id=1155641812]
 layout_mode = 2
 text = "mutar"
 
-[node name="mute_efeito" type="CheckBox" parent="Panel/VBoxContainer/efeito_container" unique_id=444547123]
+[node name="mute_efeito" type="CheckBox" parent="Panel/VBoxContainer2/VBoxContainer/efeito_container" unique_id=444547123]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer" unique_id=1632932911]
+[node name="Button" type="Button" parent="Panel/VBoxContainer2/VBoxContainer" unique_id=1632932911]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "VOLTAR"
 
-[connection signal="value_changed" from="Panel/VBoxContainer/master_container/Volume_master" to="." method="_on_volume_master_value_changed"]
-[connection signal="toggled" from="Panel/VBoxContainer/master_container/mute_master" to="." method="_on_mute_master_toggled"]
-[connection signal="value_changed" from="Panel/VBoxContainer/musica_container/Volume_musica" to="." method="_on_volume_musica_value_changed"]
-[connection signal="toggled" from="Panel/VBoxContainer/musica_container/mute_musica" to="." method="_on_mute_musica_toggled"]
-[connection signal="value_changed" from="Panel/VBoxContainer/efeito_container/Volume_efeito" to="." method="_on_volume_efeito_value_changed"]
-[connection signal="toggled" from="Panel/VBoxContainer/efeito_container/mute_efeito" to="." method="_on_mute_efeito_toggled"]
-[connection signal="pressed" from="Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel" unique_id=668861933]
+visible = false
+layout_mode = 0
+offset_top = 256.0
+offset_right = 780.0
+offset_bottom = 488.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer3" unique_id=1256000349]
+layout_mode = 2
+alignment = 1
+
+[node name="VSlider" type="VSlider" parent="Panel/VBoxContainer3/HBoxContainer" unique_id=14778927]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_8ad3v")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer3" unique_id=985359204]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer3/HBoxContainer2" unique_id=1608457877]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+texture = ExtResource("2_sy5uv")
+expand_mode = 2
+
+[connection signal="value_changed" from="Panel/VBoxContainer2/VBoxContainer/master_container/Volume_master" to="." method="_on_volume_master_value_changed"]
+[connection signal="toggled" from="Panel/VBoxContainer2/VBoxContainer/master_container/mute_master" to="." method="_on_mute_master_toggled"]
+[connection signal="value_changed" from="Panel/VBoxContainer2/VBoxContainer/musica_container/Volume_musica" to="." method="_on_volume_musica_value_changed"]
+[connection signal="toggled" from="Panel/VBoxContainer2/VBoxContainer/musica_container/mute_musica" to="." method="_on_mute_musica_toggled"]
+[connection signal="value_changed" from="Panel/VBoxContainer2/VBoxContainer/efeito_container/Volume_efeito" to="." method="_on_volume_efeito_value_changed"]
+[connection signal="toggled" from="Panel/VBoxContainer2/VBoxContainer/efeito_container/mute_efeito" to="." method="_on_mute_efeito_toggled"]
+[connection signal="pressed" from="Panel/VBoxContainer2/VBoxContainer/Button" to="." method="_on_button_pressed"]
