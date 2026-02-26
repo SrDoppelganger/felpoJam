@@ -1,17 +1,46 @@
 [gd_scene format=3 uid="uid://dlq0simau6gda"]
 
 [ext_resource type="Script" uid="uid://ddnld7iwvmyeg" path="res://scenes/puzzles/captcha_script.gd" id="1_ewmmu"]
+[ext_resource type="Texture2D" uid="uid://dt5o6nj1q6e17" path="res://assets/graficos/Captchafail1_PLACEHOLDER.png" id="2_cjuub"]
+[ext_resource type="Texture2D" uid="uid://md6f4k830ty4" path="res://assets/graficos/Captchafail2_PLACEHOLDER.png" id="3_hu4sl"]
+[ext_resource type="Texture2D" uid="uid://crxbmbwvm826l" path="res://assets/graficos/Captchasuccess_PLACEHOLDER.png" id="4_gskk1"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ewmmu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofyn6"]
+atlas = ExtResource("2_cjuub")
+region = Rect2(0, 0, 265, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35cbk"]
+atlas = ExtResource("3_hu4sl")
+region = Rect2(0, 0, 281, 83)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7ubk"]
+atlas = ExtResource("4_gskk1")
+region = Rect2(0, 0, 348, 73)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1yfnr"]
 animations = [{
-"frames": [],
-"loop": true,
-"name": &"frase1",
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofyn6")
+}],
+"loop": false,
+"name": &"fail1",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35cbk")
+}],
+"loop": false,
+"name": &"fail2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7ubk")
+}],
 "loop": true,
-"name": &"frase2",
+"name": &"success",
 "speed": 5.0
 }]
 
@@ -58,5 +87,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1397967199]
-sprite_frames = SubResource("SpriteFrames_ewmmu")
-animation = &"frase1"
+position = Vector2(577, 251)
+sprite_frames = SubResource("SpriteFrames_1yfnr")
+animation = &"fail1"
