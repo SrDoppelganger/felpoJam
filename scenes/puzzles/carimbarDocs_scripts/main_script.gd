@@ -6,14 +6,19 @@ extends Node2D
 @onready var score: Label = $HUD/Score
 @onready var tentativas_label: Label = $HUD/tentativasContainer/Tentativas
 @onready var wave_label: RichTextLabel = $HUD/wave_label
-
 @onready var tinta: Label = $HUD/tintaContainer/Tinta
 
-var stamped: int = 0000;
+var stamped: int = 0;
+var goal:int = 5;
 var tentativas:int = 3;
 
 @onready var spawn_rate: Timer = $SpawnRate
 @onready var wave_timer: Timer = $WaveTimer
+
+@onready var cutscene: AnimationPlayer = $cutscene
+
+@onready var killzone: CollisionShape2D = $killzone/CollisionShape2D
+
 
 var game_state:String = 'onGoing'
 var curr_wave:int = 1;
@@ -22,49 +27,68 @@ var last_wave:int = 1;
 var win_dialog;
 var lose_dialog;
 
+var inTutorial: bool;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	inTutorial = true;
 	win_dialog = load("res://Scripts/dialogues/minigame1_win.dialogue");
 	lose_dialog = load("res://Scripts/dialogues/minigame1_lose.dialogue");
-	
-	GlobalScript.score = 0000;
+	GlobalScript.score = 0;
 	GlobalScript.fillAmmo();
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	score.text = "Onda: "+ str(curr_wave) + "\nPontos: " + str(GlobalScript.score);
+	if inTutorial:
+		tutorialLogic();
+	elif !inTutorial:
+		gameLogic();
+
+#funções para deixar o ready e process mais legivel T .T
+func tutorialLogic():
+	$tutorial_layer.visible = true
+	if Input.is_action_just_pressed("spacebar"):
+		$tutorial_layer.visible = false;
+		score.visible = true;
+		inTutorial = false;
+		spawn_rate.start();
+
+
+func gameLogic():
+	score.text = "Onda: "+ str(curr_wave) + "\n" + str(GlobalScript.score)+"/"+str(goal);
 	tentativas_label.text = str(tentativas);
 	tinta.text = str(GlobalScript.ammo);
 	stamped = GlobalScript.score;
 	updateWave(stamped);
 	checkWave(last_wave);
-
 func updateWave(pontos):
-	if pontos < 5000:
+	if pontos < 5:
 		curr_wave = 1;
-	elif pontos >= 5000 and pontos < 15000:
+	elif pontos >= 5 and pontos < 15:
 		curr_wave = 2;
-	elif pontos >= 15000 and pontos < 30000:
+		goal = 15;
+	elif pontos >= 15 and pontos < 30:
 		curr_wave = 3;
+		goal = 30;
 	else:
 		curr_wave = 4;
 
 func checkWave(check:int):
 	if curr_wave != check:
+		disableKillzone();
+		wave_timer.start();
 		last_wave = curr_wave
-		removeDocs();
 		updateGoal(curr_wave);
 		wave_label.show();
-		wave_timer.start();
+		
 		
 func updateGoal(wave:int):
 	match wave:
 		1:
-			wave_label.text = "Onda completa!!\nmais 5 para completar!"
+			wave_label.text = "Onda completa!!!"
 		2:
-			wave_label.text = "Onda completa!!\nmais 10 para completar!"
+			wave_label.text = "Onda completa!!!"
 		3:
-			wave_label.text = "Onda completa!!\nmais 15 para completar!"
+			wave_label.text = "Onda completa!!!"
 		4:
 			wave_label.text = "Trabalho feito!"
 func updateSpawn(wave: int):
@@ -76,9 +100,8 @@ func updateSpawn(wave: int):
 		"3":
 			spawn_rate.wait_time = 0.5;
 
-func removeDocs():
-	for n in alvos.get_children():
-		n.queue_free();
+func disableKillzone():
+	killzone.disabled = true;
 
 func spawn_arquivos():
 	var spawn_pos = %PathFollow2D.global_position;
@@ -105,6 +128,7 @@ func victory():
 	DialogueManager.show_dialogue_balloon(win_dialog);
 	game_state = "victory"
 	GlobalScript.playEffect("yay");
+	playCutscene();
 
 func lose():
 	DialogueManager.show_dialogue_balloon(lose_dialog);
@@ -122,3 +146,7 @@ func _on_wave_timer_timeout() -> void:
 	wave_label.hide();
 	GlobalScript.fillAmmo();
 	tentativas = 3;
+	killzone.disabled = false;  
+
+func playCutscene():
+	cutscene.play("documento");

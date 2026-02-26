@@ -1,3 +1,6 @@
 ~ start
+set SceneHandler.minigame1 = true
 Dengoso: Hora do cafezinho!
+Dengoso: (dialogo sobre patente de carimbo automatico)
+do get_tree().change_scene_to_file("res://scenes/salas/sala_do_gato.tscn")
 => END

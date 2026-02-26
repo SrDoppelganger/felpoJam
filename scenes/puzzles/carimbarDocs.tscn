@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cwsf6ho3drdxu" path="res://assets/graficos/mesa.jpg" id="2_o5xnr"]
 [ext_resource type="Texture2D" uid="uid://pp5opj30xs1g" path="res://assets/graficos/bleh_PLACEHOLDER.png" id="3_6jben"]
 [ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="3_wlj5l"]
+[ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="4_2u2ia"]
 [ext_resource type="FontFile" uid="uid://lmblh8lufbue" path="res://assets/temas/BaksoSapi.otf" id="4_sxtb0"]
 [ext_resource type="Texture2D" uid="uid://bs23ynxqclt82" path="res://assets/graficos/tinta_PLACEHOLDER.png" id="5_sxtb0"]
 [ext_resource type="Texture2D" uid="uid://cnt0b0xpcyabw" path="res://assets/graficos/arq_placeholder.png" id="7_tuvko"]
@@ -15,6 +16,7 @@ _data = {
 point_count = 4
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sugp2"]
+distance = -88.0
 
 [sub_resource type="Animation" id="Animation_tuvko"]
 length = 0.001
@@ -54,6 +56,104 @@ _data = {
 
 [node name="minigame1" type="Node2D" unique_id=1887363783]
 script = ExtResource("1_5vrnw")
+
+[node name="tutorial_layer" type="CanvasLayer" parent="." unique_id=1902636149]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="tutorial_layer" unique_id=1375089902]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.17316544, 0.27309984, 0.5294533, 0.4117647)
+
+[node name="Label" type="Label" parent="tutorial_layer" unique_id=1205725146]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -384.0
+offset_top = 168.0
+offset_right = 396.0
+offset_bottom = 259.0
+grow_horizontal = 2
+theme = ExtResource("3_wlj5l")
+theme_override_font_sizes/font_size = 48
+text = "Carimbe todos os documentos!"
+horizontal_alignment = 1
+
+[node name="mouse_click" type="TextureRect" parent="tutorial_layer" unique_id=1382094763]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_2u2ia")
+
+[node name="Label4" type="Label" parent="tutorial_layer" unique_id=1973044597]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = 84.0
+offset_right = 194.0
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_wlj5l")
+theme_override_font_sizes/font_size = 24
+text = "(aperte espaço para começar)"
+
+[node name="Label2" type="Label" parent="tutorial_layer" unique_id=1195417955]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -544.0
+offset_top = -96.0
+offset_right = -174.0
+offset_bottom = -35.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_wlj5l")
+theme_override_font_sizes/font_size = 24
+text = "clique aqui para recarregar
+o carimbo"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="tutorial_layer" unique_id=811329859]
+offset_left = 128.0
+offset_top = 16.0
+offset_right = 433.0
+offset_bottom = 77.0
+theme = ExtResource("3_wlj5l")
+theme_override_font_sizes/font_size = 24
+text = "Cuidado com 
+a quantidade de tinta!"
+
+[node name="Label5" type="Label" parent="tutorial_layer" unique_id=5540977]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -512.0
+offset_top = 8.0
+offset_right = -131.0
+offset_bottom = 69.0
+grow_horizontal = 0
+theme = ExtResource("3_wlj5l")
+theme_override_font_sizes/font_size = 24
+text = "Não deixe 3 documentos 
+passarem em branco"
+horizontal_alignment = 2
 
 [node name="background" type="Sprite2D" parent="." unique_id=1865942434]
 position = Vector2(573, 319.75)
@@ -127,6 +227,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Score" type="Label" parent="HUD" unique_id=1102985674]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -138,7 +239,7 @@ theme = ExtResource("3_wlj5l")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "ONDA: 1
-PONTOS: 0000"
+0/5"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -159,10 +260,9 @@ theme_override_font_sizes/font_size = 48
 text = "5"
 
 [node name="SpawnRate" type="Timer" parent="." unique_id=186831771]
-autostart = true
 
 [node name="WaveTimer" type="Timer" parent="." unique_id=1878151974]
-wait_time = 1.5
+wait_time = 2.0
 one_shot = true
 
 [node name="Path2D" type="Path2D" parent="." unique_id=222826848 groups=["alvos"]]
@@ -178,7 +278,9 @@ position = Vector2(0, 900)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=1130310303]
+position = Vector2(0, -204)
 shape = SubResource("WorldBoundaryShape2D_sugp2")
+one_way_collision = true
 
 [node name="alvos" type="Node2D" parent="." unique_id=1409602330 groups=["alvos"]]
 
@@ -207,3 +309,4 @@ libraries/ = SubResource("AnimationLibrary_empqv")
 [connection signal="timeout" from="SpawnRate" to="." method="_on_spawn_rate_timeout"]
 [connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]
 [connection signal="area_entered" from="killzone" to="." method="_on_killzone_area_entered"]
+[connection signal="animation_changed" from="cutscene" to="." method="_on_cutscene_animation_changed"]

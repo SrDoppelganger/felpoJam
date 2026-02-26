@@ -41,7 +41,7 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 	if event is InputEventMouseButton and !carimbado:
 		if event.pressed and ammo > 0:
 			GlobalScript.playEffect("stamp");
-			GlobalScript.addScore(1000);
+			GlobalScript.addScore(1);
 			GlobalScript.useAmmo();
 			sprite.play("stamped");
 			carimbado = true;
