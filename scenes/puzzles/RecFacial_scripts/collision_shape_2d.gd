@@ -12,7 +12,7 @@ func _on_area_2d_area_exited(_area: Area2D) -> void:
 	isColliding = false
 
 func randomArea() -> void:
-	position.x = randf_range(-250, 750)
+	position.x = randf_range(-52.0, 292.0)
 
 func _on_rec_facial_retried() -> void:
 	randomArea()
