@@ -59,4 +59,4 @@ grow_vertical = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1397967199]
 sprite_frames = SubResource("SpriteFrames_ewmmu")
-animation = &"frase2"
+animation = &"frase1"
