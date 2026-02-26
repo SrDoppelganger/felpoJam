@@ -17,7 +17,14 @@ var win_state: bool;
 
 #vars da tela de tutorial
 var inTutorial: bool;
+@onready var tutorial_screen: CanvasLayer = $tutorial
+
+#vars de diálogo
+var dialog;
+var dialogPlaying = false;
+
 func _ready() -> void:
+	dialog = load("res://Scripts/dialogues/Mirtilanna_minigame_clear.dialogue");
 	win_state = false;
 	inTutorial = true;
 	random = rng.randf_range(0.7, 1.8)
@@ -26,15 +33,19 @@ func _process(_delta: float) -> void:
 	if inTutorial:
 		tutorialLogic();
 	else:
-		gameLogic();
-	
-func gameLogic():
-	if Input.is_action_just_pressed("click") and win_state:
-		get_tree().change_scene_to_file("res://scenes/puzzles/captcha.tscn");
-	elif !win_state:
-		facialRec()
+		facialRec();
+
 func tutorialLogic():
-	pass
+	tutorial_screen.show();
+	$Reconhecimento.hide();
+	instrucao.hide();
+	get_tree().paused = true;
+	if Input.is_action_just_pressed("spacebar"):
+		get_tree().paused = false;
+		tutorial_screen.hide();
+		$Reconhecimento.show();
+		instrucao  .show();
+		inTutorial = false;
 
 func facialRec() -> void:
 	var recArea = get_node("Reconhecimento/CollisionShape2D")
@@ -72,7 +83,14 @@ func victory():
 	win_state = true;
 	Recon_collision.disabled = true;
 	Recon_sprite.hide();
+	playDialogue(dialogPlaying);
 	
+
+func playDialogue(isPlaying):
+	if !isPlaying:
+		DialogueManager.show_dialogue_balloon(dialog);
+		dialogPlaying = true;
+
 func retry() -> void:
 	messageTime = true;
 	$Timers/MessageTime.start();
