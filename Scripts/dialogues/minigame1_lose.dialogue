@@ -1,0 +1,4 @@
+~ start
+{{GlobalScript.gatoName}}: Se continuar assim, eu vou ter que fazer hora extra...
+do get_tree().reload_current_scene()
+=> END

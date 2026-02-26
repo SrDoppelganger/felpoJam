@@ -2,18 +2,29 @@ extends Node
 @onready var carimbado: AudioStreamPlayer = $carimbado;
 @onready var yay: AudioStreamPlayer = $yay
 
+var gatoName = "Dengoso"
+
 #variavel para para o input de andar enquanto a caixa de dialogo está ativa
 var speaking: bool;
 #variavel para saber se o jogo está numa cutscene
 var is_in_cutscene: bool;
-var score: int = 0;
+var score: int = 0000;
 
+#variavies do minigame 1
+var ammo:int = 5;
 #ativar elementos da HUD
 var phone_enabled = false;
 
-# Caso necessário, add param. de valor para pontuações diferentes
-func addScore():
-	score += 1;
+# funcs do minigame 1
+func addScore(value):
+	score += value;
+func useAmmo():
+	if ammo < 0:
+		ammo = 0
+	else:
+		ammo -= 1;
+func fillAmmo():
+	ammo = 5;
 
 # Funções para gerenciar cutscenes
 func setCutscene(value:bool):

@@ -1,0 +1,15 @@
+~ start
+set GlobalScript.speaking = true
+if SceneHandler.minigame1 == false:
+	: começar os trabalhos de hoje?
+	- sim
+		{{GlobalScript.gatoName}}: [wave]miau miau[/wave]
+		set GlobalScript.speaking = false
+		do get_tree().change_scene_to_file("res://scenes/puzzles/carimbarDocs.tscn")
+	- ainda não
+		{{GlobalScript.gatoName}}: Os papeis não vão a lugar nenhum...
+		set GlobalScript.speaking = false
+if SceneHandler.minigame1 == true:
+	{{GlobalScript.gatoName}}: O  [color=#ffcc00]chefe[/color]  precisa  assinar  isso  urgentemente,  sem  tempo  a  perder!
+	set GlobalScript.speaking = false
+=> END

@@ -7,6 +7,7 @@ var velocity: Vector2;
 var target_position: Vector2;
 var spawn_position: Vector2;
 
+var ammo;
 #var para mudar sprites
 var carimbado:bool = false
 
@@ -22,6 +23,7 @@ func _ready() -> void:
 	target_position = Vector2(target_x, target_y);
 	
 func _process(delta: float) -> void:
+	ammo = GlobalScript.ammo;
 	if !carimbado:
 		velocity = (target_position - position) * SPEED * delta
 		translate(velocity)
@@ -37,9 +39,10 @@ func _on_area_2d_mouse_exited() -> void:
 
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and !carimbado:
-		if event.pressed:
+		if event.pressed and ammo > 0:
 			GlobalScript.playEffect("stamp");
-			GlobalScript.addScore();
+			GlobalScript.addScore(1);
+			GlobalScript.useAmmo();
 			sprite.play("stamped");
 			carimbado = true;
 

@@ -1,14 +1,45 @@
 [gd_scene format=3 uid="uid://d1n0cgwvu2pr1"]
 
+[ext_resource type="Script" uid="uid://cmwkauesy1k60" path="res://scenes/salas/sala_do_gato.gd" id="1_4i1ap"]
 [ext_resource type="Texture2D" uid="uid://dwk8ncu8dao07" path="res://assets/graficos/salaDoGato_PLACEHOLDER.jpg" id="1_cm18g"]
 [ext_resource type="PackedScene" uid="uid://du533ibx0tpy" path="res://scenes/carimberto.tscn" id="2_i1ide"]
+[ext_resource type="PackedScene" uid="uid://bhkpy4mpr0pug" path="res://scenes/menus/config.tscn" id="2_rx5sy"]
+[ext_resource type="PackedScene" uid="uid://ocjvpc0gyhiu" path="res://scenes/menus/PauseMenu.tscn" id="3_0jfub"]
+[ext_resource type="PackedScene" uid="uid://bbj7knvjviqdd" path="res://scenes/gato_phone.tscn" id="4_wrqjp"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_cm18g"]
 vertices = PackedVector2Array(600.65625, 240.79688, 133.0625, 254.52344, 172.28906, 172.04688, 717.1172, 176.96094, 746.21875, 203.04688, 996.5078, 200.07031, 1010.9297, 232.67188, 856.27344, 239.70313, 1034.5703, 601.3281, 731.0703, 628.40625, 655.34375, 466.96875, 652.5078, 368.71875, 390.92188, 526.71875, 279.84375, 522.5078, 306.15625, 446.21094, 410.8203, 468.03125, 299.03906, 371.5625, 588.0781, 386.0703)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 4), PackedInt32Array(4, 7, 8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(15, 14, 16, 17, 10), PackedInt32Array(10, 17, 11), PackedInt32Array(4, 11, 0)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(166, 162, 117, 265, 594, 251, 639, 362, 587, 376, 288, 361, 296, 445, 266, 532, 398, 537, 418, 478, 649, 477, 725, 639, 1050, 610, 872, 249, 1026, 242, 1003, 190, 750, 193, 721, 167)])
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4i1ap"]
+size = Vector2(408, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oe8qh"]
+size = Vector2(205, 224)
+
 [node name="SalaDoGato" type="Node2D" unique_id=972720894]
+script = ExtResource("1_4i1ap")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=642785447]
+
+[node name="Config" parent="CanvasLayer" unique_id=1177158484 instance=ExtResource("2_rx5sy")]
+process_mode = 3
+visible = false
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=1992423139 instance=ExtResource("3_0jfub")]
+visible = false
+
+[node name="GatoPhone" parent="CanvasLayer" unique_id=1980130972 instance=ExtResource("4_wrqjp")]
+process_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -152.0
+offset_right = 24.0
+offset_bottom = -152.0
+grow_vertical = 0
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1695364616]
 offset_right = 1152.0
@@ -22,3 +53,27 @@ navigation_polygon = SubResource("NavigationPolygon_cm18g")
 [node name="Carimberto" parent="." unique_id=1950335021 groups=["player"] instance=ExtResource("2_i1ide")]
 position = Vector2(160.00003, 202.00003)
 scale = Vector2(0.8, 0.8)
+
+[node name="mesa_gato" type="Area2D" parent="." unique_id=1095594157]
+position = Vector2(771, 600)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mesa_gato" unique_id=2079786761]
+position = Vector2(137, -12)
+shape = SubResource("RectangleShape2D_4i1ap")
+debug_color = Color(0.9052882, 0.00013515115, 0.7488054, 0.41960785)
+
+[node name="Corredor" type="Area2D" parent="." unique_id=1522243246]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corredor" unique_id=1967723843]
+position = Vector2(249.5, 104)
+shape = SubResource("RectangleShape2D_oe8qh")
+debug_color = Color(0.76385766, 0.4500926, 3.85046e-07, 0.41960785)
+
+[connection signal="openPause" from="CanvasLayer/Config" to="CanvasLayer/PauseMenu" method="_on_config_open_pause"]
+[connection signal="openConfig" from="CanvasLayer/PauseMenu" to="CanvasLayer/Config" method="_on_pause_menu_open_config"]
+[connection signal="body_entered" from="mesa_gato" to="." method="_on_catraca_body_entered"]
+[connection signal="body_exited" from="mesa_gato" to="." method="_on_catraca_body_exited"]
+[connection signal="input_event" from="mesa_gato" to="." method="_on_catraca_input_event"]
+[connection signal="body_entered" from="Corredor" to="." method="_on_corredor_body_entered"]
+[connection signal="body_exited" from="Corredor" to="." method="_on_corredor_body_exited"]
+[connection signal="input_event" from="Corredor" to="." method="_on_corredor_input_event"]
