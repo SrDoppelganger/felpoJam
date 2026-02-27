@@ -1,0 +1,8 @@
+~ start
+set GlobalScript.speaking = true
+Emilho: (comentário como o sistema estava fora do ar)
+set GlobalScript.speaking = false
+set SceneHandler.justFinished = true
+do SceneHandler.clearMinigame("minigame3")
+do get_tree().change_scene_to_file("res://scenes/salas/recursos_felinos.tscn")
+=> END

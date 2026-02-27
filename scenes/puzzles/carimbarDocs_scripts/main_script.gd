@@ -83,14 +83,11 @@ func checkWave(check:int):
 		
 func updateGoal(wave:int):
 	match wave:
-		1:
-			wave_label.text = "Onda completa!!!"
-		2:
-			wave_label.text = "Onda completa!!!"
-		3:
-			wave_label.text = "Onda completa!!!"
 		4:
 			wave_label.text = "Trabalho feito!"
+		_:
+			wave_label.text = "Onda completa!!!"
+
 func updateSpawn(wave: int):
 	match wave:
 		"1":
@@ -138,8 +135,7 @@ func lose():
 
 # detecta qnd um arquivo passa
 func _on_killzone_area_entered(_area: Area2D) -> void:
-	if tentativas > 0:
-		tentativas -= 1;
+	tentativas -= 1;
 
 func _on_tinta_pressed() -> void:
 	GlobalScript.fillAmmo();

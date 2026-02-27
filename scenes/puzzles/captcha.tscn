@@ -2,8 +2,15 @@
 
 [ext_resource type="Script" uid="uid://ddnld7iwvmyeg" path="res://scenes/puzzles/captcha_script.gd" id="1_ewmmu"]
 [ext_resource type="Texture2D" uid="uid://dt5o6nj1q6e17" path="res://assets/graficos/Captchafail1_PLACEHOLDER.png" id="2_cjuub"]
+[ext_resource type="Texture2D" uid="uid://ekxqnfrd3p56" path="res://assets/graficos/captcha_background_PLACEHOLDER.png" id="2_hu4sl"]
 [ext_resource type="Texture2D" uid="uid://md6f4k830ty4" path="res://assets/graficos/Captchafail2_PLACEHOLDER.png" id="3_hu4sl"]
 [ext_resource type="Texture2D" uid="uid://crxbmbwvm826l" path="res://assets/graficos/Captchasuccess_PLACEHOLDER.png" id="4_gskk1"]
+[ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="6_gskk1"]
+[ext_resource type="FontFile" uid="uid://bdmc35y8rcd61" path="res://assets/temas/Pixeled.ttf" id="6_ofyn6"]
+[ext_resource type="Texture2D" uid="uid://uruabnleagdm" path="res://assets/graficos/out_of_order.png" id="8_35cbk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hu4sl"]
+bg_color = Color(0.99215686, 0.9607843, 0.9019608, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ofyn6"]
 atlas = ExtResource("2_cjuub")
@@ -47,46 +54,148 @@ animations = [{
 [node name="Captcha" type="Node2D" unique_id=1925946634]
 script = ExtResource("1_ewmmu")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=333102206]
+[node name="BG" type="TextureRect" parent="." unique_id=2110474251]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_hu4sl")
 
-[node name="node_title" type="Label" parent="CanvasLayer" unique_id=102567320]
+[node name="node_title" type="Label" parent="." unique_id=102567320]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -304.0
-offset_right = 304.0
-offset_bottom = 67.0
+offset_left = 318.0
+offset_top = 34.0
+offset_right = 856.0
+offset_bottom = 169.0
 grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = ExtResource("6_ofyn6")
 theme_override_font_sizes/font_size = 48
-text = "MINIGAME DE CAPTCHA :P"
+text = "CATos - Login"
+horizontal_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer" unique_id=1607423261]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -226.0
-offset_top = -15.5
-offset_right = 242.0
-offset_bottom = 15.5
+[node name="Login" type="CanvasLayer" parent="." unique_id=333102206]
+
+[node name="Panel" type="Panel" parent="Login" unique_id=2088288265]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 295.0
+offset_top = 154.0
+offset_right = -280.0
+offset_bottom = -82.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_hu4sl")
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=927598950]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -218.0
-offset_top = 38.0
-offset_right = 236.0
-offset_bottom = 61.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1397967199]
-position = Vector2(577, 251)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Login" unique_id=1397967199]
+position = Vector2(586, 314.5)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_1yfnr")
 animation = &"fail1"
+
+[node name="Label2" type="Label" parent="Login" unique_id=810251564]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -137.0
+offset_right = 240.0
+offset_bottom = -91.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_gskk1")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_ofyn6")
+theme_override_font_sizes/font_size = 16
+text = "VERIFICAÇÃO DE SEGURANÇA:
+VOCÊ  É  UM  GATO?"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="Login" unique_id=1607423261]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 388.0
+offset_top = 387.5
+offset_right = -366.0
+offset_bottom = -229.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Login" unique_id=927598950]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -207.0
+offset_top = 135.0
+offset_right = 247.0
+offset_bottom = 181.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_gskk1")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_ofyn6")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="Punchline" type="CanvasLayer" parent="." unique_id=423298289]
+visible = false
+
+[node name="Panel" type="Panel" parent="Punchline" unique_id=1915637920]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -161.0
+offset_right = 267.0
+offset_bottom = 194.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hu4sl")
+
+[node name="Label" type="Label" parent="Punchline" unique_id=1122078133]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -135.0
+offset_right = 237.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_gskk1")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_ofyn6")
+theme_override_font_sizes/font_size = 12
+text = "NÃO FOI POSSÍVEL ACESSAR O SISTEMA, CONSULTE 
+O ADMINISTRADOR DA SUA REDE"
+horizontal_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Punchline" unique_id=611649454]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -105.0
+offset_top = -354.0
+offset_right = 151.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_35cbk")
+stretch_mode = 4

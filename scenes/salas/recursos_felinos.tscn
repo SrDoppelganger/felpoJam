@@ -14,7 +14,13 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(735, 128, 198, 141, 13,
 size = Vector2(280, 184)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvbcq"]
-size = Vector2(320, 114)
+size = Vector2(352, 162)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74j04"]
+size = Vector2(288, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebslo"]
+size = Vector2(204.5, 226.5)
 
 [node name="RecursosFelinos" type="Node2D" unique_id=1282392397]
 script = ExtResource("1_g2qgc")
@@ -49,24 +55,47 @@ debug_color = Color(0.76385766, 0.4500926, 3.85046e-07, 0.41960785)
 
 [node name="Emilho" parent="NPCs" unique_id=714093445 instance=ExtResource("4_gvbcq")]
 position = Vector2(880, 464)
+dialogue_path = "res://Scripts/dialogues/Emilho.dialogue"
 
 [node name="Area2D" type="Area2D" parent="NPCs/Emilho" unique_id=429515433]
 
 [node name="Emilho_range" type="CollisionShape2D" parent="NPCs/Emilho/Area2D" unique_id=1996605092]
-position = Vector2(32, -25)
+position = Vector2(16, -1)
 shape = SubResource("RectangleShape2D_gvbcq")
-debug_color = Color(0.97380024, 0.16394782, 0, 0.41960785)
+debug_color = Color(0.90588236, 0.8156863, 0.011764706, 0.41960785)
 
 [node name="Acerolina" parent="NPCs" unique_id=218430560 instance=ExtResource("4_gvbcq")]
 position = Vector2(400, 488)
+dialogue_path = "res://Scripts/dialogues/generic.dialogue"
 
 [node name="Area2D" type="Area2D" parent="NPCs/Acerolina" unique_id=595350607]
 
+[node name="Acerolina_range" type="CollisionShape2D" parent="NPCs/Acerolina/Area2D" unique_id=1528394346]
+position = Vector2(32, 16)
+shape = SubResource("RectangleShape2D_74j04")
+debug_color = Color(0.9933066, 0, 0.24628755, 0.41960785)
+
 [node name="Cerejete" parent="NPCs" unique_id=1633984902 instance=ExtResource("4_gvbcq")]
 position = Vector2(200, 168)
+dialogue_path = "res://Scripts/dialogues/generic.dialogue"
 
 [node name="Area2D" type="Area2D" parent="NPCs/Cerejete" unique_id=1804262905]
+
+[node name="Cerejete_range" type="CollisionShape2D" parent="NPCs/Cerejete/Area2D" unique_id=1629446597]
+position = Vector2(1.75, -1.25)
+shape = SubResource("RectangleShape2D_ebslo")
+debug_color = Color(0.9066825, 0.30028552, 0.10378524, 0.41960785)
 
 [connection signal="body_entered" from="Corredor" to="." method="_on_corredor_body_entered"]
 [connection signal="body_exited" from="Corredor" to="." method="_on_corredor_body_exited"]
 [connection signal="input_event" from="Corredor" to="." method="_on_corredor_input_event"]
+[connection signal="isTalkingWithPlayer" from="NPCs/Emilho" to="." method="_on_emilho_is_talking_with_player"]
+[connection signal="body_entered" from="NPCs/Emilho/Area2D" to="NPCs/Emilho" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="NPCs/Emilho/Area2D" to="NPCs/Emilho" method="_on_area_2d_body_exited"]
+[connection signal="input_event" from="NPCs/Emilho/Area2D" to="NPCs/Emilho" method="_on_area_2d_input_event"]
+[connection signal="body_entered" from="NPCs/Acerolina/Area2D" to="NPCs/Acerolina" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="NPCs/Acerolina/Area2D" to="NPCs/Acerolina" method="_on_area_2d_body_exited"]
+[connection signal="input_event" from="NPCs/Acerolina/Area2D" to="NPCs/Acerolina" method="_on_area_2d_input_event"]
+[connection signal="body_entered" from="NPCs/Cerejete/Area2D" to="NPCs/Cerejete" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="NPCs/Cerejete/Area2D" to="NPCs/Cerejete" method="_on_area_2d_body_exited"]
+[connection signal="input_event" from="NPCs/Cerejete/Area2D" to="NPCs/Cerejete" method="_on_area_2d_input_event"]
