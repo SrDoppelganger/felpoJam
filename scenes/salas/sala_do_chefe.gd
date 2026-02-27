@@ -4,6 +4,7 @@ extends Node2D
 
 var dialog;
 var curr_scene;
+var cakeGiven: bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,4 +22,11 @@ func _on_cutscene_animation_finished(_anim_name: StringName) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if SceneHandler.theEnd:
+		$Ending.show()
+		$Ending/Bolo.disabled = false;
+
+func _on_bolo_pressed() -> void:
+	#tocar som
+	await get_tree().create_timer(1.0).timeout #ou detectar quando o som acabar :p
+	get_tree().change_scene_to_file("res://scenes/menus/creditos.tscn")

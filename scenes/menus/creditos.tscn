@@ -1,11 +1,400 @@
 [gd_scene format=3 uid="uid://d3nsfqnxfwa58"]
 
+[ext_resource type="Script" uid="uid://c35le8u21tvfk" path="res://scenes/menus/creditos.gd" id="1_8by0f"]
 [ext_resource type="Shader" uid="uid://ecgbcga2vg81" path="res://scenes/menus/creditos.gdshader" id="1_jk2nc"]
 [ext_resource type="Texture2D" uid="uid://cp2l4jw71ooqu" path="res://assets/graficos/Sem título.jpg" id="1_p0w84"]
 [ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="3_f6pr2"]
+[ext_resource type="Texture2D" uid="uid://b8a1f5vsndu7a" path="res://assets/graficos/créditos/neokat-shellcat logo transparente.png" id="4_grq1a"]
+[ext_resource type="FontFile" uid="uid://lmblh8lufbue" path="res://assets/temas/BaksoSapi.otf" id="5_ls8ue"]
+[ext_resource type="Texture2D" uid="uid://dmfyb37ym4noo" path="res://assets/graficos/créditos/felpo_logo.png" id="6_ls8ue"]
+[ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="7_btpxk"]
+[ext_resource type="Texture2D" uid="uid://p4ughbxdvri3" path="res://assets/graficos/créditos/bell-creditos.png" id="8_8by0f"]
+[ext_resource type="Texture2D" uid="uid://22uk5uk4b0si" path="res://assets/graficos/créditos/doppel_creditos-spritesheet-.png" id="9_ld8hq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f6pr2"]
 shader = ExtResource("1_jk2nc")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7ulf"]
+atlas = ExtResource("7_btpxk")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1l7lo"]
+atlas = ExtResource("8_8by0f")
+region = Rect2(0, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pha0"]
+atlas = ExtResource("8_8by0f")
+region = Rect2(118, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5t36"]
+atlas = ExtResource("8_8by0f")
+region = Rect2(236, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54s3a"]
+atlas = ExtResource("8_8by0f")
+region = Rect2(354, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gr6yf"]
+atlas = ExtResource("8_8by0f")
+region = Rect2(472, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wdt7"]
+atlas = ExtResource("8_8by0f")
+region = Rect2(590, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5x31"]
+atlas = ExtResource("8_8by0f")
+region = Rect2(708, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_678rd"]
+atlas = ExtResource("9_ld8hq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0l3u0"]
+atlas = ExtResource("9_ld8hq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stqc2"]
+atlas = ExtResource("9_ld8hq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_was78"]
+atlas = ExtResource("9_ld8hq")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6tbw"]
+atlas = ExtResource("9_ld8hq")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvgt4"]
+atlas = ExtResource("9_ld8hq")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2628"]
+atlas = ExtResource("9_ld8hq")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_og3n5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7ulf")
+}],
+"loop": true,
+"name": &"PLACEHOLDER",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1l7lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pha0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5t36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54s3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gr6yf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wdt7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5x31")
+}],
+"loop": true,
+"name": &"bell",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_678rd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0l3u0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stqc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_was78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6tbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvgt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2628")
+}],
+"loop": true,
+"name": &"doppel",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_grq1a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neokat_logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1440, 344)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Felpojam:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1552, 384)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Felpojam:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("neokat_logo:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("roll_call:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1424, 320)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("roll_call/membros:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("roll_call/Funçâo:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("roll_call/membros:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("roll_call/membros:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"PLACEHOLDER"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("roll_call/Membros:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1368, -204)]
+}
+
+[sub_resource type="Animation" id="Animation_f6pr2"]
+resource_name = "créditos"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neokat_logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 4, 6, 6.991667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1440, 344), Vector2(1440, 344), Vector2(560.00006, 328), Vector2(560.00006, 328), Vector2(-199.99994, 344)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Felpojam:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.0333333, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1552, 384), Vector2(544, 352), Vector2(544, 352), Vector2(-408, 448)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Felpojam:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("neokat_logo:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6.991667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("roll_call:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(6.9926186, 7.002619, 8.002619),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1424, 320), Vector2(1424, 320), Vector2(576, 324)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("roll_call/membros:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(7.002619, 8.002619, 10.002619),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("roll_call/Funçâo:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(6.982619, 8.002619, 10.002619, 10.0726185, 12.003478, 12.053623, 14.003623, 14.063623, 15.996243),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["", "Sigil  faz  a  arte", "Sigil  faz  a  arte", "Bell  faz  a  música", "Bell  faz  a  música", "Suco  de  Argila 
+Faz  o  código", "Suco  de  Argila 
+Faz  o  código", "Doppel  faz  um  pouco
+de  tudo  
+(e deixa  todo  mundo  na  linha)", "Doppel  faz  um  pouco
+de  tudo  
+(e deixa  todo  mundo  na  linha)"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("roll_call/membros:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("roll_call/membros:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(8.003477, 10.013477, 10.073478, 12.003478, 12.053623, 14.003623, 14.063623, 15.996243),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [&"PLACEHOLDER", &"PLACEHOLDER", &"bell", &"bell", &"PLACEHOLDER", &"PLACEHOLDER", &"doppel", &"doppel"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("roll_call/Membros:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(8.013855, 16.010708, 17.006243),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-384, -212), Vector2(-376, -205), Vector2(-1368, -204)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7oli7"]
+_data = {
+&"RESET": SubResource("Animation_grq1a"),
+&"créditos": SubResource("Animation_f6pr2")
+}
 
 [node name="Creditos" type="Control" unique_id=1741456562]
 layout_mode = 3
@@ -14,6 +403,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8by0f")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=452935328]
 texture_repeat = 2
@@ -24,7 +414,7 @@ offset_bottom = 656.0
 texture = ExtResource("1_p0w84")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="." unique_id=142010437]
+[node name="creditos" type="Label" parent="." unique_id=142010437]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -43,3 +433,136 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_font_sizes/font_size = 72
 text = "CRÉDITOS :3"
 horizontal_alignment = 1
+
+[node name="neokat_logo" type="Sprite2D" parent="." unique_id=506692102]
+visible = false
+position = Vector2(1440, 344)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_grq1a")
+
+[node name="Um jogo" type="RichTextLabel" parent="neokat_logo" unique_id=1028697643]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -940.0
+offset_top = -1060.0
+offset_right = -160.00009
+offset_bottom = -920.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_f6pr2")
+theme_override_constants/outline_size = 24
+theme_override_fonts/normal_font = ExtResource("5_ls8ue")
+theme_override_font_sizes/normal_font_size = 120
+text = "pelo grupo:"
+
+[node name="Neokat café" type="RichTextLabel" parent="neokat_logo" unique_id=1632195742]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -120.00006
+offset_right = -120.0
+offset_bottom = 19.999939
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_f6pr2")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 24
+theme_override_fonts/normal_font = ExtResource("5_ls8ue")
+theme_override_font_sizes/normal_font_size = 120
+bbcode_enabled = true
+text = "Neokat  [color=#1e90ff]CAfé[/color]"
+
+[node name="Felpojam" type="Sprite2D" parent="." unique_id=738792327]
+visible = false
+position = Vector2(1552, 384)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_ls8ue")
+
+[node name="Um jogo" type="RichTextLabel" parent="Felpojam" unique_id=1973219828]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1406.0
+offset_top = -445.5
+offset_right = 13.999878
+offset_bottom = -305.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_f6pr2")
+theme_override_constants/outline_size = 24
+theme_override_fonts/normal_font = ExtResource("5_ls8ue")
+theme_override_font_sizes/normal_font_size = 120
+text = "Um jogo feito para a"
+
+[node name="roll_call" type="Control" parent="." unique_id=1226117056]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 848.0
+offset_top = -4.0
+offset_right = 848.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Membros" type="RichTextLabel" parent="roll_call" unique_id=746710564]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1368.0
+offset_top = -204.0
+offset_right = -588.0001
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_f6pr2")
+theme_override_constants/outline_size = 16
+theme_override_fonts/normal_font = ExtResource("5_ls8ue")
+theme_override_font_sizes/normal_font_size = 64
+text = "Membros:"
+horizontal_alignment = 1
+
+[node name="membros" type="AnimatedSprite2D" parent="roll_call" unique_id=1859069009]
+visible = false
+texture_filter = 1
+position = Vector2(4.7683716e-07, 11.999996)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_og3n5")
+animation = &"PLACEHOLDER"
+
+[node name="Funçâo" type="RichTextLabel" parent="roll_call" unique_id=80045694]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -392.0
+offset_top = 164.0
+offset_right = 387.99988
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_f6pr2")
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("5_ls8ue")
+theme_override_font_sizes/normal_font_size = 42
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1983129362]
+libraries/ = SubResource("AnimationLibrary_7oli7")

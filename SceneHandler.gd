@@ -15,6 +15,9 @@ var lastMinigame: String = "start";
 var gatoPosition:Vector2;
 var justFinished:bool = false;
 
+#var para tocar cena final
+var theEnd:bool = false;
+
 func clearMinigame(scenario:String):
 	match scenario:
 		"minigame1":
