@@ -85,7 +85,6 @@ func victory():
 	Recon_sprite.hide();
 	playDialogue(dialogPlaying);
 	
-
 func playDialogue(isPlaying):
 	if !isPlaying:
 		DialogueManager.show_dialogue_balloon(dialog);

@@ -8,6 +8,7 @@ var minigame1:bool = false;
 var minigame2:bool = false;
 var minigame3:bool = false;
 
+# valor inicial = start
 var lastMinigame: String = "start";
 
 #variaveis para salvar a pos. global do gato

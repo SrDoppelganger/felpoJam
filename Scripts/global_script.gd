@@ -15,6 +15,9 @@ var ammo:int = 5;
 #ativar elementos da HUD
 var phone_enabled = false;
 
+#variaveis para cutscene do minigame2
+var minigame2Scene:bool = false;
+
 # funcs do minigame 1
 func addScore(value):
 	score += value;
