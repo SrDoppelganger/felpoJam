@@ -20,59 +20,59 @@ region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1l7lo"]
 atlas = ExtResource("8_8by0f")
-region = Rect2(0, 0, 118, 128)
+region = Rect2(0, 0, 236, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8pha0"]
 atlas = ExtResource("8_8by0f")
-region = Rect2(118, 0, 118, 128)
+region = Rect2(236, 0, 236, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c5t36"]
 atlas = ExtResource("8_8by0f")
-region = Rect2(236, 0, 118, 128)
+region = Rect2(472, 0, 236, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_54s3a"]
 atlas = ExtResource("8_8by0f")
-region = Rect2(354, 0, 118, 128)
+region = Rect2(0, 256, 236, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gr6yf"]
 atlas = ExtResource("8_8by0f")
-region = Rect2(472, 0, 118, 128)
+region = Rect2(236, 256, 236, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0wdt7"]
 atlas = ExtResource("8_8by0f")
-region = Rect2(590, 0, 118, 128)
+region = Rect2(472, 256, 236, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e5x31"]
 atlas = ExtResource("8_8by0f")
-region = Rect2(708, 0, 118, 128)
+region = Rect2(0, 512, 236, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8by0f"]
+atlas = ExtResource("9_ld8hq")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld8hq"]
+atlas = ExtResource("9_ld8hq")
+region = Rect2(192, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_678rd"]
 atlas = ExtResource("9_ld8hq")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(384, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0l3u0"]
 atlas = ExtResource("9_ld8hq")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(0, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_stqc2"]
 atlas = ExtResource("9_ld8hq")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(192, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_was78"]
 atlas = ExtResource("9_ld8hq")
-region = Rect2(96, 0, 32, 32)
+region = Rect2(384, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6tbw"]
 atlas = ExtResource("9_ld8hq")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hvgt4"]
-atlas = ExtResource("9_ld8hq")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h2628"]
-atlas = ExtResource("9_ld8hq")
-region = Rect2(192, 0, 32, 32)
+region = Rect2(0, 384, 192, 192)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_og3n5"]
 animations = [{
@@ -112,6 +112,12 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_8by0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ld8hq")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_678rd")
 }, {
 "duration": 1.0,
@@ -125,12 +131,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_u6tbw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hvgt4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h2628")
 }],
 "loop": true,
 "name": &"doppel",
@@ -138,7 +138,7 @@ animations = [{
 }]
 
 [sub_resource type="Animation" id="Animation_grq1a"]
-length = 0.001
+length = 8.066667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -226,38 +226,14 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("roll_call/membros:scale")
+tracks/7/path = NodePath("roll_call/membros:animation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2, 2)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("roll_call/membros:animation")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"PLACEHOLDER"]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("roll_call/Membros:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-1368, -204)]
 }
 
 [sub_resource type="Animation" id="Animation_f6pr2"]
@@ -318,10 +294,10 @@ tracks/4/path = NodePath("roll_call:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(6.9926186, 7.002619, 8.002619),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(6.9926186, 7.002619, 8.333333, 16.928402, 18.033333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1424, 320), Vector2(1424, 320), Vector2(576, 324)]
+"values": [Vector2(1424, 320), Vector2(1424, 320), Vector2(576, 324), Vector2(576, 324), Vector2(-384, 272)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -356,38 +332,14 @@ de  tudo
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("roll_call/membros:scale")
+tracks/7/path = NodePath("roll_call/membros:animation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("roll_call/membros:animation")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
 "times": PackedFloat32Array(8.003477, 10.013477, 10.073478, 12.003478, 12.053623, 14.003623, 14.063623, 15.996243),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [&"PLACEHOLDER", &"PLACEHOLDER", &"bell", &"bell", &"PLACEHOLDER", &"PLACEHOLDER", &"doppel", &"doppel"]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("roll_call/Membros:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(8.013855, 16.010708, 17.006243),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-384, -212), Vector2(-376, -205), Vector2(-1368, -204)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7oli7"]
@@ -524,10 +476,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1368.0
-offset_top = -204.0
-offset_right = -588.0001
-offset_bottom = -64.0
+offset_left = -376.00525
+offset_top = -205.00456
+offset_right = 403.99463
+offset_bottom = -65.00456
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_f6pr2")
@@ -540,8 +492,7 @@ horizontal_alignment = 1
 [node name="membros" type="AnimatedSprite2D" parent="roll_call" unique_id=1859069009]
 visible = false
 texture_filter = 1
-position = Vector2(4.7683716e-07, 11.999996)
-scale = Vector2(2, 2)
+position = Vector2(-8, 19.999996)
 sprite_frames = SubResource("SpriteFrames_og3n5")
 animation = &"PLACEHOLDER"
 
@@ -566,3 +517,5 @@ horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1983129362]
 libraries/ = SubResource("AnimationLibrary_7oli7")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

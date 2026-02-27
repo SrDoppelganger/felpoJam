@@ -19,3 +19,13 @@ func _on_jogar_pressed() -> void:
 
 func _on_fechar_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_créditos_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/menus/creditos.tscn")
+
+
+func _on_config_open_pause() -> void:
+	$Config.hide();
+func _on_opções_pressed() -> void:
+	$Config.show();
