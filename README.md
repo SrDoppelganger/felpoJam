@@ -1,6 +1,6 @@
 # Nome do jogo
 
-## Um jogo por: Neokat Café
+## Um jogo por:
 ![logo](neokat-shellcat.png "neokat-shellcat")
 
 ## Equipe

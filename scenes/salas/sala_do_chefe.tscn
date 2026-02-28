@@ -83,5 +83,7 @@ position = Vector2(-48, 680)
 [node name="Cutscene" type="AnimationPlayer" parent="." unique_id=888400140]
 libraries/ = SubResource("AnimationLibrary_mi7vb")
 
+[connection signal="mouse_entered" from="Ending/Bolo" to="." method="_on_bolo_mouse_entered"]
+[connection signal="mouse_exited" from="Ending/Bolo" to="." method="_on_bolo_mouse_exited"]
 [connection signal="pressed" from="Ending/Bolo" to="." method="_on_bolo_pressed"]
 [connection signal="animation_finished" from="Cutscene" to="." method="_on_cutscene_animation_finished"]

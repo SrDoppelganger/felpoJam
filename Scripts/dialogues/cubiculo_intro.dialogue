@@ -5,7 +5,7 @@ if SceneHandler.minigame1 == false:
 	- sim
 		{{GlobalScript.gatoName}}: [wave]miau miau[/wave]
 		set GlobalScript.speaking = false
-		do get_tree().change_scene_to_file("res://scenes/puzzles/carimbarDocs.tscn")
+		do get_tree().change_scene_to_file("res://scenes/salas/cubiculo.tscn")
 	- ainda não
 		{{GlobalScript.gatoName}}: Os papeis não vão a lugar nenhum...
 		set GlobalScript.speaking = false

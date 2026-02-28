@@ -8,6 +8,7 @@ var corr_reachable:bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SceneHandler.curr_room = "RF"
 	corr_dialog = load("res://Scripts/dialogues/elevador_conf.dialogue");
 	if SceneHandler.justFinished:
 		SceneHandler.justFinished = false;
@@ -36,3 +37,9 @@ func _on_corredor_input_event(_viewport: Node, event: InputEvent, _shape_idx: in
 
 func _on_emilho_is_talking_with_player() -> void:
 	SceneHandler.gatoPosition = $Carimberto.position
+
+
+func cursor_mouse_entered() -> void:
+	GlobalScript.cursor(1);
+func cursor_mouse_exited() -> void:
+	GlobalScript.cursor(0);

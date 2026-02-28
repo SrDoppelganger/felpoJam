@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://gucbvmksvf5k" path="res://assets/sons/Trabalho feito!.ogg" id="3_m3l3d"]
 [ext_resource type="AudioStream" uid="uid://yngsseo1rahx" path="res://assets/sons/Dia a dia.ogg" id="4_m3l3d"]
 [ext_resource type="AudioStream" uid="uid://cqlyyhy1r42vj" path="res://assets/sons/som de seleção e menus.ogg" id="4_nelfd"]
+[ext_resource type="AudioStream" uid="uid://2tg5u16m50eo" path="res://assets/sons/Tinta molhada.ogg" id="5_6rlim"]
 
 [node name="GlobalScript" type="Node" unique_id=1088285404]
 script = ExtResource("1_4pk28")
@@ -22,6 +23,8 @@ bus = &"Efeitos"
 stream = ExtResource("4_nelfd")
 
 [node name="moiado" type="AudioStreamPlayer" parent="." unique_id=1051168482]
+stream = ExtResource("5_6rlim")
+bus = &"Efeitos"
 
 [node name="Musgas" type="Node" parent="." unique_id=1005388058]
 

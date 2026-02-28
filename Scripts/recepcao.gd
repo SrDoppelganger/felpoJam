@@ -13,6 +13,7 @@ func _ready() -> void:
 	curr_scene = SceneHandler.getLastMinigame();
 	dialog = load("res://Scripts/dialogues/intro.dialogue");
 	dialog2 = load("res://Scripts/dialogues/Mirtilanna_minigame_intro.dialogue");
+	SceneHandler.curr_room = "Recepcao"
 	if curr_scene == "start":
 		intro_cutscene.play("intro");
 		GlobalScript.setCutscene(true);
@@ -55,3 +56,9 @@ func startMinigame2():
 		DialogueManager.show_dialogue_balloon(dialog2);
 		intro_cutscene.play("minigame2_intro");
 		isPlaying = true
+
+
+func cursor_mouse_entered() -> void:
+	GlobalScript.cursor(1);
+func cursor_mouse_exited() -> void:
+	GlobalScript.cursor(0);

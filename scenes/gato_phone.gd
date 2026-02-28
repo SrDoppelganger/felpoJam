@@ -15,3 +15,9 @@ func _process(_delta:float) -> void:
 func _on_texture_button_pressed() -> void:
 	onFocus.emit();
 	DialogueManager.show_dialogue_balloon(dialog)
+
+
+func _on_texture_button_mouse_entered() -> void:
+	GlobalScript.cursor(1);
+func _on_texture_button_mouse_exited() -> void:
+	GlobalScript.cursor(0);

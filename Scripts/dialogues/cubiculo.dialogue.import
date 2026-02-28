@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d15lvqrgl5p4a"
+path="res://.godot/imported/cubiculo.dialogue-c803d3f66debf11a83f40a8ae44209e8.tres"
+
+[deps]
+
+source_file="res://Scripts/dialogues/cubiculo.dialogue"
+dest_files=["res://.godot/imported/cubiculo.dialogue-c803d3f66debf11a83f40a8ae44209e8.tres"]
+
+[params]
+
+defaults=true

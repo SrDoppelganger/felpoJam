@@ -8,8 +8,9 @@ var cakeGiven: bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#DEBUG
-	SceneHandler.clearMinigame("minigame3");
+	SceneHandler.curr_room = "chefe"
+	
+	SceneHandler.setLastMinigame("minigame3")
 	
 	dialog = load("res://Scripts/dialogues/sala_do_chefe.dialogue");
 	curr_scene = SceneHandler.getLastMinigame();
@@ -30,3 +31,9 @@ func _on_bolo_pressed() -> void:
 	#tocar som
 	await get_tree().create_timer(1.0).timeout #ou detectar quando o som acabar :p
 	get_tree().change_scene_to_file("res://scenes/menus/creditos.tscn")
+
+
+func _on_bolo_mouse_entered() -> void:
+	GlobalScript.cursor(1);
+func _on_bolo_mouse_exited() -> void:
+	GlobalScript.cursor(0);

@@ -15,4 +15,6 @@ offset_bottom = 256.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("1_yatlb")
 
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton" to="." method="_on_texture_button_mouse_exited"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

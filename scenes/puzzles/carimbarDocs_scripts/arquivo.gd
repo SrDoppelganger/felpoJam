@@ -19,7 +19,6 @@ func _ready() -> void:
 	target_x = randi_range(200, 1000);
 	target_y = randi_range(150, 300);
 	spawn_position = position;
-	
 	target_position = Vector2(target_x, target_y);
 	
 func _process(delta: float) -> void:
