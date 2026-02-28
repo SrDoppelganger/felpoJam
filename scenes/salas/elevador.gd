@@ -17,6 +17,8 @@ func _ready() -> void:
 	
 	gabinete.disabled = !SceneHandler.minigame3
 	gabinete.visible = SceneHandler.minigame3
+	
+	SceneHandler.curr_room = "elevador"
 
 func _on_recepcao_pressed() -> void:
 	ding.play();

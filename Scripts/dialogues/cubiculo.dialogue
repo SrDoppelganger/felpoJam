@@ -7,5 +7,5 @@ if SceneHandler.lastMinigame == "intro":
 	do get_tree().change_scene_to_file("res://scenes/puzzles/carimbarDocs.tscn")
 if SceneHandler.lastMinigame == "minigame1":
 	 : (Diálogo pós minigame1)
-	do get_tree().change_scene_to_file("res://scenes/salas/sala_do_gato.tscn")
+	do get_tree().change_scene_to_file("res://scenes/salas/elevador.tscn")
 => END

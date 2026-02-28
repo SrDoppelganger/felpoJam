@@ -8,8 +8,7 @@ var cakeGiven: bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#DEBUG
-	SceneHandler.clearMinigame("minigame3");
+	SceneHandler.curr_room = "chefe"
 	
 	dialog = load("res://Scripts/dialogues/sala_do_chefe.dialogue");
 	curr_scene = SceneHandler.getLastMinigame();

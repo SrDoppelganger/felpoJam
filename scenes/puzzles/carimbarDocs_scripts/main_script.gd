@@ -120,7 +120,6 @@ func _on_spawn_rate_timeout() -> void:
 
 func victory():
 	SceneHandler.clearMinigame("minigame1");
-	SceneHandler.justFinished = true;
 	game_state = "victory"
 	GlobalScript.playEffect("yay");
 	await get_tree().create_timer(1.0).timeout

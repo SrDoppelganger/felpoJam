@@ -8,6 +8,7 @@ var corr_reachable:bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SceneHandler.curr_room = "RF"
 	corr_dialog = load("res://Scripts/dialogues/elevador_conf.dialogue");
 	if SceneHandler.justFinished:
 		SceneHandler.justFinished = false;

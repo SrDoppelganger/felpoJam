@@ -16,6 +16,12 @@ func playSprite2D(anim):
 	
 
 
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 	await get_tree().create_timer(1.0).timeout
 	get_tree().change_scene_to_file("res://scenes/menus/MainMenu.tscn")
+
+
+func _on_button_pressed() -> void:
+	GlobalScript.playEffect("confirm")
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file("res://scenes/menus/MainMenu.tscn");
