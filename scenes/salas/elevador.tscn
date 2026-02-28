@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cyjvjsjv0tp12"]
 
 [ext_resource type="Script" uid="uid://cwwotfmkfvirc" path="res://scenes/salas/elevador.gd" id="1_fwl37"]
-[ext_resource type="Texture2D" uid="uid://c4l2p1efra4mo" path="res://assets/graficos/elevador_PLACEHOLDER.jpg" id="1_oycxj"]
+[ext_resource type="Texture2D" uid="uid://bjy7xa16pxje1" path="res://assets/graficos/Definitivo/elevador.png" id="2_fwl37"]
 [ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="2_yhqp4"]
 
 [node name="Elevador" type="Node2D" unique_id=796784086]
@@ -15,7 +15,7 @@ offset_right = 1152.0
 offset_bottom = 697.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_oycxj")
+texture = ExtResource("2_fwl37")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1503896398]
 

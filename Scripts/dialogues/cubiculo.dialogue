@@ -2,9 +2,12 @@
 if SceneHandler.lastMinigame == "intro":
 	Narração: *[wave]Mais  um  dia, mais  um  afazer.[/wave] É  um  pouco  apertado,  mas  ter  um  espacinho  só  seu  é  aconchegante!  Você  limpa  a  superfície  da  sua  mesa  para acomodar  a  pilha  de  papeis  que  você  põe  ao  seu  lado,  bem…  o  mais  limpo  que  consegue  limpar.
 	Narração: *Os  borrões  de  meses  e  meses  de  xícaras  de  café  marcam  a  mesa,  eles  são  extremamente  persistentes…mas  a  esse  ponto  eles  fazem  parte  do [wave][color=green]Feng-Shui[/color][/wave]  do  lugar.*
-	Cafélipe: Certo…  isso  não  deve  ser  muito  trabalho,  só  preciso  carimbar  esses  documentos.
+	[color=#772300]Cafélipe[/color]: Certo…  isso  não  deve  ser  muito  trabalho,  só  preciso  carimbar  esses  documentos.
 	Narração: *Com  o  seu  carimbo  em  patas  você  começa  o  seu  trabalho!*
 	do get_tree().change_scene_to_file("res://scenes/puzzles/carimbarDocs.tscn")
 if SceneHandler.lastMinigame == "minigame1":
-	 : (Diálogo pós minigame1)
+	[color=#772300]Cafélipe[/color]: [shake]Finalmente…[/shake] Espera,  eu  esqueci  de  um?
+	Narração: *Prestes  a  carimbar  o  último  documento  você  para  nos  seus  trilhos  ao perceber  um  adendo  nas  letras  miaúdas!  Aparentemente…*
+	[color=#772300]Cafélipe[/color]: Eu  preciso  do  carimbo  do  [shake]chefe?![/shake]
+	[color=#772300]Cafélipe[/color]: É  claro…[wave]*suspiro*[/wave] Eu  tava  sentindo  que  não  ia  ser  tão  fácil  assim.  Preciso  ver  com  a  Mirtilanna  se  o  chefe  tá  disponível. 
 => END

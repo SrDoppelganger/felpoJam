@@ -1,9 +1,15 @@
 ~ start
 set GlobalScript.speaking = true
 if GlobalScript.minigame2Scene == false:
-	[color=#4f86f7]Mirtilanna[/color]: (Diálogo sobre minigame 2 pt.1)
+	Catraca: *[shake]pem  pem![/shake] acesso  negado*
+	[color=#772300]Cafélipe[/color]: …Que?  eu  acabei  de  passar  por  aqui!
+	[color=#4f86f7]Mirtilanna[/color]: Ah…  espera  um  pouquinho.
+
 if GlobalScript.minigame2Scene == true:
-	[color=#4f86f7]Mirtilanna[/color]: (Diálogo depois da animação)
+	[color=#4f86f7]Mirtilanna[/color]: *[shake]Tec  Tec  Tec  Tec[/shake] Após  brevemente  checar  algo  no computador,  Mirtilanna  vira  sua  atenção  de  volta  a  você.*
+	[color=#4f86f7]Mirtilanna[/color]: Aparentemente  seu  reconhecimento  facial  acabou  de  expirar  nesse  exato momento.
+	[color=#4f86f7]Mirtilanna[/color]: Mas  fica  tranquilo,  não  deve  levar  muito tempo  para  renovar,  vem  cá  por um  minutinho.  
+
 	set GlobalScript.speaking = false
 	do get_tree().change_scene_to_file("res://scenes/puzzles/RecFacial.tscn")
 => END

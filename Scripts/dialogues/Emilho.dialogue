@@ -3,21 +3,25 @@ set GlobalScript.speaking = true
 
 
 if SceneHandler.lastMinigame == "minigame2":
-	Emilho: (Dialogo pré minigame 3)
+	[color=#772300]Cafélipe[/color]: Com  licença,  Emilho.  Você  poderia  me  ajudar  com…
+	Narração: *Click  Click  Click  Click* 
+	Narração: *Emílho  está  em  foco  profundo,  encarando  a  tela  de  seu  computador  em frustração,  mas  eventualmente  o  nota  ao  seu  lado.*
+	[color=#f8bf0f]Emilho[/color]: Cafélipe! Pode  me  dar  uma  ajudinha  aqui?  Quero  poder  ver  meu  e-mail,  mas   esse  novo  sistema  que  o  departamento  de  segurança  implementou  é  muito  confuso…  não  consigo  acessar  o  computador.
+	[color=#772300]Cafélipe[/color]...(Não  consigo  crer  que  ele  é  o  senior  desse  departamento…)
 	- Claro!
-		Emilho: (Dialogo de aceite)
+		[color=#772300]Cafélipe[/color] Okay... deixa  eu  dar  uma  olhada.
 		set GlobalScript.speaking = false
 		do get_tree().change_scene_to_file("res://scenes/puzzles/captcha.tscn")
 		=> END
 	- Agora não
-		Emilho: (Dialogo de recusado)
 		set GlobalScript.speaking = false
 if SceneHandler.lastMinigame == "minigame3":
-	Emilho: (Dialogo pós minigame 3)
+	[color=#f8bf0f]Emilho[/color]: Finalmente! Tô  morrendo  para  saber  se  minha  encomenda  de  jujuba  de  peixe vai  chegar  hoje!
+	[color=#772300]Cafélipe[/color]: …espera  um  pouco…[shake] é  claro…[/shake]
 	set GlobalScript.speaking = false
 
 #Provavelmente nunca vai ativar, é só para garantir que não var dar softlock
 else:
-	Emilho: Acredito que seja melhor você falar com a [color=#4f86f7]Mirtilanna[/color]  primeiro,  ela  que  sabe  das  coisas  por  aqui
+	[color=#f8bf0f]Emilho[/color]: Acredito que seja melhor você falar com a [color=#4f86f7]Mirtilanna[/color]  primeiro,  ela  que  sabe  das  coisas  por  aqui
 	set GlobalScript.speaking = false
 => END

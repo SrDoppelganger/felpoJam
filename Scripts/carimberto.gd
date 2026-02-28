@@ -12,6 +12,10 @@ func _ready() -> void:
 func _input(event):
 	if event.is_action_pressed("click") and !GlobalScript.speaking:
 		$NavigationAgent2D.target_position = get_global_mouse_position();
+		if $NavigationAgent2D.target_position.x < position.x:
+			$AnimatedSprite2D.flip_h = true;
+		else:
+			$AnimatedSprite2D.flip_h = false;
 	if onMenu:
 		$NavigationAgent2D.target_position = get_global_mouse_position();
 	

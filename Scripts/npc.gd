@@ -1,6 +1,6 @@
 extends Node2D
 
-@export_enum("godot") var animation:String;
+@export_enum("godot","Mirtilanna") var animation:String;
 @onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
@@ -24,6 +24,8 @@ func loadSprite(anim):
 	match anim:
 		"godot":
 			sprite_2d.play("godot_idle")
+		"Mirtilanna":
+			sprite_2d.play("mirtilanna")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
