@@ -1,0 +1,4 @@
+~ start
+set GlobalScript.speaking = true
+NPC: meow meow
+set GlobalScript.speaking = false

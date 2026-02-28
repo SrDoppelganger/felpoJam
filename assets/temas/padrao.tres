@@ -1,13 +1,8 @@
 [gd_resource type="Theme" format=3 uid="uid://cl6xre454wlcg"]
 
 [ext_resource type="FontFile" uid="uid://lmblh8lufbue" path="res://assets/temas/BaksoSapi.otf" id="1_vxycq"]
-[ext_resource type="Texture2D" uid="uid://8rfqehsdl55t" path="res://assets/graficos/botao_PLACEHOLDER.png" id="2_7r2ba"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yqvj8"]
-texture = ExtResource("2_7r2ba")
 
 [resource]
-Button/font_sizes/font_size = 16
+Button/font_sizes/font_size = 36
 Button/fonts/font = ExtResource("1_vxycq")
-Button/styles/normal = SubResource("StyleBoxTexture_yqvj8")
 Label/fonts/font = ExtResource("1_vxycq")

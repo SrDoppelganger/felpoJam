@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://gucbvmksvf5k"
+path="res://.godot/imported/Trabalho feito!.ogg-d27dadd15f085cab5c8b778ccdb0e91d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sons/Trabalho feito!.ogg"
+dest_files=["res://.godot/imported/Trabalho feito!.ogg-d27dadd15f085cab5c8b778ccdb0e91d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

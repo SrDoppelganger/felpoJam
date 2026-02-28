@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://djiwqnnq0c3ec"
+path="res://.godot/imported/Mirtilanna_minigame_intro.dialogue-cf38df47662012c7fb6a1a6d3f76ab59.tres"
+
+[deps]
+
+source_file="res://Scripts/dialogues/Mirtilanna_minigame_intro.dialogue"
+dest_files=["res://.godot/imported/Mirtilanna_minigame_intro.dialogue-cf38df47662012c7fb6a1a6d3f76ab59.tres"]
+
+[params]
+
+defaults=true

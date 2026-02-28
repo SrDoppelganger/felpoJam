@@ -12,6 +12,8 @@ var dialog;
 var talkable: bool = false;
 var near_player: bool
 
+signal isTalkingWithPlayer;
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	loadSprite(animation);
@@ -26,6 +28,7 @@ func loadSprite(anim):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if talkable and near_player and !GlobalScript.speaking:
+				isTalkingWithPlayer.emit();
 				DialogueManager.show_dialogue_balloon(dialog);
 				talkable = !talkable;
 

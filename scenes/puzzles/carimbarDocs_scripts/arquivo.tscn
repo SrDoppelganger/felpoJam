@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bsg3xqo2uos81" path="res://scenes/puzzles/carimbarDocs_scripts/arquivo.gd" id="1_1tye2"]
 [ext_resource type="Texture2D" uid="uid://cnt0b0xpcyabw" path="res://assets/graficos/arq_placeholder.png" id="2_mlcnj"]
 [ext_resource type="Texture2D" uid="uid://3v1pjefx57de" path="res://assets/graficos/arq_stamped_placeholder.png" id="3_j8r0s"]
-[ext_resource type="AudioStream" uid="uid://dbr24nivwhwlc" path="res://assets/sons/stamp.ogg" id="3_mlcnj"]
+[ext_resource type="AudioStream" uid="uid://rmg0sh6mgf16" path="res://assets/sons/Carimbada.ogg" id="4_8vtqp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j8r0s"]
 atlas = ExtResource("2_mlcnj")
@@ -50,7 +50,7 @@ position = Vector2(-1, -2.5)
 shape = SubResource("RectangleShape2D_1tye2")
 
 [node name="carimbado" type="AudioStreamPlayer" parent="." unique_id=1354186167]
-stream = ExtResource("3_mlcnj")
+stream = ExtResource("4_8vtqp")
 
 [node name="Timer" type="Timer" parent="." unique_id=2012205883]
 wait_time = 0.8

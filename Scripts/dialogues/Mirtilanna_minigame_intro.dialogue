@@ -1,0 +1,9 @@
+~ start
+set GlobalScript.speaking = true
+if GlobalScript.minigame2Scene == false:
+	[color=#4f86f7]Mirtilanna[/color]: (Diálogo sobre minigame 2 pt.1)
+if GlobalScript.minigame2Scene == true:
+	[color=#4f86f7]Mirtilanna[/color]: (Diálogo depois da animação)
+	set GlobalScript.speaking = false
+	do get_tree().change_scene_to_file("res://scenes/puzzles/RecFacial.tscn")
+=> END

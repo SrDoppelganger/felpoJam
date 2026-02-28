@@ -54,7 +54,7 @@ spacebar={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Scripts/dialogues/test.dialogue", "res://Scripts/dialogues/Mirtilanna.dialogue", "res://Scripts/dialogues/intro.dialogue", "res://Scripts/dialogues/gatoZap.dialogue", "res://Scripts/dialogues/minigame1_win.dialogue", "res://Scripts/dialogues/minigame1_lose.dialogue", "res://Scripts/dialogues/cubiculo_intro.dialogue", "res://Scripts/dialogues/elevador_conf.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Scripts/dialogues/test.dialogue", "res://Scripts/dialogues/Mirtilanna.dialogue", "res://Scripts/dialogues/intro.dialogue", "res://Scripts/dialogues/gatoZap.dialogue", "res://Scripts/dialogues/minigame1_win.dialogue", "res://Scripts/dialogues/minigame1_lose.dialogue", "res://Scripts/dialogues/cubiculo_intro.dialogue", "res://Scripts/dialogues/elevador_conf.dialogue", "res://Scripts/dialogues/sala_do_chefe.dialogue", "res://Scripts/dialogues/Mirtilanna_minigame_clear.dialogue", "res://Scripts/dialogues/Mirtilanna_minigame_intro.dialogue", "res://Scripts/dialogues/generic.dialogue", "res://Scripts/dialogues/Emilho.dialogue", "res://Scripts/dialogues/minigame3.dialogue")
 
 [layer_names]
 

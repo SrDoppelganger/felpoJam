@@ -1,0 +1,5 @@
+~ start
+set GlobalScript.speaking = true
+[color=#ffa62b]Mangabriel[/color]: Finalmente  a  última  cutscene,  dá  para  ver  a  luz  no  fim  do  tunel,  não  desista  [wave]meoooow[/wave]
+set SceneHandler.theEnd = true
+=> END

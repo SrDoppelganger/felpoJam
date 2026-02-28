@@ -1,0 +1,8 @@
+~ start
+set GlobalScript.speaking = true
+[color=#4f86f7]Mirtilanna[/color]: Tudo  prontinho!
+set GlobalScript.speaking = false
+set SceneHandler.justFinished = true
+do SceneHandler.clearMinigame("minigame2")
+do get_tree().change_scene_to_file("res://scenes/salas/recepcao.tscn")
+=> END
