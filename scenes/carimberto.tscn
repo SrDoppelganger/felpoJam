@@ -1,36 +1,37 @@
 [gd_scene format=3 uid="uid://du533ibx0tpy"]
 
-[ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="1_mv1it"]
 [ext_resource type="Script" uid="uid://ddocr0sfuqgu5" path="res://Scripts/carimberto.gd" id="1_xtju1"]
+[ext_resource type="Texture2D" uid="uid://ylfisbrro80g" path="res://assets/graficos/Definitivo/cafelipe - provisorio.png" id="2_xtju1"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xtju1"]
-atlas = ExtResource("1_mv1it")
-region = Rect2(0, 0, 128, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7iy5p"]
+atlas = ExtResource("2_xtju1")
+region = Rect2(0, 0, 264, 283)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7iy5p"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xtju1")
+"texture": SubResource("AtlasTexture_7iy5p")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtyv3"]
-size = Vector2(127, 127)
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtju1"]
+radius = 82.20097
 
 [node name="Carimberto" type="CharacterBody2D" unique_id=1950335021]
 collision_mask = 3
 script = ExtResource("1_xtju1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=822739395]
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_7iy5p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1215802003]
-position = Vector2(-0.5, -0.5)
-shape = SubResource("RectangleShape2D_vtyv3")
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_xtju1")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=179152025]
 path_desired_distance = 3.0
