@@ -2,6 +2,7 @@ extends Node
 @onready var carimbado: AudioStreamPlayer = $carimbado;
 @onready var yay: AudioStreamPlayer = $yay
 @onready var confirm: AudioStreamPlayer = $confirm
+@onready var moiado: AudioStreamPlayer = $moiado
 
 #importar os cursores
 var cursor_active = load("res://assets/graficos/Definitivo/cursor - clicker.png");
@@ -53,6 +54,8 @@ func playEffect(sound):
 			yay.play();
 		"confirm":
 			confirm.play();
+		"moiado":
+			moiado.play();
 	
 #Vou deixar o nome pequeno, já tô a mais de 8h programando...n consigo pensar em legibilidade agr...foi mal sucoDeArgila
 func cursor(type):

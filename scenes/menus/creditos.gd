@@ -25,3 +25,9 @@ func _on_button_pressed() -> void:
 	GlobalScript.playEffect("confirm")
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://scenes/menus/MainMenu.tscn");
+
+
+func _on_button_mouse_entered() -> void:
+	GlobalScript.cursor(1);
+func _on_button_mouse_exited() -> void:
+	GlobalScript.cursor(0);

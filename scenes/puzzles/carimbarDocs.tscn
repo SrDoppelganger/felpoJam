@@ -7,7 +7,7 @@
 [ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="3_wlj5l"]
 [ext_resource type="FontFile" uid="uid://lmblh8lufbue" path="res://assets/temas/BaksoSapi.otf" id="4_sxtb0"]
 [ext_resource type="Texture2D" uid="uid://bs23ynxqclt82" path="res://assets/graficos/tinta_PLACEHOLDER.png" id="5_sxtb0"]
-[ext_resource type="Texture2D" uid="uid://cnt0b0xpcyabw" path="res://assets/graficos/arq_placeholder.png" id="7_tuvko"]
+[ext_resource type="AudioStream" uid="uid://ma1pit050dq1" path="res://assets/sons/Derrota....ogg" id="8_4cosh"]
 
 [sub_resource type="Curve2D" id="Curve2D_sugp2"]
 _data = {
@@ -22,6 +22,7 @@ distance = -88.0
 script = ExtResource("1_5vrnw")
 
 [node name="tutorial_layer" type="CanvasLayer" parent="." unique_id=1902636149]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="tutorial_layer" unique_id=1375089902]
 anchors_preset = 15
@@ -248,23 +249,8 @@ one_way_collision = true
 
 [node name="alvos" type="Node2D" parent="." unique_id=1409602330 groups=["alvos"]]
 
-[node name="Cutscene" type="CanvasLayer" parent="." unique_id=672471947]
-
-[node name="bigDoc" type="TextureRect" parent="Cutscene" unique_id=729712685]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -400.0
-offset_top = 316.0
-offset_right = -360.0
-offset_bottom = 356.00012
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(20, 20)
-texture = ExtResource("7_tuvko")
-expand_mode = 1
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1344849853]
+stream = ExtResource("8_4cosh")
 
 [connection signal="pressed" from="HUD/tinta" to="." method="_on_tinta_pressed"]
 [connection signal="timeout" from="SpawnRate" to="." method="_on_spawn_rate_timeout"]

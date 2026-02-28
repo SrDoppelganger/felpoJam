@@ -135,6 +135,7 @@ func _on_killzone_area_entered(area: Area2D) -> void:
 	tentativas -= 1;
 
 func _on_tinta_pressed() -> void:
+	GlobalScript.playEffect("moiado");
 	GlobalScript.fillAmmo();
 	
 func _on_wave_timer_timeout() -> void:
