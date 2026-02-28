@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bv587mayvg842"]
 
-[ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="1_5x8cv"]
 [ext_resource type="Script" uid="uid://cc8ps2l8gt07s" path="res://scenes/puzzles/rec_facial.gd" id="1_kq1wg"]
 [ext_resource type="Script" uid="uid://bu8f76pedbwrj" path="res://scenes/puzzles/RecFacial_scripts/player.gd" id="1_xwlxd"]
 [ext_resource type="Texture2D" uid="uid://dbsg8f16vrjdo" path="res://assets/graficos/office_placeholder.jpg" id="2_jxo82"]
@@ -8,6 +7,8 @@
 [ext_resource type="Script" uid="uid://o0eu1xd7srtt" path="res://scenes/puzzles/RecFacial_scripts/collision_shape_2d.gd" id="4_kq1wg"]
 [ext_resource type="Texture2D" uid="uid://cy4du632ofd7c" path="res://assets/graficos/rec_facimiau-com_transparencia.png" id="6_v0kde"]
 [ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="7_jpdhs"]
+[ext_resource type="Texture2D" uid="uid://hit46jikdcys" path="res://assets/graficos/Definitivo/cursor - scroll.png" id="8_cyxh3"]
+[ext_resource type="Texture2D" uid="uid://cb1euqc62lbes" path="res://assets/graficos/Definitivo/cursor - neutro.png" id="9_rws58"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8cv"]
 size = Vector2(129, 131)
@@ -136,13 +137,13 @@ alignment = 1
 [node name="scroll" type="TextureRect" parent="tutorial/VBoxContainer/icons" unique_id=1461884057]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-texture = ExtResource("1_5x8cv")
+texture = ExtResource("8_cyxh3")
 stretch_mode = 4
 
 [node name="mouse" type="TextureRect" parent="tutorial/VBoxContainer/icons" unique_id=1366959166]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-texture = ExtResource("1_5x8cv")
+texture = ExtResource("9_rws58")
 stretch_mode = 4
 
 [node name="textos" type="HBoxContainer" parent="tutorial/VBoxContainer" unique_id=2078123506]
