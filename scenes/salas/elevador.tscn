@@ -72,7 +72,15 @@ text = "Sala  do  chefe"
 
 [node name="ding" type="AudioStreamPlayer" parent="Sons" unique_id=800395497]
 
+[connection signal="mouse_entered" from="Menu/VBoxContainer/Recepcao" to="." method="button_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/VBoxContainer/Recepcao" to="." method="button_mouse_exited"]
 [connection signal="pressed" from="Menu/VBoxContainer/Recepcao" to="." method="_on_recepcao_pressed"]
+[connection signal="mouse_entered" from="Menu/VBoxContainer/SalaDoGato" to="." method="button_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/VBoxContainer/SalaDoGato" to="." method="button_mouse_exited"]
 [connection signal="pressed" from="Menu/VBoxContainer/SalaDoGato" to="." method="_on_sala_do_gato_pressed"]
+[connection signal="mouse_entered" from="Menu/VBoxContainer/RF" to="." method="button_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/VBoxContainer/RF" to="." method="button_mouse_exited"]
 [connection signal="pressed" from="Menu/VBoxContainer/RF" to="." method="_on_rf_pressed"]
+[connection signal="mouse_entered" from="Menu/VBoxContainer/Gabinete" to="." method="button_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/VBoxContainer/Gabinete" to="." method="button_mouse_exited"]
 [connection signal="pressed" from="Menu/VBoxContainer/Gabinete" to="." method="_on_gabinete_pressed"]

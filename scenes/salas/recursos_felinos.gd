@@ -37,3 +37,9 @@ func _on_corredor_input_event(_viewport: Node, event: InputEvent, _shape_idx: in
 
 func _on_emilho_is_talking_with_player() -> void:
 	SceneHandler.gatoPosition = $Carimberto.position
+
+
+func cursor_mouse_entered() -> void:
+	GlobalScript.cursor(1);
+func cursor_mouse_exited() -> void:
+	GlobalScript.cursor(0);

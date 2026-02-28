@@ -10,6 +10,8 @@ var cakeGiven: bool = false;
 func _ready() -> void:
 	SceneHandler.curr_room = "chefe"
 	
+	SceneHandler.setLastMinigame("minigame3")
+	
 	dialog = load("res://Scripts/dialogues/sala_do_chefe.dialogue");
 	curr_scene = SceneHandler.getLastMinigame();
 	if curr_scene == "minigame3":
@@ -29,3 +31,9 @@ func _on_bolo_pressed() -> void:
 	#tocar som
 	await get_tree().create_timer(1.0).timeout #ou detectar quando o som acabar :p
 	get_tree().change_scene_to_file("res://scenes/menus/creditos.tscn")
+
+
+func _on_bolo_mouse_entered() -> void:
+	GlobalScript.cursor(1);
+func _on_bolo_mouse_exited() -> void:
+	GlobalScript.cursor(0);

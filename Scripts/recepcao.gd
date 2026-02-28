@@ -56,3 +56,9 @@ func startMinigame2():
 		DialogueManager.show_dialogue_balloon(dialog2);
 		intro_cutscene.play("minigame2_intro");
 		isPlaying = true
+
+
+func cursor_mouse_entered() -> void:
+	GlobalScript.cursor(1);
+func cursor_mouse_exited() -> void:
+	GlobalScript.cursor(0);

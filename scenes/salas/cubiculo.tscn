@@ -56,6 +56,10 @@ grow_vertical = 0
 size_flags_horizontal = 4
 
 [connection signal="input_event" from="corredor" to="." method="_on_corredor_input_event"]
+[connection signal="mouse_entered" from="corredor" to="." method="_on_corredor_mouse_entered"]
+[connection signal="mouse_exited" from="corredor" to="." method="_on_corredor_mouse_exited"]
 [connection signal="input_event" from="Mesa" to="." method="_on_mesa_input_event"]
+[connection signal="mouse_entered" from="Mesa" to="." method="_on_corredor_mouse_entered"]
+[connection signal="mouse_exited" from="Mesa" to="." method="_on_corredor_mouse_exited"]
 [connection signal="openPause" from="Menus/Config" to="Menus/PauseMenu" method="_on_config_open_pause"]
 [connection signal="openConfig" from="Menus/PauseMenu" to="Menus/Config" method="_on_pause_menu_open_config"]

@@ -27,3 +27,11 @@ func _on_mesa_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -
 	if event is InputEventMouseButton:
 		if event.pressed:
 			DialogueManager.show_dialogue_balloon(mesa_dialog)
+
+
+
+# Atualiza o gráfico dos cursores
+func _on_corredor_mouse_entered() -> void:
+	GlobalScript.cursor(1);
+func _on_corredor_mouse_exited() -> void:
+	GlobalScript.cursor(0);

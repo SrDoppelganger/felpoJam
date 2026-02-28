@@ -35,3 +35,9 @@ func _on_rf_pressed() -> void:
 func _on_gabinete_pressed() -> void:
 	ding.play();
 	get_tree().change_scene_to_file("res://scenes/salas/sala_do_chefe.tscn");
+
+
+func button_mouse_entered() -> void:
+	GlobalScript.cursor(1);
+func button_mouse_exited() -> void:
+	GlobalScript.cursor(0);
