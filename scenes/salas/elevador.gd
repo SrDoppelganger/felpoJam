@@ -24,7 +24,7 @@ func _on_recepcao_pressed() -> void:
 
 func _on_sala_do_gato_pressed() -> void:
 	ding.play();
-	get_tree().change_scene_to_file("res://scenes/salas/sala_do_gato.tscn");
+	get_tree().change_scene_to_file("res://scenes/salas/cubiculo.tscn");
 
 func _on_rf_pressed() -> void:
 	ding.play();

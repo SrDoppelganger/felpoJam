@@ -3,8 +3,13 @@ set GlobalScript.speaking = true
 : *Tec Tec Tec Tec*
 : *Ao  se  aproximar  da  mesa  da  Mirtilanna  você  é  recebido  pela  cacofonia  familiar  da  recepção,  relógio  batendo,  teclas  sendo  apertadas,  papo  miado  de  fundo, de  certa  forma  é  algo  reconfortante  no  dia a dia  de  trabalho.*
 : *Após  de  terminar  de  escrever  algo  em  seu  caderno,  Mirtilanna  lhe  nota e  diverte  a  sua  atenção  a  você*
-Mirtilanna: Bom  dia,  [color=#703c03]Cafélipe[/color].  Atrasado  como  sempre,  né?
-Mirtilanna: Olha, já  consertaram  o  elevador  interditado  hoje  de manhã,  agora  você  pode  ir  direto  para  os departamentos  sem  precisar  subir  as  escadas. Se  bem  que  com  essa  sua  pasta  que você  leva  para  todo  canto,  nunca foi  tanto problema  para  você  né?
+[color=#4f86f7]Mirtilanna[/color]: Bom  dia,  [color=D1A255]Cafélipe[/color].  Atrasado  como  sempre,  né?
+[color=#4f86f7]Mirtilanna[/color]: Olha, já  consertaram  o  elevador  interditado  hoje  de manhã,  agora  você  pode  ir  direto  para  os departamentos  sem  precisar  subir  as  escadas. Se  bem  que  com  essa  sua  pasta  que você  leva  para  todo  canto,  nunca foi  tanto problema  para  você  né?
+[color=#4f86f7]Mirtilanna[/color]: De qualquer forma,  as minhas  patas  agradecem,  você não  faz  ideia  do  sufoco  que  passei  quando  o  [shake]chefe[/shake]  pediu  para  eu  consertar  a  máquina  de  café  no  [shake]ÚLTIMO[/shake]  andar…
+[color=#4f86f7]Mirtilanna[/color]: Isso  que  dá  ser  secretária,  acabo  tendo  que  fazer  tudo  por  aqui, mal sobra tempo  de  fazer  minha  [color=fb607f][wave]novel[/wave][/color]. Aliás  [color=ffa62b]Mangabriel[/color]  mandou  uns documentos  para  você,  ele  disse  para  você  carimbar  eles  urgentissimamente, melhor  você  já  ir  direto  para  sua  sala  resolver  isso,  cê  sabe  como  ele  é  com  tarefa  atrasada.
+[color=#4f86f7]Mirtilanna[/color]: Aliás, só  para  não  dizer  que  não  avisei,  o  sistema  tá  fora  do  ar,  ouvi  dizer  que  o  [color=ff6347]Tomatheus[/color]  acabou  vomitando  uma  bola  de  pelo  bem  em  cima  do  servidor…  [shake] eeew… [/shake]  agradeço  todos  os  dias  por  não  ser  faxineira  desse  lugar.
+[color=#4f86f7]Mirtilanna[/color]: Se  precisar  de  qualquer  coisa,  pode  me  chamar  no  [color=25D366]GatoZap[/color].
 set GlobalScript.phone_enabled = true
 set GlobalScript.speaking = false
+set SceneHandler.intro_over= true
 set SceneHandler.lastMinigame = "intro"

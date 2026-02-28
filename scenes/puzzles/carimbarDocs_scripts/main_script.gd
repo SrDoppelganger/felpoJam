@@ -15,8 +15,6 @@ var tentativas:int = 3;
 @onready var spawn_rate: Timer = $SpawnRate
 @onready var wave_timer: Timer = $WaveTimer
 
-@onready var cutscene: AnimationPlayer = $cutscene
-
 @onready var killzone: CollisionShape2D = $killzone/CollisionShape2D
 
 
@@ -24,14 +22,12 @@ var game_state:String = 'onGoing'
 var curr_wave:int = 1;
 var last_wave:int = 1;
 
-var win_dialog;
 var lose_dialog;
 
 var inTutorial: bool;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	inTutorial = true;
-	win_dialog = load("res://Scripts/dialogues/minigame1_win.dialogue");
 	lose_dialog = load("res://Scripts/dialogues/minigame1_lose.dialogue");
 	GlobalScript.score = 0;
 	GlobalScript.fillAmmo();
@@ -60,6 +56,7 @@ func gameLogic():
 	stamped = GlobalScript.score;
 	updateWave(stamped);
 	checkWave(last_wave);
+
 func updateWave(pontos):
 	if pontos < 5:
 		curr_wave = 1;
@@ -122,19 +119,20 @@ func _on_spawn_rate_timeout() -> void:
 			lose();
 
 func victory():
-	SceneHandler.clearMinigame("minigame1")
+	SceneHandler.clearMinigame("minigame1");
 	SceneHandler.justFinished = true;
-	DialogueManager.show_dialogue_balloon(win_dialog);
 	game_state = "victory"
 	GlobalScript.playEffect("yay");
-	playCutscene();
+	await get_tree().create_timer(1.0).timeout
+	get_tree().change_scene_to_file("res://scenes/salas/cubiculo.tscn");
 
 func lose():
 	DialogueManager.show_dialogue_balloon(lose_dialog);
 	game_state = "loss";
 
 # detecta qnd um arquivo passa
-func _on_killzone_area_entered(_area: Area2D) -> void:
+func _on_killzone_area_entered(area: Area2D) -> void:
+	area.queue_free();
 	tentativas -= 1;
 
 func _on_tinta_pressed() -> void:
@@ -144,7 +142,4 @@ func _on_wave_timer_timeout() -> void:
 	wave_label.hide();
 	GlobalScript.fillAmmo();
 	tentativas = 3;
-	killzone.disabled = false;  
-
-func playCutscene():
-	cutscene.play("documento");
+	killzone.disabled = false; 

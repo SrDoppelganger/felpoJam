@@ -8,6 +8,12 @@ var minigame1:bool = false;
 var minigame2:bool = false;
 var minigame3:bool = false;
 
+#saber em qual sala o gato está
+var curr_room:String;
+
+#para tocar o diálogo da mirty escrevendo
+var intro_over:bool;
+
 # valor inicial = start
 var lastMinigame: String = "start";
 
