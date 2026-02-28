@@ -9,7 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://dmfyb37ym4noo" path="res://assets/graficos/créditos/felpo_logo.png" id="6_ls8ue"]
 [ext_resource type="Texture2D" uid="uid://b5l7d7el03p6r" path="res://icon.svg" id="7_btpxk"]
 [ext_resource type="Texture2D" uid="uid://p4ughbxdvri3" path="res://assets/graficos/créditos/bell-creditos.png" id="8_8by0f"]
+[ext_resource type="Texture2D" uid="uid://dieg7ggqcessm" path="res://assets/graficos/créditos/sigil_PLACEHOLDER.png" id="9_1l7lo"]
 [ext_resource type="Texture2D" uid="uid://22uk5uk4b0si" path="res://assets/graficos/créditos/doppel_creditos-spritesheet-.png" id="9_ld8hq"]
+[ext_resource type="Texture2D" uid="uid://tte07boi7qp4" path="res://assets/graficos/créditos/SucoDeArgila.png" id="9_s7ulf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f6pr2"]
 shader = ExtResource("1_jk2nc")
@@ -17,6 +19,62 @@ shader = ExtResource("1_jk2nc")
 [sub_resource type="AtlasTexture" id="AtlasTexture_s7ulf"]
 atlas = ExtResource("7_btpxk")
 region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybk7b"]
+atlas = ExtResource("9_1l7lo")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e03s"]
+atlas = ExtResource("9_1l7lo")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sq1r"]
+atlas = ExtResource("9_1l7lo")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64f2i"]
+atlas = ExtResource("9_1l7lo")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fl4xb"]
+atlas = ExtResource("9_1l7lo")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndvmv"]
+atlas = ExtResource("9_1l7lo")
+region = Rect2(1280, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tekda"]
+atlas = ExtResource("9_1l7lo")
+region = Rect2(1536, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvgt4"]
+atlas = ExtResource("9_s7ulf")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2628"]
+atlas = ExtResource("9_s7ulf")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og3n5"]
+atlas = ExtResource("9_s7ulf")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n44q"]
+atlas = ExtResource("9_s7ulf")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wa0k4"]
+atlas = ExtResource("9_s7ulf")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84p7q"]
+atlas = ExtResource("9_s7ulf")
+region = Rect2(1280, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bd4e"]
+atlas = ExtResource("9_s7ulf")
+region = Rect2(1536, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1l7lo"]
 atlas = ExtResource("8_8by0f")
@@ -82,6 +140,58 @@ animations = [{
 }],
 "loop": true,
 "name": &"PLACEHOLDER",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybk7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e03s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2sq1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64f2i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fl4xb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndvmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tekda")
+}],
+"loop": true,
+"name": &"Sigil",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvgt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2628")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og3n5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n44q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wa0k4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84p7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2bd4e")
+}],
+"loop": true,
+"name": &"SucoDeArgila",
 "speed": 5.0
 }, {
 "frames": [{
@@ -235,10 +345,22 @@ tracks/7/keys = {
 "update": 1,
 "values": [&"PLACEHOLDER"]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("arigathanks:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1184, 264)]
+}
 
 [sub_resource type="Animation" id="Animation_f6pr2"]
 resource_name = "créditos"
-length = 20.0
+length = 26.033333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -306,10 +428,10 @@ tracks/5/path = NodePath("roll_call/membros:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(7.002619, 8.002619, 10.002619),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(7.002619, 8.51268),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false, true, true]
+"values": [false, true]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -318,15 +440,19 @@ tracks/6/path = NodePath("roll_call/Funçâo:text")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(6.982619, 8.002619, 10.002619, 10.0726185, 12.003478, 12.053623, 14.003623, 14.063623, 15.996243),
+"times": PackedFloat32Array(6.982619, 8.5, 10, 10.0726185, 12.003478, 12.053623, 14.003623, 14.063623, 15.996243),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["", "Sigil  faz  a  arte", "Sigil  faz  a  arte", "Bell  faz  a  música", "Bell  faz  a  música", "Suco  de  Argila 
-Faz  o  código", "Suco  de  Argila 
-Faz  o  código", "Doppel  faz  um  pouco
-de  tudo  
-(e deixa  todo  mundo  na  linha)", "Doppel  faz  um  pouco
-de  tudo  
+"values": ["", "[color=#2A0F38]Sigil[/color]  
+faz  a  arte", "[color=#2A0F38]Sigil[/color]  
+faz  a  arte", "[color=#ff1dce]Bell[/color]  
+faz  a  música", "[color=#ff1dce]Bell[/color]  
+faz  a  música", "[color=#355e3b]Suco  de  Argila[/color] 
+Faz  o  código", "[color=#355e3b]Suco  de  Argila[/color] 
+Faz  o  código", "[color=87cefa]Doppel[/color]  
+faz  um  pouco de  tudo  
+(e deixa  todo  mundo  na  linha)", "[color=87cefa]Doppel[/color]  
+faz  um  pouco de  tudo  
 (e deixa  todo  mundo  na  linha)"]
 }
 tracks/7/type = "value"
@@ -336,10 +462,22 @@ tracks/7/path = NodePath("roll_call/membros:animation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(8.003477, 10.013477, 10.073478, 12.003478, 12.053623, 14.003623, 14.063623, 15.996243),
+"times": PackedFloat32Array(8.003477, 10.013477, 10.073478, 12.003478, 12.033334, 14.003623, 14.063623, 15.996243),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [&"PLACEHOLDER", &"PLACEHOLDER", &"bell", &"bell", &"PLACEHOLDER", &"PLACEHOLDER", &"doppel", &"doppel"]
+"values": [&"Sigil", &"Sigil", &"bell", &"bell", &"SucoDeArgila", &"SucoDeArgila", &"doppel", &"doppel"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("arigathanks:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 18.007835, 20, 22.008333, 24.033333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1184, 264), Vector2(1184, 264), Vector2(80, 224), Vector2(80, 224), Vector2(-1008, 224)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7oli7"]
@@ -409,6 +547,7 @@ theme_override_constants/outline_size = 24
 theme_override_fonts/normal_font = ExtResource("5_ls8ue")
 theme_override_font_sizes/normal_font_size = 120
 text = "pelo grupo:"
+scroll_active = false
 
 [node name="Neokat café" type="RichTextLabel" parent="neokat_logo" unique_id=1632195742]
 anchors_preset = 8
@@ -430,6 +569,7 @@ theme_override_fonts/normal_font = ExtResource("5_ls8ue")
 theme_override_font_sizes/normal_font_size = 120
 bbcode_enabled = true
 text = "Neokat  [color=#1e90ff]CAfé[/color]"
+scroll_active = false
 
 [node name="Felpojam" type="Sprite2D" parent="." unique_id=738792327]
 visible = false
@@ -454,6 +594,7 @@ theme_override_constants/outline_size = 24
 theme_override_fonts/normal_font = ExtResource("5_ls8ue")
 theme_override_font_sizes/normal_font_size = 120
 text = "Um jogo feito para a"
+scroll_active = false
 
 [node name="roll_call" type="Control" parent="." unique_id=1226117056]
 layout_mode = 1
@@ -482,11 +623,11 @@ offset_right = 403.99463
 offset_bottom = -65.00456
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_f6pr2")
 theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("5_ls8ue")
 theme_override_font_sizes/normal_font_size = 64
 text = "Membros:"
+scroll_active = false
 horizontal_alignment = 1
 
 [node name="membros" type="AnimatedSprite2D" parent="roll_call" unique_id=1859069009]
@@ -498,24 +639,47 @@ animation = &"PLACEHOLDER"
 
 [node name="Funçâo" type="RichTextLabel" parent="roll_call" unique_id=80045694]
 layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -389.99994
+offset_top = 124.0
+offset_right = 389.99994
+offset_bottom = 332.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("5_ls8ue")
+theme_override_font_sizes/normal_font_size = 42
+bbcode_enabled = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1983129362]
+libraries/ = SubResource("AnimationLibrary_7oli7")
+
+[node name="arigathanks" type="RichTextLabel" parent="." unique_id=1245118462]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -392.0
-offset_top = 164.0
-offset_right = 387.99988
-offset_bottom = 324.0
+offset_left = 608.0
+offset_top = -60.0
+offset_right = 1599.9998
+offset_bottom = 139.99997
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_f6pr2")
-theme_override_constants/outline_size = 12
+theme_override_constants/outline_size = 18
 theme_override_fonts/normal_font = ExtResource("5_ls8ue")
-theme_override_font_sizes/normal_font_size = 42
+theme_override_font_sizes/normal_font_size = 78
+text = "Obrigado  por  Jogar
+Nosso  joguito  ^_^"
+scroll_active = false
 horizontal_alignment = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1983129362]
-libraries/ = SubResource("AnimationLibrary_7oli7")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

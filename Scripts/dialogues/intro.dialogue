@@ -1,9 +1,10 @@
 ~ start
 set GlobalScript.speaking = true
-[color=#4f86f7]Mirtilanna[/color]: Bom  dia,  {{GlobalScript.gatoName}}.  Atrasado  como  sempre,  né?
-[color=#4f86f7]Mirtilanna[/color]: Olha,  já  consertaram  o  elevador,  agora  você  pode  ir  direto  para  os  departamentos  sem  ter  que  pegar  a  escada
-[color=#4f86f7]Mirtilanna[/color]: O  [color=#ffa62b]Mangabriel[/color]  mandou  uns  documentos  para  você  [wave]carimbar[/wave]  urgentemente
-[color=#4f86f7]Mirtilanna[/color]: Se  precisar  de  qualquer  coisa,  pode  me  chamar  no  [color=25D366]GatoZap[/color]
+: *Tec Tec Tec Tec*
+: *Ao  se  aproximar  da  mesa  da  Mirtilanna  você  é  recebido  pela  cacofonia  familiar  da  recepção,  relógio  batendo,  teclas  sendo  apertadas,  papo  miado  de  fundo, de  certa  forma  é  algo  reconfortante  no  dia a dia  de  trabalho.*
+: *Após  de  terminar  de  escrever  algo  em  seu  caderno,  Mirtilanna  lhe  nota e  diverte  a  sua  atenção  a  você*
+Mirtilanna: Bom  dia,  [color=#703c03]Cafélipe[/color].  Atrasado  como  sempre,  né?
+Mirtilanna: Olha, já  consertaram  o  elevador  interditado  hoje  de manhã,  agora  você  pode  ir  direto  para  os departamentos  sem  precisar  subir  as  escadas. Se  bem  que  com  essa  sua  pasta  que você  leva  para  todo  canto,  nunca foi  tanto problema  para  você  né?
 set GlobalScript.phone_enabled = true
 set GlobalScript.speaking = false
 set SceneHandler.lastMinigame = "intro"

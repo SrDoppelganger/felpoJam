@@ -9,6 +9,8 @@ var rng = RandomNumberGenerator.new()
 @onready var Recon_collision: CollisionShape2D = $Reconhecimento/CollisionShape2D
 @onready var Recon_sprite: TextureRect = $Reconhecimento/CollisionShape2D/ColorRect
 
+var jinglePlaying:bool = false;
+
 @onready var retries = 0
 signal retried
 
@@ -75,8 +77,13 @@ func facialRec() -> void:
 		
 	elif retries >= 3:
 		instrucao.text = "Reconhecimento  realizado  com  sucesso!"
-		GlobalScript.playEffect("yay")
-		victory()
+		playJingle();
+		victory();
+		
+func playJingle():
+	if !jinglePlaying:
+		GlobalScript.playEffect("yay");
+		jinglePlaying = true;
 
 func victory():
 	instrucao.add_theme_color_override("font_color","#7fff00");

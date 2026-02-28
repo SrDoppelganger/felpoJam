@@ -1,25 +1,31 @@
 [gd_scene format=3 uid="uid://bwbn45ld7r5hk"]
 
 [ext_resource type="Script" uid="uid://2qkgkt8x6hxm" path="res://Scripts/global_script.gd" id="1_4pk28"]
-[ext_resource type="AudioStream" uid="uid://dbr24nivwhwlc" path="res://assets/sons/stamp.ogg" id="2_nmxvb"]
-[ext_resource type="AudioStream" uid="uid://5gjwqegcx7fw" path="res://assets/sons/yay.ogg" id="3_opebo"]
-[ext_resource type="AudioStream" uid="uid://bdu2sbycqftxr" path="res://assets/sons/musica_placeholder.ogg" id="4_m3l3d"]
+[ext_resource type="AudioStream" uid="uid://rmg0sh6mgf16" path="res://assets/sons/Carimbada.ogg" id="2_opebo"]
+[ext_resource type="AudioStream" uid="uid://gucbvmksvf5k" path="res://assets/sons/Trabalho feito!.ogg" id="3_m3l3d"]
+[ext_resource type="AudioStream" uid="uid://yngsseo1rahx" path="res://assets/sons/Dia a dia.ogg" id="4_m3l3d"]
+[ext_resource type="AudioStream" uid="uid://cqlyyhy1r42vj" path="res://assets/sons/som de seleção e menus.ogg" id="4_nelfd"]
 
 [node name="GlobalScript" type="Node" unique_id=1088285404]
 script = ExtResource("1_4pk28")
 
 [node name="carimbado" type="AudioStreamPlayer" parent="." unique_id=1725095165]
-stream = ExtResource("2_nmxvb")
+stream = ExtResource("2_opebo")
 bus = &"Efeitos"
 
 [node name="yay" type="AudioStreamPlayer" parent="." unique_id=1616871238]
-stream = ExtResource("3_opebo")
+stream = ExtResource("3_m3l3d")
 volume_db = -8.0
-pitch_scale = 1.5
 bus = &"Efeitos"
+
+[node name="confirm" type="AudioStreamPlayer" parent="." unique_id=1754091912]
+stream = ExtResource("4_nelfd")
+
+[node name="moiado" type="AudioStreamPlayer" parent="." unique_id=1051168482]
 
 [node name="Musgas" type="Node" parent="." unique_id=1005388058]
 
-[node name="placeholder" type="AudioStreamPlayer" parent="Musgas" unique_id=2040686557]
+[node name="main" type="AudioStreamPlayer" parent="Musgas" unique_id=2040686557]
 stream = ExtResource("4_m3l3d")
 bus = &"Musica"
+parameters/looping = true

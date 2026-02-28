@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqlyyhy1r42vj"
+path="res://.godot/imported/som de seleção e menus.ogg-c5bbe887b540ecac1b57b42c71147bc9.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sons/som de seleção e menus.ogg"
+dest_files=["res://.godot/imported/som de seleção e menus.ogg-c5bbe887b540ecac1b57b42c71147bc9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

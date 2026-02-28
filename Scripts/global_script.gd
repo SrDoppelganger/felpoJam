@@ -1,8 +1,11 @@
 extends Node
 @onready var carimbado: AudioStreamPlayer = $carimbado;
 @onready var yay: AudioStreamPlayer = $yay
+@onready var confirm: AudioStreamPlayer = $confirm
 
-var gatoName = "Dengoso"
+#importar os cursores
+
+var gatoName = "Cafélipe"
 
 #variavel para para o input de andar enquanto a caixa de dialogo está ativa
 var speaking: bool;
@@ -37,14 +40,14 @@ func getCutscene():
 
 func playMusic(track):
 	match track:
-		"placeholder":
-			$Musgas/placeholder.play();
-		"yay":
-			yay.play();
+		"main":
+			$Musgas/main.play();
 
 func playEffect(sound):
 	match sound:
-		"stamp":
+		"carimbado":
 			carimbado.play();
 		"yay":
 			yay.play();
+		"confirm":
+			confirm.play();

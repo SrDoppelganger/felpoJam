@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cwwotfmkfvirc" path="res://scenes/salas/elevador.gd" id="1_fwl37"]
 [ext_resource type="Texture2D" uid="uid://c4l2p1efra4mo" path="res://assets/graficos/elevador_PLACEHOLDER.jpg" id="1_oycxj"]
 [ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="2_yhqp4"]
-[ext_resource type="AudioStream" uid="uid://dt312hi2dw1rn" path="res://assets/sons/beep_placeholder.mp3" id="4_f1svh"]
 
 [node name="Elevador" type="Node2D" unique_id=796784086]
 script = ExtResource("1_fwl37")
@@ -72,7 +71,6 @@ text = "Sala  do  chefe"
 [node name="Sons" type="Node" parent="." unique_id=109183962]
 
 [node name="ding" type="AudioStreamPlayer" parent="Sons" unique_id=800395497]
-stream = ExtResource("4_f1svh")
 
 [connection signal="pressed" from="Menu/VBoxContainer/Recepcao" to="." method="_on_recepcao_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/SalaDoGato" to="." method="_on_sala_do_gato_pressed"]

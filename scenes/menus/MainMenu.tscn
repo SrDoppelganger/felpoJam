@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bn5sx1yc2j8m1" path="res://scenes/menus/main_menu.gd" id="1_yqorp"]
 [ext_resource type="Texture2D" uid="uid://cp6asqfacgvxi" path="res://assets/graficos/placeholder_title.jpeg" id="2_bqojv"]
 [ext_resource type="PackedScene" uid="uid://bhkpy4mpr0pug" path="res://scenes/menus/config.tscn" id="4_tyyoy"]
+[ext_resource type="AudioStream" uid="uid://cqlyyhy1r42vj" path="res://assets/sons/som de seleção e menus.ogg" id="5_p0il0"]
 
 [node name="MainMenu" type="Control" unique_id=1217285510]
 layout_mode = 3
@@ -78,6 +79,9 @@ offset_left = 0.0
 offset_top = 168.0
 offset_right = 0.0
 offset_bottom = 168.0
+
+[node name="confirm" type="AudioStreamPlayer" parent="." unique_id=947180530]
+stream = ExtResource("5_p0il0")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Opções" to="." method="_on_opções_pressed"]

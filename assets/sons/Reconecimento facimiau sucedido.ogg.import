@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d1h7s6d57c00q"
+path="res://.godot/imported/Reconecimento facimiau sucedido.ogg-a57f1125b671b8f185a6202cc18bb261.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sons/Reconecimento facimiau sucedido.ogg"
+dest_files=["res://.godot/imported/Reconecimento facimiau sucedido.ogg-a57f1125b671b8f185a6202cc18bb261.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

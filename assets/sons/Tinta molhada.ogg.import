@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2tg5u16m50eo"
+path="res://.godot/imported/Tinta molhada.ogg-28256226aec04c8dd3fddef25f105f1d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sons/Tinta molhada.ogg"
+dest_files=["res://.godot/imported/Tinta molhada.ogg-28256226aec04c8dd3fddef25f105f1d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

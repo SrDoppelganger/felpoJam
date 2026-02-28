@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dytq10g5iap3p"
+path="res://.godot/imported/Catraca bloqueada.ogg-07381782eaee34e5a846ddc60c421427.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sons/Catraca bloqueada.ogg"
+dest_files=["res://.godot/imported/Catraca bloqueada.ogg-07381782eaee34e5a846ddc60c421427.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

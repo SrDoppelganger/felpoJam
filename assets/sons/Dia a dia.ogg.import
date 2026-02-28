@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://yngsseo1rahx"
+path="res://.godot/imported/Dia a dia.ogg-a6df3bf9e08f7fa0c678cbc798f3a6d9.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sons/Dia a dia.ogg"
+dest_files=["res://.godot/imported/Dia a dia.ogg-a6df3bf9e08f7fa0c678cbc798f3a6d9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
