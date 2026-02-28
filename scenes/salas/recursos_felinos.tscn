@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://duwtvn4n8gjwt" path="res://scenes/salas/recursos_felinos.gd" id="1_g2qgc"]
 [ext_resource type="PackedScene" uid="uid://du533ibx0tpy" path="res://scenes/carimberto.tscn" id="2_5nnx3"]
-[ext_resource type="Texture2D" uid="uid://dwk8ncu8dao07" path="res://assets/graficos/salaDoGato_PLACEHOLDER.jpg" id="2_gvbcq"]
+[ext_resource type="Texture2D" uid="uid://bllo2benayxhp" path="res://assets/graficos/Definitivo/setor 1 - com o emilho.png" id="2_8e63j"]
 [ext_resource type="PackedScene" uid="uid://deofm5od5e231" path="res://scenes/npc.tscn" id="4_gvbcq"]
 [ext_resource type="PackedScene" uid="uid://bhkpy4mpr0pug" path="res://scenes/menus/config.tscn" id="5_8e63j"]
 [ext_resource type="PackedScene" uid="uid://ocjvpc0gyhiu" path="res://scenes/menus/PauseMenu.tscn" id="6_ail10"]
@@ -31,7 +31,7 @@ offset_right = 1160.0
 offset_bottom = 646.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_gvbcq")
+texture = ExtResource("2_8e63j")
 expand_mode = 1
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=531006808]
@@ -41,7 +41,7 @@ navigation_polygon = SubResource("NavigationPolygon_gvbcq")
 position = Vector2(800, 224)
 
 [node name="Corredor" type="Area2D" parent="." unique_id=307217799]
-position = Vector2(128, 0)
+position = Vector2(184, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Corredor" unique_id=1776384389]
 position = Vector2(124, 112)
@@ -50,16 +50,18 @@ debug_color = Color(0.76385766, 0.4500926, 3.85046e-07, 0.41960785)
 
 [node name="NPCs" type="Node" parent="." unique_id=1591131394]
 
-[node name="Emilho" parent="NPCs" unique_id=714093445 instance=ExtResource("4_gvbcq")]
+[node name="Area2D" type="Area2D" parent="NPCs" unique_id=429515433]
 position = Vector2(168, 416)
-dialogue_path = "res://Scripts/dialogues/Emilho.dialogue"
 
-[node name="Area2D" type="Area2D" parent="NPCs/Emilho" unique_id=429515433]
-
-[node name="Emilho_range" type="CollisionShape2D" parent="NPCs/Emilho/Area2D" unique_id=1996605092]
+[node name="Emilho_range" type="CollisionShape2D" parent="NPCs/Area2D" unique_id=1996605092]
 position = Vector2(44, 20)
 shape = SubResource("RectangleShape2D_gvbcq")
 debug_color = Color(0.90588236, 0.8156863, 0.011764706, 0.41960785)
+
+[node name="Emilho" parent="NPCs" unique_id=714093445 instance=ExtResource("4_gvbcq")]
+visible = false
+position = Vector2(168, 416)
+dialogue_path = "res://Scripts/dialogues/Emilho.dialogue"
 
 [node name="menus" type="CanvasLayer" parent="." unique_id=310442280]
 
@@ -89,12 +91,12 @@ grow_vertical = 0
 [connection signal="input_event" from="Corredor" to="." method="_on_corredor_input_event"]
 [connection signal="mouse_entered" from="Corredor" to="." method="cursor_mouse_entered"]
 [connection signal="mouse_exited" from="Corredor" to="." method="cursor_mouse_exited"]
+[connection signal="body_entered" from="NPCs/Area2D" to="NPCs/Emilho" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="NPCs/Area2D" to="NPCs/Emilho" method="_on_area_2d_body_exited"]
+[connection signal="input_event" from="NPCs/Area2D" to="NPCs/Emilho" method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="NPCs/Area2D" to="." method="cursor_mouse_entered"]
+[connection signal="mouse_exited" from="NPCs/Area2D" to="." method="cursor_mouse_exited"]
 [connection signal="isTalkingWithPlayer" from="NPCs/Emilho" to="." method="_on_emilho_is_talking_with_player"]
-[connection signal="body_entered" from="NPCs/Emilho/Area2D" to="NPCs/Emilho" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="NPCs/Emilho/Area2D" to="NPCs/Emilho" method="_on_area_2d_body_exited"]
-[connection signal="input_event" from="NPCs/Emilho/Area2D" to="NPCs/Emilho" method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="NPCs/Emilho/Area2D" to="." method="cursor_mouse_entered"]
-[connection signal="mouse_exited" from="NPCs/Emilho/Area2D" to="." method="cursor_mouse_exited"]
 [connection signal="openPause" from="menus/Config" to="menus/PauseMenu" method="_on_config_open_pause"]
 [connection signal="openConfig" from="menus/PauseMenu" to="menus/Config" method="_on_pause_menu_open_config"]
 [connection signal="onFocus" from="menus/GatoPhone" to="Carimberto" method="_on_gato_phone_on_focus"]

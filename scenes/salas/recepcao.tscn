@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4q5kr72j86i8"]
 
 [ext_resource type="Script" uid="uid://b7fpcsomipuxj" path="res://Scripts/recepcao.gd" id="1_d3klu"]
-[ext_resource type="Texture2D" uid="uid://dql0olcj15rof" path="res://assets/graficos/recepcao_PLACEHOLDER.jpeg" id="1_w76ij"]
+[ext_resource type="Texture2D" uid="uid://cw85occ84u36i" path="res://assets/graficos/Definitivo/recepção - FINALIZADO.png" id="2_1y1f5"]
 [ext_resource type="PackedScene" uid="uid://du533ibx0tpy" path="res://scenes/carimberto.tscn" id="2_vhvgg"]
 [ext_resource type="PackedScene" uid="uid://deofm5od5e231" path="res://scenes/npc.tscn" id="3_xwucd"]
 [ext_resource type="PackedScene" uid="uid://ocjvpc0gyhiu" path="res://scenes/menus/PauseMenu.tscn" id="4_tifur"]
@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://dytq10g5iap3p" path="res://assets/sons/Catraca bloqueada.ogg" id="9_1y1f5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w76ij"]
-size = Vector2(344, 96)
+size = Vector2(344, 128)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_w76ij"]
 vertices = PackedVector2Array(898.3594, 274, 1118.2734, 638, 9.78125, 638, 461.21875, 346.20313, 2.2265625, 298, 188.38281, 298, 236.21875, 337.8672, 509.35156, 274)
@@ -143,16 +143,17 @@ offset_right = 1152.0
 offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_w76ij")
+texture = ExtResource("2_1y1f5")
 
 [node name="NPC" parent="." unique_id=714093445 instance=ExtResource("3_xwucd")]
-position = Vector2(336, 320)
+position = Vector2(351, 284)
+animation = "Mirtilanna"
 dialogue_path = "res://Scripts/dialogues/Mirtilanna.dialogue"
 
 [node name="Area2D" type="Area2D" parent="NPC" unique_id=848317710]
 
 [node name="mirtilanna_talkrange" type="CollisionShape2D" parent="NPC/Area2D" unique_id=1720117717]
-position = Vector2(12, 40)
+position = Vector2(12, 56)
 shape = SubResource("RectangleShape2D_w76ij")
 debug_color = Color(0.94049126, 0.1889734, 0.40293947, 0.41960785)
 
