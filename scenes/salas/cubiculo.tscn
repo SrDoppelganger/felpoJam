@@ -2,6 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://c5l4imfj72d2g" path="res://assets/graficos/cubiculo_PLACEHOLDER.jpg" id="1_aa2ty"]
 [ext_resource type="Script" uid="uid://cvdnj4wndfodx" path="res://scenes/salas/cubiculo.gd" id="1_lly2p"]
+[ext_resource type="PackedScene" uid="uid://bhkpy4mpr0pug" path="res://scenes/menus/config.tscn" id="3_yvr2o"]
+[ext_resource type="PackedScene" uid="uid://ocjvpc0gyhiu" path="res://scenes/menus/PauseMenu.tscn" id="4_oxnmk"]
+[ext_resource type="PackedScene" uid="uid://bbj7knvjviqdd" path="res://scenes/gato_phone.tscn" id="5_i5mt4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lly2p"]
+size = Vector2(357, 458)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lc05v"]
+size = Vector2(576, 405)
 
 [node name="cubiculo" type="Node2D" unique_id=299444551]
 script = ExtResource("1_lly2p")
@@ -12,3 +21,41 @@ offset_right = 1136.0
 offset_bottom = 656.0
 texture = ExtResource("1_aa2ty")
 expand_mode = 1
+
+[node name="corredor" type="Area2D" parent="." unique_id=1036305735]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="corredor" unique_id=1288243945]
+position = Vector2(165.5, 235)
+shape = SubResource("RectangleShape2D_lly2p")
+
+[node name="Mesa" type="Area2D" parent="." unique_id=1754100077]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa" unique_id=1896028299]
+position = Vector2(832, 274.5)
+shape = SubResource("RectangleShape2D_lc05v")
+debug_color = Color(0.9437049, 0.23230499, 0.14641693, 0.41960785)
+
+[node name="Menus" type="CanvasLayer" parent="." unique_id=1844123264]
+
+[node name="Config" parent="Menus" unique_id=1177158484 instance=ExtResource("3_yvr2o")]
+process_mode = 3
+visible = false
+
+[node name="PauseMenu" parent="Menus" unique_id=1992423139 instance=ExtResource("4_oxnmk")]
+visible = false
+
+[node name="GatoPhone" parent="Menus" unique_id=1980130972 instance=ExtResource("5_i5mt4")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -160.0
+offset_right = 24.0
+offset_bottom = -160.0
+grow_vertical = 0
+size_flags_horizontal = 4
+
+[connection signal="input_event" from="corredor" to="." method="_on_corredor_input_event"]
+[connection signal="input_event" from="Mesa" to="." method="_on_mesa_input_event"]
+[connection signal="openPause" from="Menus/Config" to="Menus/PauseMenu" method="_on_config_open_pause"]
+[connection signal="openConfig" from="Menus/PauseMenu" to="Menus/Config" method="_on_pause_menu_open_config"]

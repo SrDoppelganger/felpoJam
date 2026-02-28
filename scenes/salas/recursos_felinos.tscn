@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://du533ibx0tpy" path="res://scenes/carimberto.tscn" id="2_5nnx3"]
 [ext_resource type="Texture2D" uid="uid://dwk8ncu8dao07" path="res://assets/graficos/salaDoGato_PLACEHOLDER.jpg" id="2_gvbcq"]
 [ext_resource type="PackedScene" uid="uid://deofm5od5e231" path="res://scenes/npc.tscn" id="4_gvbcq"]
+[ext_resource type="PackedScene" uid="uid://bhkpy4mpr0pug" path="res://scenes/menus/config.tscn" id="5_8e63j"]
+[ext_resource type="PackedScene" uid="uid://ocjvpc0gyhiu" path="res://scenes/menus/PauseMenu.tscn" id="6_ail10"]
+[ext_resource type="PackedScene" uid="uid://bbj7knvjviqdd" path="res://scenes/gato_phone.tscn" id="7_f3bxi"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_gvbcq"]
 vertices = PackedVector2Array(160.03125, 269.9375, 105.13281, 263.84375, 165.39063, 170.10156, 383.6875, 245.97656, 1009.7578, 185.88281, 1033.3828, 233.10938, 930.1328, 256.9375, 563.8906, 254.17188, 624.9297, 306.47656, 635.0703, 347.0703, 1066.3125, 577.3594, 902.64844, 622, 717.64844, 622, 644.9531, 500.8125, 612.1406, 370, 217.57031, 370, 439.1328, 541.96875, 210.42188, 534.34375)
@@ -58,6 +61,29 @@ position = Vector2(44, 20)
 shape = SubResource("RectangleShape2D_gvbcq")
 debug_color = Color(0.90588236, 0.8156863, 0.011764706, 0.41960785)
 
+[node name="menus" type="CanvasLayer" parent="." unique_id=310442280]
+
+[node name="Config" parent="menus" unique_id=1177158484 instance=ExtResource("5_8e63j")]
+process_mode = 3
+visible = false
+
+[node name="PauseMenu" parent="menus" unique_id=1992423139 instance=ExtResource("6_ail10")]
+visible = false
+
+[node name="GatoPhone" parent="menus" unique_id=1980130972 instance=ExtResource("7_f3bxi")]
+process_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -176.0
+offset_right = -152.0
+offset_bottom = -176.0
+grow_horizontal = 0
+grow_vertical = 0
+
 [connection signal="body_entered" from="Corredor" to="." method="_on_corredor_body_entered"]
 [connection signal="body_exited" from="Corredor" to="." method="_on_corredor_body_exited"]
 [connection signal="input_event" from="Corredor" to="." method="_on_corredor_input_event"]
@@ -65,3 +91,6 @@ debug_color = Color(0.90588236, 0.8156863, 0.011764706, 0.41960785)
 [connection signal="body_entered" from="NPCs/Emilho/Area2D" to="NPCs/Emilho" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="NPCs/Emilho/Area2D" to="NPCs/Emilho" method="_on_area_2d_body_exited"]
 [connection signal="input_event" from="NPCs/Emilho/Area2D" to="NPCs/Emilho" method="_on_area_2d_input_event"]
+[connection signal="openPause" from="menus/Config" to="menus/PauseMenu" method="_on_config_open_pause"]
+[connection signal="openConfig" from="menus/PauseMenu" to="menus/Config" method="_on_pause_menu_open_config"]
+[connection signal="onFocus" from="menus/GatoPhone" to="Carimberto" method="_on_gato_phone_on_focus"]

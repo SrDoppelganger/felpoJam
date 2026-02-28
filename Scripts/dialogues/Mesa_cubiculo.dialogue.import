@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dsqqmnqtfu0kf"
+path="res://.godot/imported/Mesa_cubiculo.dialogue-9d0a6ca19b633b76674f70e23f289e28.tres"
+
+[deps]
+
+source_file="res://Scripts/dialogues/Mesa_cubiculo.dialogue"
+dest_files=["res://.godot/imported/Mesa_cubiculo.dialogue-9d0a6ca19b633b76674f70e23f289e28.tres"]
+
+[params]
+
+defaults=true

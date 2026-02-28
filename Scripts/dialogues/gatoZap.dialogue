@@ -1,28 +1,32 @@
 ~ start
 set GlobalScript.speaking = true
-Gatophone: * tururururu *
 if SceneHandler.curr_room == "Recepcao":
+	Gatophone: * tururururu *
 	[color=#4f86f7]Mirtilanna[/color]: *O  telefone  da  [color=#4f86f7]Mirtilanna[/color]  começa  a  tocar  a  musica  tema  do  club  das  winx versão  MIDI*
 	[color=#4f86f7]Mirtilanna[/color]: …Não  precisa  me  ligar  quando  eu  tô  bem  na  sua  frente.
 	set GlobalScript.speaking = false
 	=> END
-if SceneHandler.minigame1 and not SceneHandler.curr_room == "Recepcao":
-	[color=#4f86f7]Mirtilanna[/color]: Hm?  Um  documento  para  o  [color=E5A65F]chefinho[/color]  carimbar?  não  sei  como  isso  chegou  na  sua  sala
-	[color=#4f86f7]Mirtilanna[/color]: Se  importa  de  dar  uma  passadinha  aqui  na  [color=orange]recepção[/color]  para  eu  dar  uma  olhada?
+elif SceneHandler.minigame3:
+	Gatophone: * tururururu *
+	[color=#4f86f7]Mirtilanna[/color]: [wave]QUÊÊÊÊÊÊÊÊÊÊ[/wave]? Ele  disse  para  cê  mesmo  deixar  o  documento  com  o  [color=E5A65F]chefinho[/color]
+	[color=#4f86f7]Mirtilanna[/color]: Isso  é  desvio  de  função  mona, quer  ir  para  o  sindigato?
 	set GlobalScript.speaking = false
 	=> END
-if SceneHandler.minigame2 and not SceneHandler.curr_room == "Recepcao":
+elif SceneHandler.minigame2:
+	Gatophone: * tururururu *
 	[color=#4f86f7]Mirtilanna[/color]: Agora  está  tudo  em  dia  com  sua  biometria  facimiau
 	[color=#4f86f7]Mirtilanna[/color]: Cê  devia  passar  no  setor  de  [color=orange]Recursos  Felinos[/color]  para  se  livrar  desse  documento
 	[color=#4f86f7]Mirtilanna[/color]: A  menos  que  cê  queira  pagar  suas  horas  pendentes  agora,  o  que  eu  não  recomendo.
 	set GlobalScript.speaking = false
 	=> END
-if SceneHandler.minigame3 and not SceneHandler.curr_room == "Recepcao":
-	[color=#4f86f7]Mirtilanna[/color]: [wave]QUÊẼÊÊÊÊẼÊÊÊ[/wave]? Ele  disse  para  cê  mesmo  deixar  o  documento  com  o  [color=E5A65F]chefinho[/color]
-	[color=#4f86f7]Mirtilanna[/color]: Isso  é  desvio  de  função  mona, quer  ir  para  o  sindigato?
+elif SceneHandler.minigame1:
+	Gatophone: * tururururu *
+	[color=#4f86f7]Mirtilanna[/color]: Hm?  Um  documento  para  o  [color=E5A65F]chefinho[/color]  carimbar?  não  sei  como  isso  chegou  na  sua  sala
+	[color=#4f86f7]Mirtilanna[/color]: Se  importa  de  dar  uma  passadinha  aqui  na  [color=orange]recepção[/color]  para  eu  dar  uma  olhada?
 	set GlobalScript.speaking = false
 	=> END
 else:
+	Gatophone: * tururururu *
 	[color=#4f86f7]Mirtilanna[/color]: [wave]meeeeeooooooooow[/wave]
 	set GlobalScript.speaking = false
 	=> END

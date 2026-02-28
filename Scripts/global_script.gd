@@ -4,6 +4,7 @@ extends Node
 @onready var confirm: AudioStreamPlayer = $confirm
 
 #importar os cursores
+var cursor_active = load("res://assets/graficos/Definitivo/cursor - clicker.png")
 
 var gatoName = "Cafélipe"
 
