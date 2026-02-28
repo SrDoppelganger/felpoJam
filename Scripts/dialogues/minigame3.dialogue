@@ -1,6 +1,8 @@
 ~ start
 set GlobalScript.speaking = true
-Emilho: (comentário como o sistema estava fora do ar)
+[color=#772300]Cafélipe[/color]: O  sistema  tá  fora  do  ar. Como  vou  enviar  esse  documento  para  o  chefe  agora?...
+[color=#f8bf0f]Emilho[/color]: Ah… Era  isso  que  você  tava  precisando?  Infelizmente  sem  acesso  ao  sistema  você  precisa  ir  diretamente  para  a  sala  do  chefe,  eu  posso  enviar  uma  mensagem  para  o  Mangabriel  dizendo  que  você  vai  visitar  o  chefe.
+[color=#772300]Cafélipe[/color]: [wave]*Suspiro*[/wave] Obrigado  Emilho…
 set GlobalScript.speaking = false
 set SceneHandler.justFinished = true
 do SceneHandler.clearMinigame("minigame3")

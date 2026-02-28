@@ -1,5 +1,18 @@
 ~ start
 set GlobalScript.speaking = true
-[color=#ffa62b]Mangabriel[/color]: Finalmente  a  última  cutscene,  dá  para  ver  a  luz  no  fim  do  tunel,  não  desista  [wave]meoooow[/wave]
+Narração: Se  aproximando  de  mangabriel  ele  acena  sua  cabeça  em  saudação,  o  convidando  a  se  aproximar.
+[color=#ffa62b]Mangabriel[/color]: Emilho  me  avisou  que  você  deseja  falar  com  o  chefe,  correto?
+[color=#772300]Cafélipe[/color]: Sim,  eu terminei  de  carimbar  todos  os  documentos  que  você  me  requisitou, com  exceção  de  um  que  demanda  o  carimbo  do  chefe… tá  sendo  um [shake]sufoco[shake],  parece  que nada  tá  indo  como  eu  quero…
+[color=#ffa62b]Mangabriel[/color]: Entendo... Não  se  estressa,  pode  me  passar  o  que  já  foi  feito  que  eu repasso  para  o  chefe  quando  ele  estiver  disponível  novamente  em  pelo  menos  20  dias  úteis. Você  sabe  que  ele  está  de  recesso  certo?
+[color=#772300]Cafélipe[/color]: [shake]Que??[/shake]
+[color=#ffa62b]Mangabriel[/color]: A  gente  avisou  no  grupo  de  trabalho  do  [color=#c6ff00]GatoZap[/color]  hoje  de  manhã,  você  não  viu?
+[color=#772300]Cafélipe[/color]: (Eu  não  tenho saco  de  ficar  vendo  o  grupo  [shake]todo[shake]  santo  dia!!)
+[color=#772300]Cafélipe[/color]: Tudo  isso  para  acabar  não  resolvendo  nada??
+[color=#ffa62b]Mangabriel[/color]: Pelo  menos  hoje  tem  bolo.
+[color=#772300]Cafélipe[/color]: Bolo?
+[color=#ffa62b]Mangabriel[/color]: Da  festa  da  Abacatina. Acabaram  que  começaram  a  festa  antes  dela,  não conseguiram  resistir  a  comida  na  frente  deles  por  tanto  tempo. Aqui,  pode  comer  esse  pedaço  que  sobrou.
+Narração: Mangabriel  te  entrega  uma fatia  de  bolo  em  um  [color=#c6ff00]pratinho[/color]  de plástico  verde. Você  come  um  pedaço  do  bolo  de  morango  com  o  garfinho  que  veio junto e  determina  que... É  bem  gostoso.
+[color=#772300]Cafélipe[/color]: [wave] *suspiiiro* Pelo  menos  tem  bolo… [/wave]
+
 set SceneHandler.theEnd = true
 => END
