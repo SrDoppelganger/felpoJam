@@ -2,7 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://cl6xre454wlcg" path="res://assets/temas/padrao.tres" id="1_ldf1p"]
 [ext_resource type="Script" uid="uid://bn5sx1yc2j8m1" path="res://scenes/menus/main_menu.gd" id="1_yqorp"]
-[ext_resource type="Texture2D" uid="uid://cp6asqfacgvxi" path="res://assets/graficos/placeholder_title.jpeg" id="2_bqojv"]
+[ext_resource type="Texture2D" uid="uid://ct8jrxdm2f0gr" path="res://assets/graficos/Definitivo/splash.jpg" id="3_p0il0"]
+[ext_resource type="FontFile" uid="uid://lmblh8lufbue" path="res://assets/temas/BaksoSapi.otf" id="4_cty7a"]
 [ext_resource type="PackedScene" uid="uid://bhkpy4mpr0pug" path="res://scenes/menus/config.tscn" id="4_tyyoy"]
 [ext_resource type="AudioStream" uid="uid://cqlyyhy1r42vj" path="res://assets/sons/som de seleção e menus.ogg" id="5_p0il0"]
 
@@ -20,7 +21,40 @@ script = ExtResource("1_yqorp")
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("2_bqojv")
+texture = ExtResource("3_p0il0")
+expand_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="." unique_id=203202411]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 464.0
+offset_bottom = 111.0
+theme = ExtResource("1_ldf1p")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/normal_font = ExtResource("4_cty7a")
+theme_override_font_sizes/normal_font_size = 72
+bbcode_enabled = true
+text = "[color=red]Patatente[/color]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label2" type="RichTextLabel" parent="." unique_id=669146025]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 104.0
+offset_right = 472.0
+offset_bottom = 172.0
+theme = ExtResource("1_ldf1p")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/normal_font = ExtResource("4_cty7a")
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "Gatice no escritório"
+fit_content = true
+horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1786541762]
 process_mode = 3
@@ -28,9 +62,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -132.0
-offset_right = 504.0
-offset_bottom = 163.0
+offset_left = 8.0
+offset_top = -148.0
+offset_right = 432.0
+offset_bottom = 243.0
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1817629713]

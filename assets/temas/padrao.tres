@@ -27,6 +27,9 @@ texture_margin_bottom = 25.0
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0.07150052, 0.07150052, 0.07150052, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
 Button/colors/icon_normal_color = Color(0, 0, 0, 1)
 Button/font_sizes/font_size = 36
 Button/fonts/font = ExtResource("1_vxycq")
