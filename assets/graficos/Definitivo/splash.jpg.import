@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmpad3ngywf5m"
-path="res://.godot/imported/bolo_PLACEHOLDER.png-b05f6103a967f8421be828374888562c.ctex"
+uid="uid://ct8jrxdm2f0gr"
+path="res://.godot/imported/splash.jpg-ffc83e8bb3e393b2b0fb060bcc42a369.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graficos/bolo_PLACEHOLDER.png"
-dest_files=["res://.godot/imported/bolo_PLACEHOLDER.png-b05f6103a967f8421be828374888562c.ctex"]
+source_file="res://assets/graficos/Definitivo/splash.jpg"
+dest_files=["res://.godot/imported/splash.jpg-ffc83e8bb3e393b2b0fb060bcc42a369.ctex"]
 
 [params]
 

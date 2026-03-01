@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmpad3ngywf5m"
-path="res://.godot/imported/bolo_PLACEHOLDER.png-b05f6103a967f8421be828374888562c.ctex"
+uid="uid://dag3gibsyieas"
+path="res://.godot/imported/mirtiphone.png-3ab16c55b267b6e7a2e79381bdaf9655.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graficos/bolo_PLACEHOLDER.png"
-dest_files=["res://.godot/imported/bolo_PLACEHOLDER.png-b05f6103a967f8421be828374888562c.ctex"]
+source_file="res://assets/graficos/Definitivo/mirtiphone.png"
+dest_files=["res://.godot/imported/mirtiphone.png-3ab16c55b267b6e7a2e79381bdaf9655.ctex"]
 
 [params]
 

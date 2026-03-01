@@ -41,21 +41,40 @@ func setCutscene(value:bool):
 func getCutscene():
 	return is_in_cutscene;
 
+#faz a musica n ficar recomeçando
+var musicPlaying:bool = false;
+@onready var currTrack = $Musgas/main;
 func playMusic(track):
-	match track:
-		"main":
-			$Musgas/main.play();
+	if !musicPlaying:
+		match track:
+			"main":
+				$Musgas/main.play();
+				currTrack = $Musgas/main;
+			"creditos":
+				$Musgas/creditos.play();
+				currTrack = $Musgas/creditos;
+			"yay":
+				yay.play();
+				currTrack = $yay
+	else:
+		return
+
+func changeTrack(track:String):
+		stopMusic();
+		playMusic(track);
 
 func playEffect(sound):
 	match sound:
 		"carimbado":
 			carimbado.play();
-		"yay":
-			yay.play();
 		"confirm":
 			confirm.play();
 		"moiado":
 			moiado.play();
+
+func stopMusic():
+	currTrack.stop();
+	musicPlaying = false;
 	
 #Vou deixar o nome pequeno, já tô a mais de 8h programando...n consigo pensar em legibilidade agr...foi mal sucoDeArgila
 func cursor(type):

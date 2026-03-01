@@ -18,6 +18,7 @@ func _ready() -> void:
 		intro_cutscene.play("intro");
 		GlobalScript.setCutscene(true);
 	elif SceneHandler.justFinished:
+		GlobalScript.changeTrack("main");
 		$Carimberto.position = SceneHandler.gatoPosition;
 		SceneHandler.justFinished = false;
 	else:

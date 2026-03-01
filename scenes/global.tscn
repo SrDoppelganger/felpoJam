@@ -6,29 +6,39 @@
 [ext_resource type="AudioStream" uid="uid://yngsseo1rahx" path="res://assets/sons/Dia a dia.ogg" id="4_m3l3d"]
 [ext_resource type="AudioStream" uid="uid://cqlyyhy1r42vj" path="res://assets/sons/som de seleção e menus.ogg" id="4_nelfd"]
 [ext_resource type="AudioStream" uid="uid://2tg5u16m50eo" path="res://assets/sons/Tinta molhada.ogg" id="5_6rlim"]
+[ext_resource type="AudioStream" uid="uid://c3dmw6m6sfogy" path="res://assets/sons/Creditos miau miau! todo mundo.ogg" id="7_mmyj5"]
 
 [node name="GlobalScript" type="Node" unique_id=1088285404]
+process_mode = 3
 script = ExtResource("1_4pk28")
 
 [node name="carimbado" type="AudioStreamPlayer" parent="." unique_id=1725095165]
 stream = ExtResource("2_opebo")
+volume_db = -20.0
 bus = &"Efeitos"
 
 [node name="yay" type="AudioStreamPlayer" parent="." unique_id=1616871238]
 stream = ExtResource("3_m3l3d")
-volume_db = -8.0
-bus = &"Efeitos"
+volume_db = -20.0
+bus = &"Musica"
 
 [node name="confirm" type="AudioStreamPlayer" parent="." unique_id=1754091912]
 stream = ExtResource("4_nelfd")
+volume_db = -20.0
 
 [node name="moiado" type="AudioStreamPlayer" parent="." unique_id=1051168482]
 stream = ExtResource("5_6rlim")
+volume_db = -20.0
 bus = &"Efeitos"
 
 [node name="Musgas" type="Node" parent="." unique_id=1005388058]
 
 [node name="main" type="AudioStreamPlayer" parent="Musgas" unique_id=2040686557]
 stream = ExtResource("4_m3l3d")
+volume_db = -20.0
 bus = &"Musica"
 parameters/looping = true
+
+[node name="creditos" type="AudioStreamPlayer" parent="Musgas" unique_id=1166531351]
+stream = ExtResource("7_mmyj5")
+volume_db = -20.0

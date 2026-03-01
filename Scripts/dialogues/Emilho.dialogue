@@ -7,7 +7,7 @@ if SceneHandler.lastMinigame == "minigame2":
 	Narração: *Click  Click  Click  Click* 
 	Narração: *Emílho  está  em  foco  profundo,  encarando  a  tela  de  seu  computador  em frustração,  mas  eventualmente  o  nota  ao  seu  lado.*
 	[color=#f8bf0f]Emilho[/color]: Cafélipe! Pode  me  dar  uma  ajudinha  aqui?  Quero  poder  ver  meu  e-mail,  mas   esse  novo  sistema  que  o  departamento  de  segurança  implementou  é  muito  confuso…  não  consigo  acessar  o  computador.
-	[color=#772300]Cafélipe[/color]...(Não  consigo  crer  que  ele  é  o  senior  desse  departamento…)
+	[color=#772300]Cafélipe[/color]:...(Não  consigo  crer  que  ele  é  o  senior  desse  departamento…)
 	- Claro!
 		[color=#772300]Cafélipe[/color] Okay... deixa  eu  dar  uma  olhada.
 		set GlobalScript.speaking = false

@@ -15,6 +15,7 @@ func _ready() -> void:
 	dialog = load("res://Scripts/dialogues/cubiculo_intro.dialogue");
 	dialog2 = load("res://Scripts/dialogues/elevador_conf.dialogue");
 	if SceneHandler.justFinished:
+		GlobalScript.changeTrack("main")
 		SceneHandler.justFinished = false;
 		carimberto.position = SceneHandler.gatoPosition;
 

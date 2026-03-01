@@ -7,17 +7,19 @@
 [ext_resource type="PackedScene" uid="uid://bhkpy4mpr0pug" path="res://scenes/menus/config.tscn" id="5_8e63j"]
 [ext_resource type="PackedScene" uid="uid://ocjvpc0gyhiu" path="res://scenes/menus/PauseMenu.tscn" id="6_ail10"]
 [ext_resource type="PackedScene" uid="uid://bbj7knvjviqdd" path="res://scenes/gato_phone.tscn" id="7_f3bxi"]
+[ext_resource type="Texture2D" uid="uid://draxvf7qfh5al" path="res://assets/graficos/Definitivo/prop_RF.png" id="8_ail10"]
+[ext_resource type="Texture2D" uid="uid://bkoq01oirkqvl" path="res://assets/graficos/Definitivo/prop2_RF.png" id="9_f3bxi"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_gvbcq"]
-vertices = PackedVector2Array(160.03125, 269.9375, 105.13281, 263.84375, 165.39063, 170.10156, 383.6875, 245.97656, 1009.7578, 185.88281, 1033.3828, 233.10938, 930.1328, 256.9375, 563.8906, 254.17188, 624.9297, 306.47656, 635.0703, 347.0703, 1066.3125, 577.3594, 902.64844, 622, 717.64844, 622, 644.9531, 500.8125, 612.1406, 370, 217.57031, 370, 439.1328, 541.96875, 210.42188, 534.34375)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5, 6, 7), PackedInt32Array(8, 7, 6), PackedInt32Array(9, 8, 6, 10, 11, 12), PackedInt32Array(9, 12, 13, 14), PackedInt32Array(15, 14, 13, 16, 17)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(160, 160, 1016, 176, 1048, 240, 944, 264, 1080, 584, 904, 632, 712, 632, 640, 512, 440, 552, 200, 544, 208, 360, 608, 360, 624, 344, 616, 312, 560, 264, 384, 256, 160, 280, 88, 272)])
+vertices = PackedVector2Array(167.57813, 238, 122.21875, 238, 165.42188, 170.10156, 367.60156, 222, 1009.7578, 185.88281, 1033.3828, 233.10938, 930.1328, 256.9375, 640.21875, 230.64844, 1066.3125, 577.3594, 902.64844, 622, 717.64844, 622, 644.9531, 500.8125, 675.1875, 434.20313, 439.1328, 541.96875, 210.61719, 534.35156, 217.38281, 426.15625, 665.8828, 350.39844, 536.4219, 222)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(2, 4, 5, 6, 7), PackedInt32Array(6, 8, 9, 10, 11, 12), PackedInt32Array(13, 14, 15, 12, 11), PackedInt32Array(6, 12, 16), PackedInt32Array(6, 16, 7), PackedInt32Array(2, 7, 17), PackedInt32Array(2, 17, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(160, 160, 1016, 176, 1048, 240, 944, 264, 1080, 584, 904, 632, 712, 632, 640, 512, 440, 552, 200, 544, 208, 416, 664, 424, 656, 352, 632, 240, 536, 232, 368, 232, 168, 248, 104, 248)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5nnx3"]
 size = Vector2(216, 224)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvbcq"]
-size = Vector2(232, 264)
+size = Vector2(272, 232)
 
 [node name="RecursosFelinos" type="Node2D" unique_id=1282392397]
 script = ExtResource("1_g2qgc")
@@ -54,7 +56,7 @@ debug_color = Color(0.76385766, 0.4500926, 3.85046e-07, 0.41960785)
 position = Vector2(168, 416)
 
 [node name="Emilho_range" type="CollisionShape2D" parent="NPCs/Area2D" unique_id=1996605092]
-position = Vector2(44, 20)
+position = Vector2(104, 4)
 shape = SubResource("RectangleShape2D_gvbcq")
 debug_color = Color(0.90588236, 0.8156863, 0.011764706, 0.41960785)
 
@@ -74,17 +76,22 @@ visible = false
 
 [node name="GatoPhone" parent="menus" unique_id=1980130972 instance=ExtResource("7_f3bxi")]
 process_mode = 3
-anchors_preset = 3
-anchor_left = 1.0
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -152.0
-offset_top = -176.0
-offset_right = -152.0
-offset_bottom = -176.0
-grow_horizontal = 0
+offset_left = 6.0
+offset_top = -194.0
+offset_right = 6.0
+offset_bottom = -194.0
 grow_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1763441989]
+position = Vector2(410, 266)
+texture = ExtResource("8_ail10")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=979568056]
+position = Vector2(524, 314)
+texture = ExtResource("9_f3bxi")
 
 [connection signal="body_entered" from="Corredor" to="." method="_on_corredor_body_entered"]
 [connection signal="body_exited" from="Corredor" to="." method="_on_corredor_body_exited"]

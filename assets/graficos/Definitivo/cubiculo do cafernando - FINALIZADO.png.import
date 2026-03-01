@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmpad3ngywf5m"
-path="res://.godot/imported/bolo_PLACEHOLDER.png-b05f6103a967f8421be828374888562c.ctex"
+uid="uid://bopyep107dxou"
+path="res://.godot/imported/cubiculo do cafernando - FINALIZADO.png-817e2f452204732263e6673d427e5679.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graficos/bolo_PLACEHOLDER.png"
-dest_files=["res://.godot/imported/bolo_PLACEHOLDER.png-b05f6103a967f8421be828374888562c.ctex"]
+source_file="res://assets/graficos/Definitivo/cubiculo do cafernando - FINALIZADO.png"
+dest_files=["res://.godot/imported/cubiculo do cafernando - FINALIZADO.png-817e2f452204732263e6673d427e5679.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cc8ps2l8gt07s" path="res://scenes/puzzles/rec_facial.gd" id="1_kq1wg"]
 [ext_resource type="Script" uid="uid://bu8f76pedbwrj" path="res://scenes/puzzles/RecFacial_scripts/player.gd" id="1_xwlxd"]
-[ext_resource type="Texture2D" uid="uid://dbsg8f16vrjdo" path="res://assets/graficos/office_placeholder.jpg" id="2_jxo82"]
+[ext_resource type="Texture2D" uid="uid://cw34invbcamnp" path="res://assets/graficos/Definitivo/minigame2_bg.png" id="2_cyxh3"]
 [ext_resource type="Texture2D" uid="uid://cd2xp1aakc6dw" path="res://assets/graficos/cafélipe.png" id="4_jpdhs"]
 [ext_resource type="Script" uid="uid://o0eu1xd7srtt" path="res://scenes/puzzles/RecFacial_scripts/collision_shape_2d.gd" id="4_kq1wg"]
 [ext_resource type="Texture2D" uid="uid://cy4du632ofd7c" path="res://assets/graficos/rec_facimiau-com_transparencia.png" id="6_v0kde"]
@@ -22,10 +22,10 @@ script = ExtResource("1_kq1wg")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=101629336]
 offset_left = -5.0
-offset_right = 2297.0
+offset_right = 2311.0
 offset_bottom = 1294.0
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_jxo82")
+texture = ExtResource("2_cyxh3")
 expand_mode = 1
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1012888952]
@@ -91,7 +91,28 @@ text = "comando"
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="Instrucao" unique_id=1044695420]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -57.0
+offset_right = 232.0
+offset_bottom = -14.0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Instrucao/VBoxContainer2" unique_id=1906495961]
+layout_mode = 2
+theme = ExtResource("7_jpdhs")
+theme_override_colors/font_color = Color(0.053600356, 0.33959314, 0.42022544, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 16
+text = "Aperte 'esc' para
+ver as instruções de novo"
+
 [node name="tutorial" type="CanvasLayer" parent="." unique_id=1559903700]
+process_mode = 3
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="tutorial" unique_id=604913090]
 anchors_preset = 15

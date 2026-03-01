@@ -22,7 +22,6 @@ distance = -88.0
 script = ExtResource("1_5vrnw")
 
 [node name="tutorial_layer" type="CanvasLayer" parent="." unique_id=1902636149]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="tutorial_layer" unique_id=1375089902]
 anchors_preset = 15
@@ -78,16 +77,13 @@ theme_override_font_sizes/font_size = 24
 text = "(aperte espaço para começar)"
 
 [node name="Label2" type="Label" parent="tutorial_layer" unique_id=1195417955]
-anchors_preset = 3
-anchor_left = 1.0
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -544.0
-offset_top = -96.0
-offset_right = -174.0
-offset_bottom = -35.0
-grow_horizontal = 0
+offset_left = 133.0
+offset_top = -114.0
+offset_right = 503.0
+offset_bottom = -53.0
 grow_vertical = 0
 theme = ExtResource("3_wlj5l")
 theme_override_font_sizes/font_size = 24
@@ -154,16 +150,16 @@ horizontal_alignment = 1
 justification_flags = 160
 
 [node name="tinta" type="TextureButton" parent="HUD" unique_id=436226890]
-anchors_preset = 3
-anchor_left = 1.0
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -176.0
-offset_top = -152.0
-offset_right = 105.0
-offset_bottom = 129.0
-grow_horizontal = 0
+offset_left = -71.5
+offset_top = -160.0
+offset_right = 209.5
+offset_bottom = 121.0
+grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("5_sxtb0")

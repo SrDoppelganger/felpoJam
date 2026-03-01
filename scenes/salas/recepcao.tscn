@@ -44,6 +44,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Carimberto:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 0.8)]
+}
 
 [sub_resource type="Animation" id="Animation_5boec"]
 resource_name = "elevador"
@@ -102,6 +114,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Carimberto:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.91),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(-0.8, 0.8)]
 }
 
 [sub_resource type="Animation" id="Animation_w862l"]
@@ -182,9 +206,9 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 16.0
-offset_top = -160.0
+offset_top = -192.0
 offset_right = 16.0
-offset_bottom = -160.0
+offset_bottom = -192.0
 grow_vertical = 0
 
 [node name="Intro_cutscene" type="AnimationPlayer" parent="." unique_id=1004921321]
@@ -202,6 +226,8 @@ bus = &"Efeitos"
 
 [node name="gatraca_barrada" type="AudioStreamPlayer" parent="catraca" unique_id=1555835337]
 stream = ExtResource("9_1y1f5")
+volume_db = -20.0
+bus = &"Efeitos"
 
 [node name="Minigame2" type="Node" parent="." unique_id=384963847]
 

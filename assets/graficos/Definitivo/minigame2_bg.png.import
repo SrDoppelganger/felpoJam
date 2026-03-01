@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8rfqehsdl55t"
-path="res://.godot/imported/botao_PLACEHOLDER.png-3056515a63967aa01fb1d5fd86844b15.ctex"
+uid="uid://cw34invbcamnp"
+path="res://.godot/imported/minigame2_bg.png-7b7656c892ec382a5f5933272c90b176.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graficos/botao_PLACEHOLDER.png"
-dest_files=["res://.godot/imported/botao_PLACEHOLDER.png-3056515a63967aa01fb1d5fd86844b15.ctex"]
+source_file="res://assets/graficos/Definitivo/minigame2_bg.png"
+dest_files=["res://.godot/imported/minigame2_bg.png-7b7656c892ec382a5f5933272c90b176.ctex"]
 
 [params]
 

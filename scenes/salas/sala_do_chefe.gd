@@ -10,16 +10,17 @@ var cakeGiven: bool = false;
 func _ready() -> void:
 	SceneHandler.curr_room = "chefe"
 	
-	SceneHandler.setLastMinigame("minigame3")
-	
 	dialog = load("res://Scripts/dialogues/sala_do_chefe.dialogue");
 	curr_scene = SceneHandler.getLastMinigame();
 	if curr_scene == "minigame3":
 		cutscene.play("final");
 		GlobalScript.setCutscene(true);
 
-func _on_cutscene_animation_finished(_anim_name: StringName) -> void:
-	DialogueManager.show_dialogue_balloon(dialog);
+func _on_cutscene_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "final":
+		DialogueManager.show_dialogue_balloon(dialog);
+	elif anim_name == "ending":
+		get_tree().change_scene_to_file("res://scenes/menus/creditos.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -28,9 +29,9 @@ func _process(_delta: float) -> void:
 		$Ending/Bolo.disabled = false;
 
 func _on_bolo_pressed() -> void:
-	#tocar som
-	await get_tree().create_timer(1.0).timeout #ou detectar quando o som acabar :p
-	get_tree().change_scene_to_file("res://scenes/menus/creditos.tscn")
+	GlobalScript.playEffect("yay")
+	await get_tree().create_timer(2.0).timeout #ou detectar quando o som acabar :p
+	cutscene.play("ending");
 
 
 func _on_bolo_mouse_entered() -> void:

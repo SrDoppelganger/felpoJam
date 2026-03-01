@@ -1,8 +1,39 @@
 [gd_resource type="Theme" format=3 uid="uid://cl6xre454wlcg"]
 
 [ext_resource type="FontFile" uid="uid://lmblh8lufbue" path="res://assets/temas/BaksoSapi.otf" id="1_vxycq"]
+[ext_resource type="Texture2D" uid="uid://daat4trn5c67b" path="res://assets/graficos/Definitivo/botaown gato.png" id="2_7r2ba"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7r2ba"]
+texture = ExtResource("2_7r2ba")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 50.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yqvj8"]
+texture = ExtResource("2_7r2ba")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 50.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l86wu"]
+texture = ExtResource("2_7r2ba")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 50.0
+texture_margin_bottom = 25.0
 
 [resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0.07150052, 0.07150052, 0.07150052, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_normal_color = Color(0, 0, 0, 1)
 Button/font_sizes/font_size = 36
 Button/fonts/font = ExtResource("1_vxycq")
+Button/styles/hover = SubResource("StyleBoxTexture_7r2ba")
+Button/styles/normal = SubResource("StyleBoxTexture_yqvj8")
+Button/styles/pressed = SubResource("StyleBoxTexture_l86wu")
 Label/fonts/font = ExtResource("1_vxycq")
