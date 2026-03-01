@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bbj7knvjviqdd" path="res://scenes/gato_phone.tscn" id="5_i5mt4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lly2p"]
-size = Vector2(357, 458)
+size = Vector2(357, 418)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lc05v"]
 size = Vector2(576, 405)
@@ -25,7 +25,7 @@ expand_mode = 1
 [node name="corredor" type="Area2D" parent="." unique_id=1036305735]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="corredor" unique_id=1288243945]
-position = Vector2(165.5, 235)
+position = Vector2(165.5, 215)
 shape = SubResource("RectangleShape2D_lly2p")
 
 [node name="Mesa" type="Area2D" parent="." unique_id=1754100077]
@@ -49,9 +49,9 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 24.0
-offset_top = -160.0
+offset_top = -193.0
 offset_right = 24.0
-offset_bottom = -160.0
+offset_bottom = -193.0
 grow_vertical = 0
 size_flags_horizontal = 4
 

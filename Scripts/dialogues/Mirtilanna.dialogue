@@ -10,7 +10,7 @@ if SceneHandler.intro_over:
 	set SceneHandler.intro_over = false
 if SceneHandler.lastMinigame == "minigame1":
 	[color=#772300]Cafélipe[/color]: [color=#4f86f7]Mirti…[/color]  você  sabe  se  o  chefe tá de bom  humor  para aceitar  visita  na  sala  dele? Só  preciso  que  ele  carimbe  esse  último  documento  de…
-	[color=#772300]Cafélipe[/color]: Uma  pata-tente  de  um… [wave][rainbow]super  carimbador  automático?[/rainbow][/wave] (qual  é  o  ponto  disso?...pensando  bem…eu  quase  nunca leio  o  que  carimbo,  isso  agilizaria  tanto  o  meu  trabalho!)
+	[color=#772300]Cafélipe[/color]: Uma  pata-tente  de  um… [wave][rainbow]super  carimbador  automático?[/rainbow][/wave] (qual  é  o  ponto  disso?...pensando  bem…eu  quase  nunca leio  o  que  eu  carimbo,  isso  agilizaria  tanto  o  meu  trabalho!)
 	[color=#4f86f7]Mirtilanna[/color]: …certo…não  precisa  se  preocupar  com  isso,  é  só  deixar  no  departamento de  recursos  felinos  que  eles  podem  resolver  isso  e  enviar  para  o  chefe  sem  precisar falar  com  ele  diretamente. 
 
 if SceneHandler.lastMinigame == "minigame2":

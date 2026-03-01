@@ -91,7 +91,25 @@ text = "comando"
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="Instrucao" unique_id=1044695420]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -57.0
+offset_right = 232.0
+offset_bottom = -14.0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Instrucao/VBoxContainer2" unique_id=1906495961]
+layout_mode = 2
+theme = ExtResource("7_jpdhs")
+text = "Aperte 'esc' para
+ver as instruções de novo"
+
 [node name="tutorial" type="CanvasLayer" parent="." unique_id=1559903700]
+process_mode = 3
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="tutorial" unique_id=604913090]
 anchors_preset = 15

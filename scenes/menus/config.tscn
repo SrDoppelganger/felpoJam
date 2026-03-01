@@ -68,8 +68,9 @@ layout_mode = 2
 [node name="Volume_master" type="HSlider" parent="Panel/VBoxContainer2/VBoxContainer/master_container" unique_id=226835784]
 custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
-min_value = -10.0
-max_value = 10.0
+min_value = -50.0
+max_value = 5.0
+value = -20.0
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer2/VBoxContainer/master_container" unique_id=1101887485]
 layout_mode = 2
@@ -89,8 +90,9 @@ layout_mode = 2
 [node name="Volume_musica" type="HSlider" parent="Panel/VBoxContainer2/VBoxContainer/musica_container" unique_id=1462148295]
 custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
-min_value = -10.0
-max_value = 10.0
+min_value = -50.0
+max_value = 5.0
+value = -20.0
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer2/VBoxContainer/musica_container" unique_id=1832452402]
 layout_mode = 2
@@ -109,8 +111,9 @@ layout_mode = 2
 [node name="Volume_efeito" type="HSlider" parent="Panel/VBoxContainer2/VBoxContainer/efeito_container" unique_id=1999320017]
 custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
-min_value = -10.0
-max_value = 10.0
+min_value = -50.0
+max_value = 5.0
+value = -20.0
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer2/VBoxContainer/efeito_container" unique_id=1155641812]
 layout_mode = 2

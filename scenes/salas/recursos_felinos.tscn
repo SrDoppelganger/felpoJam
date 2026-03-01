@@ -17,7 +17,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(160, 160, 1016, 176, 10
 size = Vector2(216, 224)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvbcq"]
-size = Vector2(232, 264)
+size = Vector2(272, 232)
 
 [node name="RecursosFelinos" type="Node2D" unique_id=1282392397]
 script = ExtResource("1_g2qgc")
@@ -54,7 +54,7 @@ debug_color = Color(0.76385766, 0.4500926, 3.85046e-07, 0.41960785)
 position = Vector2(168, 416)
 
 [node name="Emilho_range" type="CollisionShape2D" parent="NPCs/Area2D" unique_id=1996605092]
-position = Vector2(44, 20)
+position = Vector2(104, 4)
 shape = SubResource("RectangleShape2D_gvbcq")
 debug_color = Color(0.90588236, 0.8156863, 0.011764706, 0.41960785)
 
@@ -74,16 +74,13 @@ visible = false
 
 [node name="GatoPhone" parent="menus" unique_id=1980130972 instance=ExtResource("7_f3bxi")]
 process_mode = 3
-anchors_preset = 3
-anchor_left = 1.0
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -152.0
-offset_top = -176.0
-offset_right = -152.0
-offset_bottom = -176.0
-grow_horizontal = 0
+offset_left = 6.0
+offset_top = -194.0
+offset_right = 6.0
+offset_bottom = -194.0
 grow_vertical = 0
 
 [connection signal="body_entered" from="Corredor" to="." method="_on_corredor_body_entered"]

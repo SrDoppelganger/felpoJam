@@ -48,6 +48,7 @@ func success_captcha():
 	label.add_theme_color_override("font_color","#7fff00");
 	line_edit.editable = false
 	await get_tree().create_timer(1.0).timeout
+	GlobalScript.changeTrack("yay");
 	$Punchline.show();
 	$Login.hide();
 	await get_tree().create_timer(1.0).timeout

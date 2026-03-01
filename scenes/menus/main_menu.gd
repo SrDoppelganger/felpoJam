@@ -1,7 +1,7 @@
 extends Control
 
 func _ready() -> void:
-	GlobalScript.playMusic("main");
+	GlobalScript.changeTrack("main")
 
 func _on_jogar_pressed() -> void:
 	$confirm.play();

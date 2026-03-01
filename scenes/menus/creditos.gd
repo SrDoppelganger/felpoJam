@@ -6,6 +6,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GlobalScript.changeTrack("creditos");
 	animation_player.play("créditos");
 
 func _process(_delta: float) -> void:

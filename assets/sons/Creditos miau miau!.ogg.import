@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dm1lnuerdnww1"
+path="res://.godot/imported/Creditos miau miau!.ogg-eefa7c337fcf8bb05626263ee6b3e6a5.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sons/Creditos miau miau!.ogg"
+dest_files=["res://.godot/imported/Creditos miau miau!.ogg-eefa7c337fcf8bb05626263ee6b3e6a5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

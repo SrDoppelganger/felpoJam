@@ -121,8 +121,8 @@ func _on_spawn_rate_timeout() -> void:
 func victory():
 	SceneHandler.clearMinigame("minigame1");
 	game_state = "victory"
-	GlobalScript.playEffect("yay");
-	await get_tree().create_timer(1.0).timeout
+	GlobalScript.changeTrack("yay");
+	await get_tree().create_timer(2.5).timeout
 	get_tree().change_scene_to_file("res://scenes/salas/cubiculo.tscn");
 
 func lose():

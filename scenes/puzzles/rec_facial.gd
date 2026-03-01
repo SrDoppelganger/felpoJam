@@ -50,6 +50,8 @@ func tutorialLogic():
 		inTutorial = false;
 
 func facialRec() -> void:
+	if Input.is_action_just_pressed("esc"):
+		inTutorial = true;
 	var recArea = get_node("Reconhecimento/CollisionShape2D")
 	
 	if messageTime:
@@ -82,7 +84,7 @@ func facialRec() -> void:
 		
 func playJingle():
 	if !jinglePlaying:
-		GlobalScript.playEffect("yay");
+		GlobalScript.changeTrack("yay");
 		jinglePlaying = true;
 
 func victory():
