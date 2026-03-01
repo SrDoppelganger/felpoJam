@@ -360,7 +360,7 @@ tracks/8/keys = {
 
 [sub_resource type="Animation" id="Animation_f6pr2"]
 resource_name = "créditos"
-length = 26.033333
+length = 51.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -368,7 +368,7 @@ tracks/0/path = NodePath("neokat_logo:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3, 4, 6, 6.991667),
+"times": PackedFloat32Array(-0.5, 5, 8.1, 10.1, 11.091666),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1440, 344), Vector2(1440, 344), Vector2(560.00006, 328), Vector2(560.00006, 328), Vector2(-199.99994, 344)]
@@ -380,7 +380,7 @@ tracks/1/path = NodePath("Felpojam:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.0333333, 3, 4),
+"times": PackedFloat32Array(0, 3.1333332, 5.1, 8.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1552, 384), Vector2(544, 352), Vector2(544, 352), Vector2(-408, 448)]
@@ -392,7 +392,7 @@ tracks/2/path = NodePath("Felpojam:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 3.9666667),
+"times": PackedFloat32Array(0, 8.066667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -404,7 +404,7 @@ tracks/3/path = NodePath("neokat_logo:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 6.991667),
+"times": PackedFloat32Array(0, 11.091666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -416,7 +416,7 @@ tracks/4/path = NodePath("roll_call:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(6.9926186, 7.002619, 8.333333, 16.928402, 18.033333),
+"times": PackedFloat32Array(11.092618, 11.102618, 11.599999, 24.099998, 27.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1424, 320), Vector2(1424, 320), Vector2(576, 324), Vector2(576, 324), Vector2(-384, 272)]
@@ -428,7 +428,7 @@ tracks/5/path = NodePath("roll_call/membros:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(7.002619, 8.51268),
+"times": PackedFloat32Array(11.102618, 12.6126795),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -440,7 +440,7 @@ tracks/6/path = NodePath("roll_call/Funçâo:text")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(6.982619, 8.5, 10, 10.0726185, 12.003478, 12.053623, 14.003623, 14.063623, 15.996243),
+"times": PackedFloat32Array(11.08262, 12.2, 15.099999, 15.249999, 18.099998, 18.25, 21.099998, 21.3, 24.099998),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": ["", "[color=#2A0F38]Sigil[/color]  
@@ -462,7 +462,7 @@ tracks/7/path = NodePath("roll_call/membros:animation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(8.003477, 10.013477, 10.073478, 12.003478, 12.033334, 14.003623, 14.063623, 15.996243),
+"times": PackedFloat32Array(12.099999, 15.099999, 15.150001, 18.099998, 18.150002, 21.099998, 21.166668, 24.099998),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [&"Sigil", &"Sigil", &"bell", &"bell", &"SucoDeArgila", &"SucoDeArgila", &"doppel", &"doppel"]
@@ -474,7 +474,7 @@ tracks/8/path = NodePath("arigathanks:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 18.007835, 20, 22.008333, 24.033333),
+"times": PackedFloat32Array(0, 24.099998, 27.1, 47, 50),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1184, 264), Vector2(1184, 264), Vector2(80, 224), Vector2(80, 224), Vector2(-1008, 224)]
@@ -669,8 +669,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 608.0
 offset_top = -60.0
-offset_right = 1599.9998
-offset_bottom = 139.99997
+offset_right = 1600.0029
+offset_bottom = 139.9992
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_f6pr2")
@@ -691,6 +691,11 @@ offset_bottom = 68.0
 theme = ExtResource("3_f6pr2")
 theme_override_font_sizes/font_size = 36
 text = "Sair"
+
+[node name="Control" type="Control" parent="." unique_id=398534006]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]

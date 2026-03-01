@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://yngsseo1rahx" path="res://assets/sons/Dia a dia.ogg" id="4_m3l3d"]
 [ext_resource type="AudioStream" uid="uid://cqlyyhy1r42vj" path="res://assets/sons/som de seleção e menus.ogg" id="4_nelfd"]
 [ext_resource type="AudioStream" uid="uid://2tg5u16m50eo" path="res://assets/sons/Tinta molhada.ogg" id="5_6rlim"]
-[ext_resource type="AudioStream" uid="uid://dm1lnuerdnww1" path="res://assets/sons/Creditos miau miau!.ogg" id="7_mmyj5"]
+[ext_resource type="AudioStream" uid="uid://c3dmw6m6sfogy" path="res://assets/sons/Creditos miau miau! todo mundo.ogg" id="7_mmyj5"]
 
 [node name="GlobalScript" type="Node" unique_id=1088285404]
 process_mode = 3

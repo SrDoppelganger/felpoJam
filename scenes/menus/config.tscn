@@ -77,9 +77,6 @@ layout_mode = 2
 text = "mutar"
 vertical_alignment = 1
 
-[node name="mute_master" type="CheckBox" parent="Panel/VBoxContainer2/VBoxContainer/master_container" unique_id=575829495]
-layout_mode = 2
-
 [node name="musicaVol" type="Label" parent="Panel/VBoxContainer2/VBoxContainer" unique_id=2036135778]
 layout_mode = 2
 text = "Música"
@@ -98,9 +95,6 @@ value = -20.0
 layout_mode = 2
 text = "mutar"
 
-[node name="mute_musica" type="CheckBox" parent="Panel/VBoxContainer2/VBoxContainer/musica_container" unique_id=1178106966]
-layout_mode = 2
-
 [node name="efeitoVol" type="Label" parent="Panel/VBoxContainer2/VBoxContainer" unique_id=560231522]
 layout_mode = 2
 text = "Efeitos Sonoros"
@@ -118,9 +112,6 @@ value = -20.0
 [node name="Label" type="Label" parent="Panel/VBoxContainer2/VBoxContainer/efeito_container" unique_id=1155641812]
 layout_mode = 2
 text = "mutar"
-
-[node name="mute_efeito" type="CheckBox" parent="Panel/VBoxContainer2/VBoxContainer/efeito_container" unique_id=444547123]
-layout_mode = 2
 
 [node name="Button" type="Button" parent="Panel/VBoxContainer2/VBoxContainer" unique_id=1632932911]
 custom_minimum_size = Vector2(200, 0)
@@ -155,9 +146,6 @@ texture = ExtResource("2_sy5uv")
 expand_mode = 2
 
 [connection signal="value_changed" from="Panel/VBoxContainer2/VBoxContainer/master_container/Volume_master" to="." method="_on_volume_master_value_changed"]
-[connection signal="toggled" from="Panel/VBoxContainer2/VBoxContainer/master_container/mute_master" to="." method="_on_mute_master_toggled"]
 [connection signal="value_changed" from="Panel/VBoxContainer2/VBoxContainer/musica_container/Volume_musica" to="." method="_on_volume_musica_value_changed"]
-[connection signal="toggled" from="Panel/VBoxContainer2/VBoxContainer/musica_container/mute_musica" to="." method="_on_mute_musica_toggled"]
 [connection signal="value_changed" from="Panel/VBoxContainer2/VBoxContainer/efeito_container/Volume_efeito" to="." method="_on_volume_efeito_value_changed"]
-[connection signal="toggled" from="Panel/VBoxContainer2/VBoxContainer/efeito_container/mute_efeito" to="." method="_on_mute_efeito_toggled"]
 [connection signal="pressed" from="Panel/VBoxContainer2/VBoxContainer/Button" to="." method="_on_button_pressed"]
