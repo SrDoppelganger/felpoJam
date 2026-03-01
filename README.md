@@ -1,4 +1,4 @@
-# Nome do jogo
+# Patatente: Gatice no escritório
 
 ## Um jogo por:
 ![logo](neokat-shellcat.png "neokat-shellcat")
@@ -10,7 +10,7 @@
 - SrDoppelganger
 
 ## Sobre o jogo
-_nome_do_jogo_ é um jogo point-and-click onde você joga como Cafelipe, um funcionário da tribumiau, que deve embarcar em uma jornada de tremendo tédio e burocracia para conseguir uma mera carimbada num documento.
+Patatente: Gatice no escritório é um jogo point-and-click onde você joga como Cafelipe, um funcionário da tribumiau, que deve embarcar em uma jornada de tremendo tédio e burocracia para conseguir uma mera carimbada num documento.
 
 ### Classificação indicativa
 ![classificacao](classificacao.png "Livre")
